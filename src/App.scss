@@ -2,17 +2,27 @@ body {
   font-family: "Rubik", sans-serif;
 }
 
-:root {
-  --pale-grey: #f2f5fa;
-  --dark-sky-blue: #4a90e2;
-  --orangey-yellow: #f5a623;
-  --greyish-brown: #4a4a4a;
-  --scarlet: #d0021b;
-  --navy: #001433;
-  --steel: #7a7d86;
-  --primary: #ee5f7b;
-  --bluey-grey: #91a2bc;
-}
+$pale-grey: #f2f5fa;
+$primary: #ee5f7b;
+$navy: #001433;
+$blue-grey: #91a2bc;
+$steel: #7a7d86;
+$orange-yellow: #f5a623;
+$red: #d0021b;
+$blue: #4a90e2;
+$greyish-brown: #4a4a4a;
+
+$colors: (
+  "pale-grey": $pale-grey,
+  "primary": $primary,
+  "navy": $navy,
+  "blue-grey": $blue-grey,
+  "steel": $steel,
+  "orange-yellow": $orange-yellow,
+  "red": $red,
+  "blue": $blue,
+  "grey": $greyish-brown,
+);
 
 .text {
   font-family: AvenirNext;
@@ -20,60 +30,64 @@ body {
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: var(--greyish-brown);
+  color: $greyish-brown;
   &__t1 {
     font-size: 53px;
     font-weight: bold;
-    &--grey {
-      color: var(--greyish-brown);
+    @each $name, $glyph in $colors {
+      &--#{$name}{
+        color: $glyph
+      }
     }
   }
 
   &__h1 {
     font-size: 36px;
     font-weight: bold;
-    &--primary {
-      color: var(--primary);
-    }
-    &--grey {
-      color: var(--greyish-brown);
+    @each $name, $glyph in $colors {
+      &--#{$name}{
+        color: $glyph
+      }
     }
   }
 
   &__h2 {
     font-size: 30px;
     font-weight: bold;
-    &--primary {
-      color: var(--primary);
-    }
-    &--grey {
-      color: var(--greyish-brown);
+    @each $name, $glyph in $colors {
+      &--#{$name}{
+        color: $glyph
+      }
     }
   }
 
   &__h3 {
     font-size: 24px;
     font-weight: bold;
-    &--steal {
-      color: var(--steel);
-    }
-    &--grey {
-      color: var(--greyish-brown);
+    @each $name, $glyph in $colors {
+      &--#{$name}{
+        color: $glyph
+      }
     }
   }
 
-  &__h4{
+  &__h4 {
     font-size: 20px;
     font-weight: bold;
-    &--grey{
-      color: var(--greyish-brown);
+    @each $name, $glyph in $colors {
+      &--#{$name}{
+        color: $glyph
+      }
     }
   }
 
   &__d2 {
     font-size: 28px;
-    &--bluegrey {
-      color: var(--bluey-grey);
+    font-weight: bold;
+    @each $name, $glyph in $colors {
+      &--#{$name}{
+        color: $glyph
+      }
     }
   }
 
@@ -82,39 +96,30 @@ body {
     font-weight: normal;
     line-height: 1.42;
     font-style: italic;
-    &--grey {
-      color: var(--greyish-brown);
+    @each $name, $glyph in $colors {
+      &--#{$name}{
+        color: $glyph
+      }
     }
   }
 
-  &__b1{
+  &__b1 {
     font-size: 16px;
     font-weight: 500;
-   
-  }
-
-  &__d1{
-    font-size: 16px;
-    font-weight: normal;
-    &--bluegrey{
-      color: var(--bluey-grey);
+    @each $name, $glyph in $colors {
+      &--#{$name}{
+        color: $glyph;
+      }
     }
   }
 
-  &--primary{
-    color: var(--primary);
+  &__d1 {
+    font-size: 16px;
+    font-weight: normal;
+    @each $name, $glyph in $colors {
+      &--#{$name}{
+        color: $glyph
+      }
+    }
   }
-  &--steel{
-    color: var(--steel)
-  }
-  &--grey{
-    color: var(--greyish-brown)
-  }
-  &--bluegrey{
-    color: var(--bluey-grey)
-  }
-  &--pale-grey{
-    color: var(--pale-grey);
-  }
-
 }

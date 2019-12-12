@@ -4,7 +4,8 @@
         "paths": {
             "screens/*": ["screens/*"],
             "components/*": ["components/*"],
-            "router/*": ["router/*"]
+            "router/*": ["router/*"],
+            "theme/*": ["theme/*"]
         }
   }
 }
