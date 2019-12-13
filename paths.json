@@ -5,7 +5,8 @@
             "screens/*": ["screens/*"],
             "components/*": ["components/*"],
             "router/*": ["router/*"],
-            "theme/*": ["theme/*"]
+            "theme/*": ["theme/*"],
+            "@colors": ["theme/color/_colors.scss"]
         }
   }
 }

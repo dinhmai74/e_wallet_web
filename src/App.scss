@@ -2,7 +2,7 @@ body {
   font-family: "Rubik", sans-serif;
 }
 
-@import "./theme/colors";
+@import "./theme/color/colors";
 
 $colors: (
   "pale-grey": $pale-grey,
