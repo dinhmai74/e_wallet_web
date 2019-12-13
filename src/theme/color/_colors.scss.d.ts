@@ -9,6 +9,7 @@ export interface I_globalScss {
   blue: string;
   grey: string;
   white: string;
+  secondary: string;
 }
 
 export const styles: I_globalScss;
