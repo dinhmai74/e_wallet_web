@@ -16,6 +16,12 @@ $colors: (
   "grey": $greyish-brown,
 );
 
+@each $name, $glyph in $colors {
+ .color__#{$name}{
+  color: $glyph;
+ }
+}
+
 .text {
   font-family: AvenirNext;
   font-stretch: normal;
@@ -26,61 +32,31 @@ $colors: (
   &__t1 {
     font-size: 53px;
     font-weight: bold;
-    @each $name, $glyph in $colors {
-      &--#{$name}{
-        color: $glyph
-      }
-    }
   }
 
   &__h1 {
     font-size: 36px;
     font-weight: bold;
-    @each $name, $glyph in $colors {
-      &--#{$name}{
-        color: $glyph
-      }
-    }
   }
 
   &__h2 {
     font-size: 30px;
     font-weight: bold;
-    @each $name, $glyph in $colors {
-      &--#{$name}{
-        color: $glyph
-      }
-    }
   }
 
   &__h3 {
     font-size: 24px;
     font-weight: bold;
-    @each $name, $glyph in $colors {
-      &--#{$name}{
-        color: $glyph
-      }
-    }
   }
 
   &__h4 {
     font-size: 20px;
     font-weight: bold;
-    @each $name, $glyph in $colors {
-      &--#{$name}{
-        color: $glyph
-      }
-    }
   }
 
   &__d2 {
     font-size: 28px;
     font-weight: bold;
-    @each $name, $glyph in $colors {
-      &--#{$name}{
-        color: $glyph
-      }
-    }
   }
 
   &__quote {
@@ -88,31 +64,16 @@ $colors: (
     font-weight: normal;
     line-height: 1.42;
     font-style: italic;
-    @each $name, $glyph in $colors {
-      &--#{$name}{
-        color: $glyph
-      }
-    }
   }
 
   &__b1 {
     font-size: 16px;
     font-weight: 500;
-    @each $name, $glyph in $colors {
-      &--#{$name}{
-        color: $glyph;
-      }
-    }
   }
 
   &__d1 {
     font-size: 16px;
     font-weight: normal;
-    @each $name, $glyph in $colors {
-      &--#{$name}{
-        color: $glyph
-      }
-    }
   }
 }
 

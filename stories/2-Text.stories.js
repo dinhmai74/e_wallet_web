@@ -11,8 +11,8 @@ export default {
 export const Text = () => (
   <div>
     <p className="text__b1">normal one</p>
-    <p className="text__h1--grey">b1 primary</p>
-    <p className="text__b1--blue-grey">b1 blue-grey</p>
+    <p className="text__h1 color__primary">b1 primary</p>
+    <p className="text__b1 color__blue-grey">b1 blue-grey</p>
   </div>
 );
 
