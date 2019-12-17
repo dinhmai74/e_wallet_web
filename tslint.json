@@ -11,7 +11,9 @@
     "ordered-imports": false,
     "jsx-no-lambda": false,
     "interface-name": false,
-    "jsx-boolean-value": false
+    "no-unused-expression": false,
+    "jsx-boolean-value": false,
+    "noImplicitAny": false
   },
   "rulesDirectory": ["tslint-plugin-prettier"]
 }

@@ -35,12 +35,13 @@ export interface AppButtonProps extends ButtonProps {
 }
 
 export const AppButton = withStyles(styles)((props: AppButtonProps) => {
-  const { className, variant, tx, children, ...rest } = props;
+  const { color, className, variant, tx, children, ...rest } = props;
   const classes = props.classes || {};
   const content = children || tx;
   return (
     <Button
       {...props}
+      color={color}
       className={`${className} 
     // @ts-ignore
     ${classes[variant]}`}
@@ -51,5 +52,6 @@ export const AppButton = withStyles(styles)((props: AppButtonProps) => {
 });
 
 AppButton.defaultProps = {
-  variant: "contained"
+  variant: "contained",
+  color: "primary"
 };
