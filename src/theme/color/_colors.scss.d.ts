@@ -10,8 +10,11 @@ export interface I_globalScss {
   grey: string;
   white: string;
   secondary: string;
+  black: string;
+  navBg: string;
 }
 
 export const styles: I_globalScss;
 
 export default styles;
+

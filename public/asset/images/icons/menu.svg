@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="38px" height="23px" viewBox="0 0 38 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+    <title>Icons/menu</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g id="Header" transform="translate(-1146.000000, -45.000000)" stroke="#7A7D86" stroke-width="2">
+            <g id="Icons/menu" transform="translate(1147.000000, 46.000000)">
+                <line x1="0.347924929" y1="0.5" x2="35.1404179" y2="0.5" id="Line-2"></line>
+                <line x1="11.2917454" y1="10.3054173" x2="35.4883428" y2="10.2032328" id="Line-2"></line>
+                <line x1="6.45242596" y1="20.3665006" x2="35.4883428" y2="20.1421494" id="Line-2"></line>
+            </g>
+        </g>
+    </g>
+</svg>

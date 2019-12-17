@@ -1,3 +1,6 @@
 export const images = {
-  home: require("../../public/asset/images/home.jpg")
+  home: "asset/images/home.jpg",
+  logo: "asset/images/logo.png",
+
+  icMenu: "asset/images/Icons/menu.svg"
 };

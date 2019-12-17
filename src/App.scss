@@ -20,6 +20,10 @@ $colors: (
  .color__#{$name}{
   color: $glyph;
  }
+
+ .bg__#{$name}{
+   background-color: $glyph;
+ }
 }
 
 .text {
@@ -78,7 +82,31 @@ $colors: (
 }
 
 
-.image__decorate{
-  width: 500px;
-  height: 380px;
+.img{
+  &__decorate{
+    width: 500px;
+    height: 380px;
+  }
+
+  &__logo {
+   width: 150px;
+   height: 52px;
+  }
+
+  &__icon {
+      width: 32px;
+      height: 32px;
+    
+    &--small {
+      width: 16px;
+      height: 16px;
+    }
+
+    &--large{
+      width: 64px;
+      height: 64px;
+    }
+  }
 }
+
+

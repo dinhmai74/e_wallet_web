@@ -1,13 +1,14 @@
 {
   "compilerOptions": {
     "baseUrl": "src", // This must be specified if "paths" is.
-        "paths": {
-            "screens/*": ["screens/*"],
-            "components/*": ["components/*"],
-            "router/*": ["router/*"],
-            "theme/*": ["theme/*"],
-            "@colors": ["theme/color/_colors.scss"],
-            "utils/*": ["utils/*"]
-        }
+    "paths": {
+      "screens/*": ["screens/*"],
+      "components/*": ["components/*"],
+      "router/*": ["router/*"],
+      "theme/*": ["theme/*"],
+      "asset/*": ["./public/asset/*"],
+      "@colors": ["theme/color/_colors.scss"],
+      "utils/*": ["utils/*"]
+    }
   }
 }

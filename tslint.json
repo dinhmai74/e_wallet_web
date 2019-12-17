@@ -1,7 +1,9 @@
 {
   "defaultSeverity": "warning",
   "extends": ["tslint:recommended", "tslint-react", "tslint-config-prettier"],
-  "jsRules": {},
+  "jsRules": {
+    "object-literal-sort-keys": false
+  },
   "rules": {
     "prettier": true,
     "member-access": [true, "no-public"],
@@ -13,7 +15,8 @@
     "interface-name": false,
     "no-unused-expression": false,
     "jsx-boolean-value": false,
-    "noImplicitAny": false
+    "noImplicitAny": false,
+    "no-var-requires": false
   },
   "rulesDirectory": ["tslint-plugin-prettier"]
 }
