@@ -14,18 +14,8 @@ interface Props extends RouteComponentProps {
 
 export const Home: React.FC<Props> = ({ history, location, match }) => {
   // Sidebar
-  const {
-    isMobile,
-    sidebarWidth,
-    toggleSidebar,
-    useDragMain,
-    useSidebarLayout,
-    useSidebarStyle,
-    useMainStyle
-  } = useSidebar();
+  const { isMobile, toggleSidebar, useDragMain, useMainStyle } = useSidebar();
 
-  useSidebarLayout();
-  const sidebarStyle = useSidebarStyle();
   const mainStyle = useMainStyle();
   const bindMain = useDragMain();
 
@@ -36,19 +26,14 @@ export const Home: React.FC<Props> = ({ history, location, match }) => {
 
   return (
     <div className="min-h-screen relative overflow-x-hidden">
-      <Sidebar
-        style={{
-          width: sidebarWidth,
-          ...sidebarStyle
-        }}
-      />
+      <Sidebar />
 
       <animated.div
         {...(isMobile ? bindMain() : {})}
         className="flex-1 p-16"
         style={mainStyle}
       >
-        <p className="color__primary">Hello, World!</p>
+        <p className="text-primary">Hello, World!</p>
         <AppButton onClick={toggleModal}>Toggle modal</AppButton>
 
         <button className="btn btn-primary" onClick={() => toggleSidebar()}>

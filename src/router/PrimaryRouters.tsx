@@ -1,6 +1,13 @@
 import { Home } from "screens/Home";
 import { About } from "screens/About";
 import { Post } from "screens/Post";
+import { MovieTicketGeneral } from "screens/MovieTicket";
+
+export const Paths = {
+  home: "/",
+  about: "/about",
+  movieTicket: "/movie-ticket"
+};
 
 export interface RouterModel {
   path: string;
@@ -10,11 +17,11 @@ export interface RouterModel {
 export const PrimaryRouters: RouterModel[] = [
   {
     Component: Home,
-    path: "/"
+    path: Paths.home
   },
   {
     Component: About,
-    path: "/about"
+    path: Paths.about
   },
   {
     Component: Post,
@@ -23,5 +30,9 @@ export const PrimaryRouters: RouterModel[] = [
   {
     Component: Home,
     path: "/"
+  },
+  {
+    Component: MovieTicketGeneral,
+    path: Paths.movieTicket
   }
 ];

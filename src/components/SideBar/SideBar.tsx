@@ -8,6 +8,8 @@ import { useLocalStorage, useMount, useWindowSize } from "react-use";
 import { persist, immer } from "utils/zustand";
 import { icons } from "theme";
 import { Icon } from "@material-ui/core";
+import { useHistory } from "react-router-dom";
+import { Paths } from "router/PrimaryRouters";
 
 const LS_KEY = "sidebarState";
 const DEFAULT_WIDTH = 280;
@@ -82,22 +84,43 @@ const [useSidebar] = create<SidebarState>(
   )
 );
 
-function Sidebar({ style }: AnimatedProps<{ style: object }>) {
+interface ItemProps {
+  onClick: () => void;
+  children: any;
+}
+
+const Item: React.FC<ItemProps> = ({ onClick, children }) => {
+  return (
+    <div className="mb-6">
+      <button
+        className="btn bg-transparent text-white text__h3"
+        onClick={onClick}
+      >
+        {children}
+      </button>
+    </div>
+  );
+};
+
+function Sidebar() {
   const {
     toggleSidebar,
     useDragSidebar,
-    useSidebarStyle,
-    sidebarWidth
+    sidebarWidth,
+    useSidebarStyle
   } = useSidebar();
 
   const bindSidebar = useDragSidebar();
 
+  const history = useHistory();
+  const styles = useSidebarStyle();
+
   return (
     <animated.div
       {...bindSidebar()}
-      className="fixed top-0 h-full scrolling-touch"
+      className="fixed top-0 h-full scrolling-touch py-6 px-10"
       style={{
-        ...style,
+        ...styles,
         sidebarWidth,
         position: "absolute",
         right: 0,
@@ -105,16 +128,21 @@ function Sidebar({ style }: AnimatedProps<{ style: object }>) {
         backgroundColor: colors.navBg
       }}
     >
-      <div className="justify-end items-end content-end bg__blue">
+      <button className="btn bg-transparent w-full text-left mb-8">
         <Icon
           style={{ color: colors.white }}
           fontSize="large"
-          className="my-6 self-end bg__red text-right"
+          className="self-end mr-0 d-block"
+          onClick={() => toggleSidebar()}
         >
           close
         </Icon>
-      </div>
-      <p className="text-primary">afdskjl</p>
+      </button>
+
+      <Item onClick={() => history.push("/")}>Home</Item>
+      <Item onClick={() => history.push(Paths.movieTicket)}>
+        Buy movie ticket
+      </Item>
     </animated.div>
   );
 }

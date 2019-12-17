@@ -1,6 +1,6 @@
 $pale-grey: #f2f5fa;
 $primary: #ee5f7b;
-$secondary: "#5fed77";
+$secondary: #5fed77;
 $navy: #001433;
 $blue-grey: #91a2bc;
 $steel: #7a7d86;
@@ -9,7 +9,7 @@ $red: #d0021b;
 $blue: #4a90e2;
 $greyish-brown: #4a4a4a;
 $white: #ffffff;
-$black: #000;
+$black: #000000;
 
 :export {
   paleGrey: $pale-grey;
@@ -26,3 +26,7 @@ $black: #000;
   black: $black;
   navBg: $black;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities
