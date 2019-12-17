@@ -1,10 +1,13 @@
 import React from "react";
 import create from "zustand";
+import colors from "theme/color/_colors.scss";
+
 import { useDrag } from "react-use-gesture";
-import { useSpring, animated, to } from "react-spring";
+import { useSpring, animated, AnimatedProps, to } from "react-spring";
 import { useLocalStorage, useMount, useWindowSize } from "react-use";
 import { persist, immer } from "utils/zustand";
-import { AppButton } from "./AppButton";
+import { icons } from "theme";
+import { Icon } from "@material-ui/core";
 
 const LS_KEY = "sidebarState";
 const DEFAULT_WIDTH = 280;
@@ -36,7 +39,7 @@ const [useSidebar] = create<SidebarState>(
       },
       useSidebarStyle: () => {
         const { translate } = useSpring({
-          translate: [get().isOpen ? 0 : -100]
+          translate: [get().isOpen ? 0 : 100]
         });
         return {
           transform: to(translate, x => `translateX(${x}%)`)
@@ -45,7 +48,7 @@ const [useSidebar] = create<SidebarState>(
       useMainStyle: () => {
         const { isMobile, isOpen, sidebarWidth } = get();
         return useSpring({
-          marginLeft: isMobile ? 0 : isOpen ? sidebarWidth : 0
+          marginRight: isMobile ? 0 : isOpen ? 0 : sidebarWidth
         });
       },
       useSidebarLayout: () => {
@@ -57,7 +60,7 @@ const [useSidebar] = create<SidebarState>(
           set((state: SidebarState) => {
             state.sidebarWidth = isMobile ? width : DEFAULT_WIDTH;
             state.isMobile = isMobile;
-            state.isOpen = persistedState ? persistedState.isOpen : false;
+            state.isOpen = persistedState.isOpen;
           });
         });
       },
@@ -79,32 +82,39 @@ const [useSidebar] = create<SidebarState>(
   )
 );
 
-function Sidebar() {
+function Sidebar({ style }: AnimatedProps<{ style: object }>) {
   const {
-    sidebarWidth,
     toggleSidebar,
     useDragSidebar,
-    useSidebarStyle
+    useSidebarStyle,
+    sidebarWidth
   } = useSidebar();
 
-  const styles = useSidebarStyle();
   const bindSidebar = useDragSidebar();
 
   return (
     <animated.div
       {...bindSidebar()}
-      className="fixed top-0 left-0 h-full text-white py-12 px-6 overflow-x-scroll overflow-y-scroll scrolling-touch"
+      className="fixed top-0 h-full scrolling-touch"
       style={{
-        ...styles,
-        width: sidebarWidth,
-        backgroundColor: "#121212"
+        ...style,
+        sidebarWidth,
+        position: "absolute",
+        right: 0,
+        bot: 0,
+        backgroundColor: colors.navBg
       }}
     >
-      <AppButton className="mb-16" onClick={() => toggleSidebar()}>
-        Close
-      </AppButton>
-
-      <p>Sidebar</p>
+      <div className="justify-end items-end content-end bg__blue">
+        <Icon
+          style={{ color: colors.white }}
+          fontSize="large"
+          className="my-6 self-end bg__red text-right"
+        >
+          close
+        </Icon>
+      </div>
+      <p className="text-primary">afdskjl</p>
     </animated.div>
   );
 }

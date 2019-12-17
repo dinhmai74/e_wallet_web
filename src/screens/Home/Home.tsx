@@ -36,14 +36,19 @@ export const Home: React.FC<Props> = ({ history, location, match }) => {
 
   return (
     <div className="min-h-screen relative overflow-x-hidden">
-      <Sidebar />
+      <Sidebar
+        style={{
+          width: sidebarWidth,
+          ...sidebarStyle
+        }}
+      />
 
       <animated.div
         {...(isMobile ? bindMain() : {})}
         className="flex-1 p-16"
         style={mainStyle}
       >
-        <p className="text-teal-600">Hello, World!</p>
+        <p className="color__primary">Hello, World!</p>
         <AppButton onClick={toggleModal}>Toggle modal</AppButton>
 
         <button className="btn btn-primary" onClick={() => toggleSidebar()}>

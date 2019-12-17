@@ -8,6 +8,6 @@
             "theme/*": ["theme/*"],
             "@colors": ["theme/color/_colors.scss"],
             "utils/*": ["utils/*"]
-        }
+        },
   }
 }
