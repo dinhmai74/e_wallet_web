@@ -1,5 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
+import { Screen } from "components";
 
 export const MovieTicketGeneral: React.FC = ({}) => {
-  return <div>123</div>;
+  return (
+    <Screen>
+      <div>1232</div>
+    </Screen>
+  );
 };

@@ -5,13 +5,14 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { PrimaryRouters } from "router/PrimaryRouters";
 import { ThemeProvider } from "@material-ui/core";
 import { theme } from "theme/materialUITheme";
-import { Sidebar } from "components";
+import { Sidebar, Header } from "components";
 
 const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
         <Sidebar />
+        <Header />
         <Switch>
           {PrimaryRouters.map(val => {
             return (

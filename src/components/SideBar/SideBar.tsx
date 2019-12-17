@@ -128,16 +128,18 @@ function Sidebar() {
         backgroundColor: colors.navBg
       }}
     >
-      <button className="btn bg-transparent w-full text-left mb-8">
-        <Icon
-          style={{ color: colors.white }}
-          fontSize="large"
-          className="self-end mr-0 d-block"
-          onClick={() => toggleSidebar()}
-        >
-          close
-        </Icon>
-      </button>
+      <div className="w-full">
+        <button className="btn ml-0 pl-0 bg-transparent text-left mb-8">
+          <Icon
+            style={{ color: colors.white }}
+            fontSize="large"
+            className="self-end ml-0 d-block pl-0"
+            onClick={() => toggleSidebar()}
+          >
+            close
+          </Icon>
+        </button>
+      </div>
 
       <Item onClick={() => history.push("/")}>Home</Item>
       <Item onClick={() => history.push(Paths.movieTicket)}>
