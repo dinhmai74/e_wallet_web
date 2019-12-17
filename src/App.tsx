@@ -1,21 +1,33 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import "./App.scss";
+import "./styles/index.scss";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { PrimaryRouters } from "router/PrimaryRouters";
+import { ThemeProvider } from "@material-ui/core";
+import { theme } from "theme/materialUITheme";
+import { Sidebar, Header } from "components";
 
 const App: React.FC = () => {
   return (
-    <BrowserRouter>
-      <Switch>
-        {PrimaryRouters.map(val => {
-          return (
-            <Route path={val.path} component={val.Component} key={val.path} />
-          );
-        })}
-        <Route path="/" render={() => <div>404</div>} />
-      </Switch>
-    </BrowserRouter>
+    <ThemeProvider theme={theme}>
+      <BrowserRouter>
+        <Sidebar />
+        <Header />
+        <Switch>
+          {PrimaryRouters.map(val => {
+            return (
+              <Route
+                path={val.path}
+                component={val.Component}
+                key={val.path}
+                exact
+              />
+            );
+          })}
+          <Route path="/" render={() => <div>404</div>} />
+        </Switch>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 };
 

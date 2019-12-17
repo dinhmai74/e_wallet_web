@@ -1,7 +1,12 @@
 import * as React from "react";
+import { animated } from "react-spring";
 import { Link, RouteComponentProps } from "react-router-dom";
 import { SpecialButton } from "components/SpecialButton";
-import styles from './Home.module.css'
+import styles from "./Home.module.scss";
+import cx from "classnames"; // Optional classname helper library
+
+import { Button } from "react-bootstrap";
+import { Screen } from "components";
 
 interface Props extends RouteComponentProps {
   [rest: string]: any;
@@ -9,19 +14,8 @@ interface Props extends RouteComponentProps {
 
 export const Home: React.FC<Props> = ({ history, location, match }) => {
   return (
-    <div>
-      <div>home</div>
-      <Link to="/about">go to about</Link>
-      <button
-        onClick={() => {
-          // api call
-          // change to the about page
-          history.push("/about");
-        }}
-      >
-        click me to go to about
-      </button>
-      <SpecialButton />
-    </div>
+    <Screen>
+      <p>Hello</p>
+    </Screen>
   );
 };
