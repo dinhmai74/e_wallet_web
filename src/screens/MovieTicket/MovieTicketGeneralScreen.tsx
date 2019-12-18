@@ -1,10 +1,11 @@
 import React from "react";
 import { Screen } from "components";
+import { MovieTicketHots } from "./MovieTicketHots";
 
 export const MovieTicketGeneral: React.FC = () => {
   return (
-    <Screen>
-      <div>1232</div>
+    <Screen className="">
+      <MovieTicketHots />
     </Screen>
   );
 };
