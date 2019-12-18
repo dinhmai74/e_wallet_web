@@ -10,6 +10,10 @@ export const images = {
   },
   icon: {
     menu: "asset/images/Icons/menu.svg",
-    arrowHalf: "asset/images/Icons/arrow-half-right.svg"
+    arrowHalf: "asset/images/Icons/arrow-half-right.png"
+  },
+  movie: {
+    illu_watch: "asset/images/movies/illu_watch.png",
+    illu_movie: "asset/images/movies/ill_movie.png"
   }
 };

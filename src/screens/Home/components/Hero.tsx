@@ -52,7 +52,7 @@ export const Hero: React.FC<HeroModel> = ({
   const renderImg = () => (
     <img
       src={src}
-      className={`self-center ${imgMargin} ${imgStyle}`}
+      className={`self-center ${imgMargin} ${imgStyle} hidden img__decorate sm:hidden md:hidden lg:block xl:block`}
       alt="illstration"
     />
   );
