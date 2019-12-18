@@ -1,7 +1,4 @@
 import React from "react";
-import { action } from "@storybook/addon-actions";
-import { Button } from "@storybook/react/demo";
-import { Image } from 'react-bootstrap'
 import { images } from '../src/theme'
 
 export default {
@@ -11,6 +8,6 @@ export default {
 
 export const TestImage = () => (
   <div>
-    <img src={images.home} className="image__decorate" />
+    <img src={images.home.general} className="image__decorate" alt="test" />
   </div>
 );

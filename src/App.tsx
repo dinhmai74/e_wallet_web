@@ -6,6 +6,9 @@ import { PrimaryRouters } from "router/PrimaryRouters";
 import { ThemeProvider } from "@material-ui/core";
 import { theme } from "theme/materialUITheme";
 import { Sidebar, Header } from "components";
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+AOS.init();
 
 const App: React.FC = () => {
   return (

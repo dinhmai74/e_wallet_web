@@ -1,5 +1,4 @@
 import React from "react";
-import * as Space from "react-spaces";
 
 import { useSidebar } from "components/SideBar";
 import { animated } from "react-spring";
@@ -30,7 +29,9 @@ export const ScreenPadding: React.FC = ({ children }) => {
 };
 
 export const Screen: React.FC<ScreenProps> = ({ children, preset }) => {
-  if (preset === "default") return <ScreenPadding>{children}</ScreenPadding>;
+  if (preset === "default") {
+    return <ScreenPadding>{children}</ScreenPadding>;
+  }
   return <div>123</div>;
 };
 

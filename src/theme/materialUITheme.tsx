@@ -18,6 +18,12 @@ export const theme = createMuiTheme({
           backgroundColor: styles.primary,
           color: "#fff"
         }
+      },
+      text: {
+        fontSize: 40,
+        color: "blue",
+        fontWeight: 400,
+        fontFamily: "Rubik"
       }
     }
   }

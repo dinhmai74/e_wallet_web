@@ -1,1 +1,1 @@
-export * from "./MovieTicketGeneral";
+export * from "./MovieTicketGeneralScreen";
