@@ -3,10 +3,9 @@ import create from "zustand";
 import colors from "theme/color/_colors.scss";
 
 import { useDrag } from "react-use-gesture";
-import { useSpring, animated, AnimatedProps, to } from "react-spring";
+import { useSpring, animated, to } from "react-spring";
 import { useLocalStorage, useMount, useWindowSize } from "react-use";
 import { persist, immer } from "utils/zustand";
-import { icons } from "theme";
 import { Icon } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
 import { Paths } from "router/PrimaryRouters";
@@ -115,6 +114,11 @@ function Sidebar() {
   const history = useHistory();
   const styles = useSidebarStyle();
 
+  const handleOnClick = (path: string) => {
+    history.push(path);
+    toggleSidebar();
+  };
+
   return (
     <animated.div
       {...bindSidebar()}
@@ -141,8 +145,8 @@ function Sidebar() {
         </button>
       </div>
 
-      <Item onClick={() => history.push("/")}>Home</Item>
-      <Item onClick={() => history.push(Paths.movieTicket)}>
+      <Item onClick={() => handleOnClick("/")}>Home</Item>
+      <Item onClick={() => handleOnClick(Paths.movieTicket)}>
         Buy movie ticket
       </Item>
     </animated.div>
