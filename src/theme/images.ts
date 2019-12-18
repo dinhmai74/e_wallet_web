@@ -8,6 +8,8 @@ export const images = {
     train: "asset/images/home/train.png",
     movie: "asset/images/home/movie.png"
   },
-
-  icMenu: "asset/images/Icons/menu.svg"
+  icon: {
+    menu: "asset/images/Icons/menu.svg",
+    arrowHalf: "asset/images/Icons/arrow-half-right.svg"
+  }
 };
