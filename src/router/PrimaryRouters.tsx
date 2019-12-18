@@ -2,11 +2,13 @@ import { HomeScreen } from "screens/Home";
 import { About } from "screens/About";
 import { Post } from "screens/Post";
 import { MovieTicketGeneral } from "screens/MovieTicket";
+import { BuyPhoneCardGeneral } from "screens/buy-phone-card/buy-phone-card-general/buy-phone-card-general";
 
 export const Paths = {
   home: "/",
   about: "/about",
-  movieTicket: "/movie-ticket"
+  movieTicket: "/movie-ticket",
+  buyPhoneCardGeneral: "/buy-phone-card-general"
 };
 
 export interface RouterModel {
@@ -34,5 +36,9 @@ export const PrimaryRouters: RouterModel[] = [
   {
     Component: MovieTicketGeneral,
     path: Paths.movieTicket
+  },
+  {
+    Component: BuyPhoneCardGeneral,
+    path: Paths.buyPhoneCardGeneral
   }
 ];

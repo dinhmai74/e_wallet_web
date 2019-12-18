@@ -47,7 +47,9 @@ const HerosHome: HeroModel[] = [
       "More buy, more discount."
     ],
     type: "right",
-    imgStyle: "img__decorate--mobile-card"
+    imgStyle: "img__decorate--mobile-card",
+    navigateTo: "buy-phone-card-general",
+    buttonTx: "Buy Mobile Card"
   },
   {
     src: images.home.movie,

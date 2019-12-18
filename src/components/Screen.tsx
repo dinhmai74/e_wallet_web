@@ -20,7 +20,7 @@ export const ScreenPadding: React.FC = ({ children }) => {
   return (
     <animated.div
       {...(isMobile ? bindMain() : {})}
-      className="flex-1 px-20"
+      className="flex-1"
       style={mainStyle}
     >
       {children}
