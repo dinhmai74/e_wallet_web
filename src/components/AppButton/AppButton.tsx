@@ -1,18 +1,13 @@
 import React from "react";
 import { Button, ButtonProps } from "@material-ui/core";
-import styled from "styled-components";
-import colors from "theme/color/_colors.scss";
 import { Theme } from "@material-ui/core";
 import { withStyles } from "@material-ui/styles";
 
-const StyledButton = styled(Button)`
-  &:hover {
-    background: ${colors.primary};
-  }
-`;
-
 const styles: (theme: Theme) => any = theme => {
   return {
+    root: {
+      borderRadius: 6
+    },
     contained: {
       "&:hover": {
         backgroundColor: theme.palette.primary.main,
@@ -25,7 +20,14 @@ const styles: (theme: Theme) => any = theme => {
         opacity: 0.2
       }
     },
-    outlined: {}
+    outlined: {},
+
+    label: {
+      textTransform: "capitalize",
+      fontSize: 16,
+      fontFamily: "Rubik",
+      fontWeight: 400
+    }
   };
 };
 
@@ -35,17 +37,10 @@ export interface AppButtonProps extends ButtonProps {
 }
 
 export const AppButton = withStyles(styles)((props: AppButtonProps) => {
-  const { color, className, variant, tx, children, ...rest } = props;
-  const classes = props.classes || {};
+  const { color, className, tx, children, ...rest } = props;
   const content = children || tx;
   return (
-    <Button
-      {...props}
-      color={color}
-      className={`${className} 
-    // @ts-ignore
-    ${classes[variant]}`}
-    >
+    <Button {...rest} color={color} className={`${className} `}>
       {content}
     </Button>
   );

@@ -1,4 +1,4 @@
-import { Home } from "screens/Home";
+import { HomeScreen } from "screens/Home";
 import { About } from "screens/About";
 import { Post } from "screens/Post";
 import { MovieTicketGeneral } from "screens/MovieTicket";
@@ -16,7 +16,7 @@ export interface RouterModel {
 
 export const PrimaryRouters: RouterModel[] = [
   {
-    Component: Home,
+    Component: HomeScreen,
     path: Paths.home
   },
   {
@@ -28,7 +28,7 @@ export const PrimaryRouters: RouterModel[] = [
     path: "posts/:id"
   },
   {
-    Component: Home,
+    Component: HomeScreen,
     path: "/"
   },
   {

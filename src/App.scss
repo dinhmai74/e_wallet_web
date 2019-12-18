@@ -85,8 +85,12 @@ $colors: (
 .img{
   &__decorate{
     width: 500px;
-    height: 380px;
+
+    &--mobile-card{
+      width: 480px;
+    }
   }
+
 
   &__logo {
    width: 150px;
