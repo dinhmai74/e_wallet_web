@@ -29,5 +29,5 @@ export const Screen: React.FC<ScreenProps> = ({ children, className }) => {
 };
 
 Screen.defaultProps = {
-  className: " pt-32"
+  className: "px-20 pt-32"
 };
