@@ -9,8 +9,7 @@ export const images = {
     movie: "asset/images/home/movie.png"
   },
   icon: {
-    menu: "asset/images/Icons/menu.svg",
-    arrowHalf: "asset/images/Icons/arrow-half-right.svg"
+    menu: "asset/images/Icons/menu.svg"
   },
   iconProvider: {
     viettel: "asset/images/viettel.png",

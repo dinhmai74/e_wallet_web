@@ -152,14 +152,8 @@ $colors: (
 
   &__icon {
     width: 32px;
-    height: 32px;
 
-    &--small {
-      width: 16px;
-      height: 16px;
-    }
-
-    &--large {
+    &--md {
       width: 64px;
       height: 64px;
     }
@@ -167,7 +161,7 @@ $colors: (
 
   &__poster{
     width: 320px;
-    height: 480px;
+    height: 32rem;
   }
 
   &-sm{
@@ -240,3 +234,11 @@ $colors: (
     opacity: 1;
   }
 }
+
+/* ------------------------ shadow ------------------------ */
+
+.a-shadow {
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+}
+
+

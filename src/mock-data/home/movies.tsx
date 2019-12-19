@@ -121,7 +121,6 @@ export const PlaceData: PlaceModel[] = [
   }
 ];
 
-const BaseDir = "/asset/images/movies/";
 const tempDesc = `In the near future, humans are augmented with cybernetic improvements to traits such as vision, strength, and intelligence. Augmentation developer Hanka Robotics establishes a secret project to develop an artificial body, or "shell", that can integrate a human brain rather than an AI. Mira Killian, the sole survivor of a cyberterrorist attack which killed her parents, is chosen as the test subject after her body is damaged beyond repair. Over the objections of her designer Dr. Ouelet, Hanka's CEO, Cutter, decides to use Killian as a counter-terrorism operative.
 
 A year later, Killian has attained the rank of Major in the anti-terrorist bureau Section 9, working alongside operatives Batou and Togusa under Chief Daisuke Aramaki. Killian, who experiences hallucinations that Ouelet dismisses as glitches, is troubled by how little she remembers of her past. The team thwarts a terrorist attack on a Hanka business conference, and Killian destroys a robotic geisha after it murders a hostage. After learning that the geisha was hacked by an unknown entity known as Kuze, Killian breaks protocol and "dives" into its AI for answers. The entity attempts a counter-hack, and Batou is forced to disconnect her. They trace the hacker to a yakuza nightclub, where they are lured into a trap. The explosion destroys Batou's eyes and damages Killian's body. Cutter is enraged by Killian's actions, and threatens to have Section 9 shut down unless Aramaki keeps her in line.
@@ -200,7 +199,7 @@ export const HotMovieData: MovieModel[] = [
     title: "Frozen II",
     source: {
       uri:
-        "https://resizing.flixster.com/IaXbRF4gIPh9jireK_4VCPNfdKc=/300x0/v2/https://flxt.tmsimg.com/assets/p14568920_p_v10_av.jpg"
+        "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRaBMVvmkv08w6m_4FRVQspIV_hc5G_URBlbxnQW_ql18evNvz-"
     },
     digitalType: 0,
     dimensionType: 1,
