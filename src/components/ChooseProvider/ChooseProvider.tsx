@@ -26,7 +26,7 @@ export const ChooseProvider: React.FC = () => {
   const classes = useStyles();
   return (
     <div
-      className=" d-flex flex-wrap px-40 py-10 mb-64  justify-center "
+      className=" d-flex flex-wrap  px-10 py-10 mb-64  justify-center "
       style={{ backgroundColor: "#f2f5fa" }}
     >
       <p className="`text__h2 color__steel font-bold pl-16">Choose Provider:</p>
