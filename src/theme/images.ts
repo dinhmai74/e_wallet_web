@@ -16,5 +16,9 @@ export const images = {
     viettel: "asset/images/viettel.png",
     vcb: "asset/images/vcb.jpeg",
     viettinbank: "asset/images/viettinbank.png"
+  },
+  movie: {
+    illu_watch: "asset/images/movies/illu_watch.png",
+    illu_movie: "asset/images/movies/ill_movie.png"
   }
 };

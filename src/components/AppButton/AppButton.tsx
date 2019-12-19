@@ -10,9 +10,9 @@ const styles: (theme: Theme) => any = theme => {
     },
     contained: {
       "&:hover": {
+        opacity: 0.6,
         backgroundColor: theme.palette.primary.main,
-        color: theme.palette.primary.contrastText,
-        opacity: 0.6
+        color: theme.palette.primary.contrastText
       },
       "&:disabled": {
         backgroundColor: theme.palette.primary.main,

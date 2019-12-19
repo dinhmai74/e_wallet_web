@@ -122,7 +122,7 @@ function Sidebar() {
   return (
     <animated.div
       {...bindSidebar()}
-      className="fixed top-0 h-full scrolling-touch py-6 px-10"
+      className="fixed top-0 h-full scrolling-touch py-6 px-10 z-50"
       style={{
         ...styles,
         sidebarWidth,
