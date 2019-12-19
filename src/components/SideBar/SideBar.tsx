@@ -66,15 +66,19 @@ const [useSidebar] = create<SidebarState>(
         });
       },
       useDragSidebar: () => {
+        const { width } = useWindowSize();
         return useDrag(({ direction, velocity, last }) => {
-          if (direction[0] < -D_THRESHOLD && last && velocity > V_THRESHOLD) {
+          if (direction[0] > D_THRESHOLD && last && velocity > V_THRESHOLD) {
+            if (width > 500) return;
             get().toggleSidebar();
           }
         });
       },
       useDragMain: () => {
+        const { width } = useWindowSize();
         return useDrag(({ direction, velocity, last }) => {
-          if (direction[0] > D_THRESHOLD && last && velocity > V_THRESHOLD) {
+          if (direction[0] < -D_THRESHOLD && last && velocity > V_THRESHOLD) {
+            if (width > 500) return;
             get().toggleSidebar();
           }
         });

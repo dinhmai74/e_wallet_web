@@ -9,7 +9,7 @@ export const Header: React.FC = () => {
   const absolute = "absolute";
   return (
     <div
-      className={`flex py-12 px-20 flex-row justify-between inset-x-0 top-0 ${absolute} z-0`}
+      className={`flex min-w-screen py-12 pl-20 md:pr-20 flex-row justify-between inset-x-0 top-0 ${absolute} z-0`}
     >
       <img src={images.logo} className="img__logo" alt="logo" />
       <IconMenu onClick={toggleSidebar} width={metrics.icon.md} />

@@ -17,7 +17,7 @@ export const Poster: React.FC<Props> = props => {
   return (
     <div className="flex-row hidden md:block lg:block xl:block">
       <div className="relative z-10 img__poster">
-        <img src={src} alt="poster" className="z-10 mr-20 img__poster" />
+        <img src={src} alt="poster" className="z-10 mr-20 img__movie--poster" />
 
         <RoundedButton
           className={cx("", styles["icon--left"], styles.icon)}

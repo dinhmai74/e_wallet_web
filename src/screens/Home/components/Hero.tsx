@@ -1,6 +1,7 @@
 import React from "react";
 import { AppButton } from "components";
 import { useHistory } from "react-router";
+import { useWindowSize } from "react-use";
 
 type HeroType = "left" | "right";
 
@@ -42,9 +43,9 @@ export const Hero: React.FC<HeroModel> = ({
   const imgMargin = "";
 
   if (type === "right") {
-    txMargin = "ml-20";
+    txMargin = "md:ml-20";
   } else {
-    txMargin = "ml-20";
+    txMargin = "md:ml-20";
   }
 
   const history = useHistory();
@@ -75,7 +76,9 @@ export const Hero: React.FC<HeroModel> = ({
   };
 
   const containerClassName =
-    "flex flex-row items-center justify-center py-24 self-stretch max-h-screen";
+    "flex flex-row sm:items-center sm:justify-center py-24 self-stretch max-h-screen pl-56 sm:pl-0";
+
+  const { width } = useWindowSize();
   return (
     <div
       className={containerClassName}

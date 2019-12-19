@@ -43,7 +43,7 @@ export const useHotMovie = () => {
     setTimeout(() => {
       setIsChanging(false);
     }, nextMovieTime / 2);
-  }, [movie, setIsChanging]);
+  }, [movie, setIsChanging, changeInterval]);
 
   const setNewMovie = (type: NextMovieType) => {
     type === "next" ? nextIdx() : preIdx();
