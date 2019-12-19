@@ -1,5 +1,4 @@
 import React from "react";
-import { AppCard, AppCardContent } from "components/AppCard";
 import { images } from "theme";
 import { makeStyles } from "@material-ui/core/styles";
 import colors from "theme/color/_colors.scss";
