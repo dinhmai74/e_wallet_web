@@ -48,7 +48,7 @@ const HerosHome: HeroModel[] = [
     ],
     type: "right",
     imgStyle: "img__decorate--mobile-card",
-    navigateTo: "buy-phone-card-general",
+    navigateTo: "buy-phone-card-detail",
     buttonTx: "Buy Mobile Card"
   },
   {

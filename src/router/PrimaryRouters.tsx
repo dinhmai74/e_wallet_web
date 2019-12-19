@@ -3,12 +3,14 @@ import { About } from "screens/About";
 import { Post } from "screens/Post";
 import { MovieTicketGeneral } from "screens/MovieTicket";
 import { BuyPhoneCardGeneral } from "screens/buy-phone-card/buy-phone-card-general/buy-phone-card-general";
+import { BuyPhoneCardDetail } from "screens/buy-phone-card/buy-phone-card-general/BuyPhoneCardDetail";
 
 export const Paths = {
   home: "/",
   about: "/about",
   movieTicket: "/movie-ticket",
-  buyPhoneCardGeneral: "/buy-phone-card-general"
+  buyPhoneCardGeneral: "/buy-phone-card-general",
+  buyPhoneCardDetail: "/buy-phone-card-detail"
 };
 
 export interface RouterModel {
@@ -40,5 +42,9 @@ export const PrimaryRouters: RouterModel[] = [
   {
     Component: BuyPhoneCardGeneral,
     path: Paths.buyPhoneCardGeneral
+  },
+  {
+    Component: BuyPhoneCardDetail,
+    path: Paths.buyPhoneCardDetail
   }
 ];

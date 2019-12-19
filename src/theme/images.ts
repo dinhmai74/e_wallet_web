@@ -20,5 +20,8 @@ export const images = {
   movie: {
     illu_watch: "asset/images/movies/illu_watch.png",
     illu_movie: "asset/images/movies/ill_movie.png"
+  },
+  phoneCard: {
+    bgPhoneCardDetail: "asset/images/bg/bg-polygon.png"
   }
 };
