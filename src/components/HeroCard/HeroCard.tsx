@@ -97,7 +97,7 @@ export const HeroCard: React.FC<HeroModel> = ({
   };
 
   const containerClassName =
-    "flex flex-row items-center justify-center py-24 self-stretch max-h-screen absolute .inset-x-0.top-0";
+    "flex flex-row items-center justify-center absolute inset-y-0 right-0 left-0 ";
   return (
     <div
       className={containerClassName}
