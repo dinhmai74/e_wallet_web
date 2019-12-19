@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import TextAnim, { ITextyProps } from "rc-texty";
+// import TextAnim, { ITextyProps } from "rc-texty";
 
 import { HotMovieData } from "mock-data/home/movies";
 import { Pagination } from "screens/MovieTicket/MovieTicketHots/components/Pagination";
