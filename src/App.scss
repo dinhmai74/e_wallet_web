@@ -40,7 +40,7 @@ $screen-xl-min: 1200px;
 }
 
 :root {
-  font-size: 8px;
+  font-size: 10px;
 }
 
 @include s-md() {
@@ -89,6 +89,11 @@ $colors: (
 }
 
 .text {
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: $greyish-brown;
   &__t1 {
     font-size: 3.3125rem;
   }
@@ -101,8 +106,12 @@ $colors: (
     font-size: 1.875rem;
   }
 
-  &__quote {
+  &__h4 {
     font-size: 1.5rem;
+  }
+
+  &__quote {
+    font-size: 1rem;
     font-style: italic;
   }
 
@@ -112,47 +121,6 @@ $colors: (
 
   &__d1 {
     font-size: 1rem;
-  }
-}
-
-@include s-md() {
-  .text {
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: $greyish-brown;
-    &__t1 {
-      font-size: 3.3125rem;
-      font-weight: bold;
-    }
-
-    &__h1 {
-      font-size: 2.25rem;
-      font-weight: bold;
-    }
-
-    &__h2 {
-      font-size: 1.875rem;
-      font-weight: bold;
-    }
-
-    &__quote {
-      font-size: 1.5rem;
-      font-weight: normal;
-      line-height: 1.42;
-      font-style: italic;
-    }
-
-    &__b1 {
-      font-size: 1rem;
-      font-weight: 500;
-    }
-
-    &__d1 {
-      font-size: 1rem;
-      font-weight: normal;
-    }
   }
 }
 
@@ -188,8 +156,8 @@ $colors: (
     }
 
     &--normal {
-      width: 300px;
-      height: 28rem;
+      width: 220px;
+      height: 300px;
     }
   }
 

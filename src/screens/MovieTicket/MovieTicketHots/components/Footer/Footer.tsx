@@ -12,7 +12,7 @@ interface Props {
 }
 
 export const Footer: React.FC<Props> = ({ movie, isChanging }) => {
-  const absolutePos = "absolute inset-x-0 bottom-0";
+  const absolutePos = "md:absolute inset-x-0 bottom-0";
 
   const sidePadding = 24;
 
@@ -29,12 +29,14 @@ export const Footer: React.FC<Props> = ({ movie, isChanging }) => {
   const anim = isChanging ? "anim--fadeIn" : "";
 
   return (
-    <div className={`${absolutePos} h-68 px-${sidePadding}`}>
-      <AppButton tx="test" className={`relative z-10 py-2 ${anim}`}>
+    <div className={`${absolutePos} md:h-68 px-${sidePadding}`}>
+      <AppButton className={`md:relative z-10 py-2 my-8 md:my-0 ${anim}`}>
         <p className="pl-12 pr-4">View more</p>
         <IconArrowHalf width={metrics.icon.sm} />
       </AppButton>
-      <Wallpaper className={`bg__bg-17 h-64 py-8 px-${sidePadding}`}>
+      <Wallpaper
+        className={`bg__bg-17 h-64 py-8 px-${sidePadding} hidden md:block`}
+      >
         <InfoMovieShowing idx={idx} nextTitle={nextTitle} className={anim} />
       </Wallpaper>
     </div>
