@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ReactCSSTransitionGroup from "react-addons-css-transition-group"; // ES6
+// import ReactCSSTransitionGroup from "react-addons-css-transition-group"; // ES6
 
 import { Wallpaper } from "components/Wallpaper";
 import { AppButton } from "components";

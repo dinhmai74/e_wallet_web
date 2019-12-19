@@ -10,7 +10,12 @@ export const images = {
   },
   icon: {
     menu: "asset/images/Icons/menu.svg",
-    arrowHalf: "asset/images/Icons/arrow-half-right.png"
+    arrowHalf: "asset/images/Icons/arrow-half-right.svg"
+  },
+  iconProvider: {
+    viettel: "asset/images/viettel.png",
+    vcb: "asset/images/vcb.jpeg",
+    viettinbank: "asset/images/viettinbank.png"
   },
   movie: {
     illu_watch: "asset/images/movies/illu_watch.png",
