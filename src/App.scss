@@ -1,13 +1,4 @@
-body {
-  font-family: "Rubik", sans-serif;
-}
-
-:root {
-  font-size: 16px;
-}
-
 @import "./theme/color/colors";
-
 // Small tablets and large smartphones (landscape view)
 $screen-sm-min: 576px;
 
@@ -48,6 +39,26 @@ $screen-xl-min: 1200px;
   }
 }
 
+:root {
+  font-size: 10px;
+}
+
+@include s-md() {
+  :root {
+    font-size: 16px;
+  }
+}
+
+$shadow-color: rgba(0, 0, 0, 0.1);
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
 $colors: (
   "pale-grey": $pale-grey,
   "primary": $primary,
@@ -77,10 +88,7 @@ $colors: (
   }
 }
 
-/* ------------- text ------------- */
-
 .text {
-  font-family: AvenirNext;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
@@ -88,49 +96,31 @@ $colors: (
   color: $greyish-brown;
   &__t1 {
     font-size: 3.3125rem;
-    font-weight: bold;
   }
 
   &__h1 {
     font-size: 2.25rem;
-    font-weight: bold;
   }
 
   &__h2 {
     font-size: 1.875rem;
-    font-weight: bold;
-  }
-
-  &__h3 {
-    font-size: 1.5rem;
-    font-weight: bold;
   }
 
   &__h4 {
-    font-size: 1.25rem;
-    font-weight: bold;
-  }
-
-  &__d2 {
-    font-size: 1.75rem;
-    font-weight: bold;
+    font-size: 1.5rem;
   }
 
   &__quote {
-    font-size: 1.5rem;
-    font-weight: normal;
-    line-height: 1.42;
+    font-size: 1rem;
     font-style: italic;
   }
 
   &__b1 {
     font-size: 1rem;
-    font-weight: 500;
   }
 
   &__d1 {
     font-size: 1rem;
-    font-weight: normal;
   }
 }
 
@@ -152,37 +142,37 @@ $colors: (
 
   &__icon {
     width: 32px;
-    height: 32px;
 
-    &--small {
-      width: 16px;
-      height: 16px;
-    }
-
-    &--large {
+    &--md {
       width: 64px;
       height: 64px;
     }
   }
 
-  &__poster{
-    width: 320px;
-    height: 480px;
+  &__movie {
+    &--poster {
+      width: 320px;
+      height: 32rem;
+    }
+
+    &--normal {
+      width: 220px;
+      height: 300px;
+    }
   }
 
-  &-sm{
-      width: 150px;
-      height: auto;
+  &-sm {
+    width: 150px;
+    height: auto;
   }
 
-  &-md{
-      width: 250px;
-      height: auto;
+  &-md {
+    width: 250px;
+    height: auto;
   }
 }
 
-/* ------------------------ movie ticket ------------------------ */
-.anim{
+.anim {
   &--fadeIn {
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadein 2s; /* Firefox < 16 */
@@ -201,17 +191,16 @@ $colors: (
   }
 }
 
-/* Firefox < 16 */
 @-moz-keyframes fadein {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
 }
 
-/* Safari, Chrome and Opera > 12.1 */
 @-webkit-keyframes fadein {
   from {
     opacity: 0;
@@ -221,7 +210,6 @@ $colors: (
   }
 }
 
-/* Internet Explorer */
 @-ms-keyframes fadein {
   from {
     opacity: 0;
@@ -231,7 +219,6 @@ $colors: (
   }
 }
 
-/* Opera < 12.1 */
 @-o-keyframes fadein {
   from {
     opacity: 0;
@@ -239,4 +226,10 @@ $colors: (
   to {
     opacity: 1;
   }
+}
+
+// ------------------------ shadow ------------------------
+
+.a-shadow {
+  box-shadow: 0 0 15px $shadow-color;
 }
