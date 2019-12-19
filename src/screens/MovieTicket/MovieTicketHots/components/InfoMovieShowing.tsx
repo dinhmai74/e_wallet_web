@@ -1,21 +1,16 @@
-import React, { useEffect, useState } from "react";
-import TextAnim, { ITextyProps } from "rc-texty";
+import React from "react";
 
 import { HotMovieData } from "mock-data/home/movies";
 import { Pagination } from "screens/MovieTicket/MovieTicketHots/components/Pagination";
 import { AnimText } from "screens/MovieTicket/MovieTicketHots/components/AnimText";
-import { useBoolean } from "react-use";
-import { useHotMovie } from "screens/MovieTicket/MovieTicketHots/useHotMovie";
 
 interface Props {
   idx: number;
-  title: string;
   nextTitle: string;
   className?: string;
 }
 export const InfoMovieShowing: React.FC<Props> = ({
   idx,
-  title,
   nextTitle,
   className
 }) => {
