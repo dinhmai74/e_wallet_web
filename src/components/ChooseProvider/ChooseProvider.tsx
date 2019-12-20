@@ -30,7 +30,7 @@ export const ChooseProvider: React.FC = () => {
     >
       <p className="`text__h2 color__steel font-bold pl-16">Choose Provider:</p>
       <div className="flex flex-row  py-10 flex-wrap ">
-        <AppButton variant="text" className="pl-16 pt-12">
+        <AppButton variant="text" className="pl-16 pt-12" >
           <Card className={classes.card}>
             <CardMedia
               className={classes.media}
