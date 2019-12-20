@@ -9,6 +9,11 @@ export enum MovieDigitalType {
   Digital
 }
 
+export interface CastModel {
+  src: string;
+  name: string;
+}
+
 export interface MovieModel {
   id: string;
   title: string;
@@ -20,7 +25,9 @@ export interface MovieModel {
   releaseDate: string | Date | Moment;
   director: string;
   cast: string;
+  casts: CastModel[];
   description: string;
+  trailSrc: string;
 }
 
 export interface MovieTimeModel {
@@ -140,12 +147,51 @@ export const HotMovieData: MovieModel[] = [
     source: {
       uri: "http://www.movienewsletters.net/photos/209706R1.jpg"
     },
+    casts: [
+      {
+        name: "Leo Rose",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Curtis Bryant",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Johanna Craig",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Ronnie Wood",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Lettie Parker",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Susan Perkins",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Ronnie Wood",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Lettie Parker",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Susan Perkins",
+        src: "https://source.unsplash.com/400x400/?face"
+      }
+    ],
     digitalType: 0,
     dimensionType: 0,
     duration: 120,
     releaseDate: "2020-01-20",
     stars: 7,
     director: "	Rupert Sanders",
+    trailSrc: "G4VmJcZR0Yg",
     cast:
       "Bryan Dennis,Angel Evans,Hulda Todd,Mayme Newton,Peter Gibson,Angel Smith,Callie Harris,Floyd Hernandez,Helena Watkins",
     description: `In the near future, humans are augmented with cybernetic improvements to traits such as vision, strength, and intelligence. Augmentation developer Hanka Robotics establishes a secret project to develop an artificial body, or "shell", that can integrate a human brain rather than an AI. Mira Killian, the sole survivor of a cyberterrorist attack which killed her parents, is chosen as the test subject after her body is damaged beyond repair. Over the objections of her designer Dr. Ouelet, Hanka's CEO, Cutter, decides to use Killian as a counter-terrorism operative.
@@ -163,9 +209,60 @@ export const HotMovieData: MovieModel[] = [
   {
     id: "49b48aa1-2261-4b30-9454-0da5ee37520f",
     title: "Mantera",
+    casts: [
+      {
+        name: "Leo Rose",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Curtis Bryant",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Johanna Craig",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Ronnie Wood",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Lettie Parker",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Susan Perkins",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Ronnie Wood",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Lettie Parker",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Susan Perkins",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Ronnie Wood",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Lettie Parker",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Susan Perkins",
+        src: "https://source.unsplash.com/400x400/?face"
+      }
+    ],
     source: {
       uri: "https://i.jeded.com/i/mantera.6694.jpg"
     },
+    trailSrc: "q4yYeIft61c",
     digitalType: 0,
     dimensionType: 0,
     duration: 120,
@@ -183,6 +280,58 @@ export const HotMovieData: MovieModel[] = [
       uri:
         "https://images-na.ssl-images-amazon.com/images/I/71rNJQ2g-EL._SY679_.jpg"
     },
+    casts: [
+      {
+        name: "Leo Rose",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Ronnie Wood",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Lettie Parker",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Susan Perkins",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Ronnie Wood",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Lettie Parker",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Susan Perkins",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+
+      {
+        name: "Curtis Bryant",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Johanna Craig",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Ronnie Wood",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Lettie Parker",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Susan Perkins",
+        src: "https://source.unsplash.com/400x400/?face"
+      }
+    ],
+    trailSrc: "9NJj12tJzqc",
     digitalType: 0,
     dimensionType: 0,
     duration: 180,
@@ -201,6 +350,7 @@ export const HotMovieData: MovieModel[] = [
       uri:
         "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRaBMVvmkv08w6m_4FRVQspIV_hc5G_URBlbxnQW_ql18evNvz-"
     },
+    trailSrc: "Zi4LMpSDccc",
     digitalType: 0,
     dimensionType: 1,
     duration: 180,
@@ -208,7 +358,57 @@ export const HotMovieData: MovieModel[] = [
     stars: 10,
     director: "Chris Buck, Jennifer Lee",
     description: `Elsa the Snow Queen has an extraordinary gift -- the power to create ice and snow. But no matter how happy she is to be surrounded by the people of Arendelle, Elsa finds herself strangely unsettled. After hearing a mysterious voice call out to her, Elsa travels to the enchanted forests and dark seas beyond her kingdom -- an adventure that soon turns into a journey of self-discovery.`,
+    casts: [
+      {
+        name: "Leo Rose",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Ronnie Wood",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Lettie Parker",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Susan Perkins",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Ronnie Wood",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Lettie Parker",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Susan Perkins",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
 
+      {
+        name: "Curtis Bryant",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Johanna Craig",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Ronnie Wood",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Lettie Parker",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Susan Perkins",
+        src: "https://source.unsplash.com/400x400/?face"
+      }
+    ],
     cast:
       "Hunter Moody, Justin McBride, Jerry Adams, Mabelle Williams, Ernest Klein, Ora James, Irene Spencer, Pauline Moran, Josephine Griffith, Betty Steele, Mark Wade"
   }
@@ -219,6 +419,32 @@ export const MovieData: MovieModel[] = [
   {
     id: "5202faa8-d326-4633-8fbf-61c741ed833f",
     title: "Extra ordinary",
+    casts: [
+      {
+        name: "Leo Rose",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Curtis Bryant",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Johanna Craig",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Ronnie Wood",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Lettie Parker",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Susan Perkins",
+        src: "https://source.unsplash.com/400x400/?face"
+      }
+    ],
     source: {
       uri:
         "https://m.media-amazon.com/images/M/MV5BOTZiMzZiNTktZGRkNi00Yzc4LWEyZTYtMTEzOGZjOTFkNWZkXkEyXkFqcGdeQXVyMTI4Mjg4MjA@._V1_.jpg"
@@ -230,13 +456,14 @@ export const MovieData: MovieModel[] = [
     stars: 8,
     director: "Lettie Wise",
     description: tempDesc,
-
+    trailSrc: "8V1dEsZAQyg",
     cast:
       "Lenora Boyd, Cynthia Flowers, Harold Reeves, Antonio Warner, Isabelle Wallace,Harriett Sanchez , Connor Wolfe, Winifred Lyons, Ann Wallace"
   },
   {
     id: "97dab2ea-62dc-4817-8e2b-dfbefd02cb76",
     title: "Charlies angles",
+    trailSrc: "RSUq4VfWfjE",
     source: {
       uri:
         "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/christmas-day-movies-charlies-angels-1567050231.jpg?crop=0.9891196834817012xw:1xh;center,top&resize=480:*"
@@ -250,6 +477,57 @@ export const MovieData: MovieModel[] = [
     description: tempDesc,
 
     cast:
-      "Josie Lewis, Sally Maxwell, Aiden Ballard, Bertie Torres, Louise Lane,Bill Hunter , Callie Peters"
+      "Josie Lewis, Sally Maxwell, Aiden Ballard, Bertie Torres, Louise Lane,Bill Hunter , Callie Peters",
+    casts: [
+      {
+        name: "Leo Rose",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Ronnie Wood",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Lettie Parker",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Susan Perkins",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Ronnie Wood",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Lettie Parker",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Susan Perkins",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+
+      {
+        name: "Curtis Bryant",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Johanna Craig",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Ronnie Wood",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Lettie Parker",
+        src: "https://source.unsplash.com/400x400/?face"
+      },
+      {
+        name: "Susan Perkins",
+        src: "https://source.unsplash.com/400x400/?face"
+      }
+    ]
   }
 ];

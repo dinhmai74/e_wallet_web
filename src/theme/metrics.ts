@@ -3,5 +3,10 @@ export const metrics = {
     sm: 32,
     md: 64,
     lg: 129
+  },
+  img: {
+    sm: 200,
+    md: 300,
+    lg: 400
   }
 };

@@ -1,25 +1,38 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import ScrollMenu from "react-horizontal-scrolling-menu";
 import { Screen } from "components";
 import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
 
 import { MovieTicketHots } from "./MovieTicketHots";
-import "./MovieTicketGenenralScreen.scss";
 import { MovieData } from "mock-data/home/movies";
 import { MovieCard } from "screens/MovieTicket/components/MovieCard";
+import { observer } from "mobx-react";
+import { MovieTicketStoreContext } from "stores/MovieTicketStore";
+import { useHistory } from "react-router";
+import { Paths } from "router/PrimaryRouters";
 
-const UpcomingListMovies = () =>
-  MovieData.map(el => {
-    const { id } = el;
-    return <MovieCard movie={el} key={id} />;
+const UpcomingListMovies = () => {
+  const history = useHistory();
+  return MovieData.map(el => {
+    const { id: eID } = el;
+    return (
+      <MovieCard
+        movie={el}
+        key={eID}
+        onClick={id => {
+          history.push(Paths.movieTicketDetail + `/${eID}`);
+        }}
+      />
+    );
   });
+};
 
 const ArrowLeft = () => <ArrowBackIos />;
 const ArrowRight = () => <ArrowForwardIos />;
 
-export const MovieTicketGeneral: React.FC = () => {
-  const [, setOnSelect] = useState();
+export const MovieTicketGeneral: React.FC = observer(() => {
   const onShowing = UpcomingListMovies();
+
   return (
     <Screen className="">
       <MovieTicketHots />
@@ -35,9 +48,6 @@ export const MovieTicketGeneral: React.FC = () => {
             data={onShowing}
             arrowLeft={ArrowLeft()}
             arrowRight={ArrowRight()}
-            onSelect={idx => {
-              setOnSelect(idx);
-            }}
           />
         </div>
       </div>
@@ -53,12 +63,9 @@ export const MovieTicketGeneral: React.FC = () => {
             data={onShowing}
             arrowLeft={ArrowLeft()}
             arrowRight={ArrowRight()}
-            onSelect={idx => {
-              setOnSelect(idx);
-            }}
           />
         </div>
       </div>
     </Screen>
   );
-};
+});

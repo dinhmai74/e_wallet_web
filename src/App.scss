@@ -40,7 +40,7 @@ $screen-xl-min: 1200px;
 }
 
 :root {
-  font-size: 10px;
+  font-size: 13px;
 }
 
 @include s-md() {
@@ -90,9 +90,6 @@ $colors: (
 
 .text {
   font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
   color: $greyish-brown;
   &__t1 {
     font-size: 3.3125rem;
@@ -117,6 +114,7 @@ $colors: (
 
   &__b1 {
     font-size: 1rem;
+    line-height: 1.5rem;
   }
 
   &__d1 {
@@ -152,7 +150,7 @@ $colors: (
   &__movie {
     &--poster {
       width: 320px;
-      height: 32rem;
+      height: 30rem;
     }
 
     &--normal {
@@ -232,4 +230,8 @@ $colors: (
 
 .a-shadow {
   box-shadow: 0 0 15px $shadow-color;
+}
+
+.footer{
+  min-height: 40vh;
 }

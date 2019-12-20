@@ -1,5 +1,5 @@
 import React from "react";
-import { useHotMovie } from "screens/MovieTicket/MovieTicketHots/useHotMovie";
+import { useHotMovie } from "screens/MovieTicket/MovieTicketGeneralScreen/MovieTicketHots/useHotMovie";
 
 interface Props {
   children: string;
