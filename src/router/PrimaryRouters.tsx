@@ -1,7 +1,10 @@
 import { HomeScreen } from "screens/Home";
 import { About } from "screens/About";
 import { Post } from "screens/Post";
-import { MovieTicketGeneral } from "screens/MovieTicket";
+import {
+  MovieTicketGeneral,
+  MovieTicketChoseInfoScreen
+} from "screens/MovieTicket";
 import { BuyPhoneCardGeneral } from "screens/buy-phone-card/buy-phone-card-general/buy-phone-card-general";
 import { MovieTicketDetailSreen } from "screens/MovieTicket/MovieTicketDetailScreen";
 
@@ -10,6 +13,7 @@ export const Paths = {
   about: "/about",
   movieTicket: "/movie-ticket",
   movieTicketDetail: "/movie-ticket/detail",
+  movieTicketChoseInfo: "/movie-ticket/chose-info",
   buyPhoneCardGeneral: "/buy-phone-card-general"
 };
 
@@ -42,6 +46,10 @@ export const PrimaryRouters: RouterModel[] = [
   {
     Component: MovieTicketDetailSreen,
     path: Paths.movieTicketDetail + "/:id"
+  },
+  {
+    Component: MovieTicketChoseInfoScreen,
+    path: Paths.movieTicketChoseInfo
   },
   {
     Component: BuyPhoneCardGeneral,
