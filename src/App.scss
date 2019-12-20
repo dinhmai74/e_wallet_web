@@ -1,8 +1,63 @@
-body {
-  font-family: "Rubik", sans-serif;
+@import "./theme/color/colors";
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+// Small devices
+@mixin s-sm {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
 }
 
-@import "./theme/color/colors";
+// Medium devices
+@mixin s-md {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin s-lg {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+// Extra large devices
+@mixin s-xl {
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+
+:root {
+  font-size: 13px;
+}
+
+@include s-md() {
+  :root {
+    font-size: 16px;
+  }
+}
+
+$shadow-color: rgba(0, 0, 0, 0.1);
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
 
 $colors: (
   "pale-grey": $pale-grey,
@@ -14,103 +69,169 @@ $colors: (
   "red": $red,
   "blue": $blue,
   "grey": $greyish-brown,
+  "white": $white,
+  "black": $black,
+  "navBg": $black,
+  "bg": $window-blue,
+  "bg-5": $window-blue-5,
+  "bg-10": $window-blue-10,
+  "bg-17": $window-blue-17
 );
 
 @each $name, $glyph in $colors {
- .color__#{$name}{
-  color: $glyph;
- }
+  .color__#{$name} {
+    color: $glyph;
+  }
 
- .bg__#{$name}{
-   background-color: $glyph;
- }
+  .bg__#{$name} {
+    background-color: $glyph;
+  }
 }
 
 .text {
-  font-family: AvenirNext;
   font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
   color: $greyish-brown;
   &__t1 {
-    font-size: 53px;
-    font-weight: bold;
+    font-size: 3.3125rem;
   }
 
   &__h1 {
-    font-size: 36px;
-    font-weight: bold;
+    font-size: 2.25rem;
   }
 
   &__h2 {
-    font-size: 30px;
-    font-weight: bold;
-  }
-
-  &__h3 {
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 1.875rem;
   }
 
   &__h4 {
-    font-size: 20px;
-    font-weight: bold;
-  }
-
-  &__d2 {
-    font-size: 28px;
-    font-weight: bold;
+    font-size: 1.5rem;
   }
 
   &__quote {
-    font-size: 24px;
-    font-weight: normal;
-    line-height: 1.42;
+    font-size: 1rem;
     font-style: italic;
   }
 
   &__b1 {
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 
   &__d1 {
-    font-size: 16px;
-    font-weight: normal;
+    font-size: 1rem;
   }
 }
 
+/* ------------- img ------------- */
 
-.img{
-  &__decorate{
+.img {
+  &__decorate {
     width: 500px;
 
-    &--mobile-card{
+    &--mobile-card {
       width: 480px;
     }
   }
 
-
   &__logo {
-   width: 150px;
-   height: 52px;
+    width: 150px;
+    height: 52px;
   }
 
   &__icon {
-      width: 32px;
-      height: 32px;
-    
-    &--small {
-      width: 16px;
-      height: 16px;
-    }
+    width: 32px;
 
-    &--large{
+    &--md {
       width: 64px;
       height: 64px;
     }
   }
+
+  &__movie {
+    &--poster {
+      width: 320px;
+      height: 30rem;
+    }
+
+    &--normal {
+      width: 220px;
+      height: 300px;
+    }
+  }
+
+  &-sm {
+    width: 150px;
+    height: auto;
+  }
+
+  &-md {
+    width: 250px;
+    height: auto;
+  }
 }
 
+.anim {
+  &--fadeIn {
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s; /* Firefox < 16 */
+    -ms-animation: fadein 2s; /* Internet Explorer */
+    -o-animation: fadein 2s; /* Opera < 12.1 */
+    animation: fadein 2s;
+  }
+}
 
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// ------------------------ shadow ------------------------
+
+.a-shadow {
+  box-shadow: 0 0 15px $shadow-color;
+}
+
+.footer{
+  min-height: 40vh;
+}

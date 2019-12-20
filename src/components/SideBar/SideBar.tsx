@@ -66,15 +66,19 @@ const [useSidebar] = create<SidebarState>(
         });
       },
       useDragSidebar: () => {
+        const { width } = useWindowSize();
         return useDrag(({ direction, velocity, last }) => {
-          if (direction[0] < -D_THRESHOLD && last && velocity > V_THRESHOLD) {
+          if (direction[0] > D_THRESHOLD && last && velocity > V_THRESHOLD) {
+            if (width > 500) return;
             get().toggleSidebar();
           }
         });
       },
       useDragMain: () => {
+        const { width } = useWindowSize();
         return useDrag(({ direction, velocity, last }) => {
-          if (direction[0] > D_THRESHOLD && last && velocity > V_THRESHOLD) {
+          if (direction[0] < -D_THRESHOLD && last && velocity > V_THRESHOLD) {
+            if (width > 500) return;
             get().toggleSidebar();
           }
         });
@@ -122,7 +126,7 @@ function Sidebar() {
   return (
     <animated.div
       {...bindSidebar()}
-      className="fixed top-0 h-full scrolling-touch py-6 px-10"
+      className="fixed top-0 h-full scrolling-touch py-6 px-10 z-50"
       style={{
         ...styles,
         sidebarWidth,

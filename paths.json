@@ -6,9 +6,12 @@
       "components/*": ["components/*"],
       "router/*": ["router/*"],
       "theme/*": ["theme/*"],
-      "asset/*": ["./public/asset/*"],
       "@colors": ["theme/color/_colors.scss"],
-      "utils/*": ["utils/*"]
+      "utils/*": ["utils/*"],
+      "stores/*": ["stores/*"],
+      "mock-data/*": ["mock-data/*"],
+      "icons/*": ["../public/asset/images/Icons/*"],
+      "images/*": ["../public/asset/images/*"]
     }
   }
 }

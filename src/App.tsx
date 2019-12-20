@@ -7,7 +7,11 @@ import { ThemeProvider } from "@material-ui/core";
 import { theme } from "theme/materialUITheme";
 import { Sidebar, Header } from "components";
 import AOS from "aos";
+
 import "aos/dist/aos.css"; // You can also use <link> for styles
+import { PageNotFound } from "components/PageNotFound";
+import { ImgNotFound404 } from "theme";
+import { Footer } from "components/Footer";
 AOS.init();
 
 const App: React.FC = () => {
@@ -27,8 +31,14 @@ const App: React.FC = () => {
               />
             );
           })}
-          <Route path="/" render={() => <div>404</div>} />
+          <Route
+            path="/"
+            render={() => (
+              <PageNotFound Img={ImgNotFound404} message="Page not found" />
+            )}
+          />
         </Switch>
+        <Footer />
       </BrowserRouter>
     </ThemeProvider>
   );

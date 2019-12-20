@@ -1,3 +1,6 @@
+export { ReactComponent as ImgNotFound404 } from "./raw-img/404.svg";
+export { ReactComponent as ImgNotFound } from "./raw-img/notFound.svg";
+
 export const images = {
   logo: "asset/images/logo.png",
   home: {
@@ -8,6 +11,16 @@ export const images = {
     train: "asset/images/home/train.png",
     movie: "asset/images/home/movie.png"
   },
-
-  icMenu: "asset/images/Icons/menu.svg"
+  icon: {
+    menu: "asset/images/Icons/menu.svg"
+  },
+  iconProvider: {
+    viettel: "asset/images/viettel.png",
+    vcb: "asset/images/vcb.jpeg",
+    viettinbank: "asset/images/viettinbank.png"
+  },
+  movie: {
+    illu_watch: "asset/images/movies/illu_watch.png",
+    illu_movie: "asset/images/movies/ill_movie.png"
+  }
 };

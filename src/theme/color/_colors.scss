@@ -10,6 +10,10 @@ $blue: #4a90e2;
 $greyish-brown: #4a4a4a;
 $white: #ffffff;
 $black: #000000;
+$window-blue: #3896BA;
+$window-blue-17: #DDEDF3;
+$window-blue-5: #F5F9FB;
+$window-blue-10: #EBF4F8;
 
 :export {
   paleGrey: $pale-grey;
@@ -25,6 +29,10 @@ $black: #000000;
   white: $white;
   black: $black;
   navBg: $black;
+  bg: $window-blue;
+  bg5: $window-blue-5;
+  bg10: $window-blue-10;
+  bg17: $window-blue-17;
 }
 
 @tailwind base;
