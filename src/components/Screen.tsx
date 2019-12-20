@@ -15,7 +15,7 @@ export const Screen: React.FC<ScreenProps> = ({ children, className }) => {
   const mainStyle = useMainStyle();
   const bindMain = useDragMain();
 
-  const clName = `flex-1 ${className}`;
+  const clName = `flex-1 ${className} overflow-hidden`;
 
   return (
     <animated.div
@@ -29,5 +29,5 @@ export const Screen: React.FC<ScreenProps> = ({ children, className }) => {
 };
 
 Screen.defaultProps = {
-  className: "px-20 pt-32"
+  className: " md:px-20 lg:px-20 pt-32"
 };

@@ -1,21 +1,16 @@
-import React, { useEffect, useState } from "react";
-// import TextAnim, { ITextyProps } from "rc-texty";
+import React from "react";
 
 import { HotMovieData } from "mock-data/home/movies";
-import { Pagination } from "screens/MovieTicket/MovieTicketHots/components/Pagination";
+import { Pagination } from "screens/MovieTicket/MovieTicketHots/components/Footer/Pagination";
 import { AnimText } from "screens/MovieTicket/MovieTicketHots/components/AnimText";
-import { useBoolean } from "react-use";
-import { useHotMovie } from "screens/MovieTicket/MovieTicketHots/useHotMovie";
 
 interface Props {
   idx: number;
-  title: string;
   nextTitle: string;
   className?: string;
 }
 export const InfoMovieShowing: React.FC<Props> = ({
   idx,
-  title,
   nextTitle,
   className
 }) => {
@@ -25,9 +20,10 @@ export const InfoMovieShowing: React.FC<Props> = ({
     >
       <Pagination activeIdx={idx + 1} total={HotMovieData.length} />
       <div className="ml-16">
-        <AnimText className={`text__h1 color__blue-grey `}>
+        <AnimText className="text__h1 color__blue-grey ">
           The next movie:
         </AnimText>
+
         <br />
         <AnimText className={`text__b1 color__steel `}>{nextTitle}</AnimText>
       </div>
