@@ -31,7 +31,7 @@ export const MovieTicketDetailSreen: React.FC<Props> = () => {
   const onShowing = UpcomingListMovies(casts);
 
   return (
-    <Screen className="pl-20 pt-32">
+    <Screen className="pl-20 pt-40">
       <div className="flex flex-row">
         <MovieTicketDeatilScreenInfo movie={movie} className="md:w-1/2 pr-20" />
         <div className={cx(styles.youtube, "hidden md:block")}>

@@ -42,10 +42,7 @@ const HerosHome: HeroModel[] = [
   {
     src: images.home.mobile,
     title: "Mobile card",
-    content: [
-      "With us, discount is just a number.",
-      "More buy, more discount."
-    ],
+    content: ["Discount is just a number.", "More buy, more discount."],
     type: "right",
     imgStyle: "img__decorate--mobile-card",
     navigateTo: "buy-phone-card-general",

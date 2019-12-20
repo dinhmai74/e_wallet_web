@@ -1,4 +1,6 @@
 import React from "react";
+import styled from "styled-components";
+
 import { images } from "theme";
 import { useSidebar } from "components/SideBar";
 import { IconMenu } from "theme/Icons";
@@ -19,7 +21,11 @@ export const Header: React.FC = () => {
         alt="logo"
         onClick={() => history.push("/")}
       />
-      <IconMenu onClick={toggleSidebar} width={metrics.icon.md} />
+      <StyledIconMenu onClick={toggleSidebar} width={metrics.icon.md} />
     </div>
   );
 };
+
+export const StyledIconMenu = styled(IconMenu)`
+  cursor: pointer;
+`;

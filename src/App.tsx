@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.scss";
 import "./styles/index.scss";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import {
+  BrowserRouter,
+  Route,
+  Switch,
+  Router,
+  useLocation
+} from "react-router-dom";
 import { PrimaryRouters } from "router/PrimaryRouters";
 import { ThemeProvider } from "@material-ui/core";
 import { theme } from "theme/materialUITheme";
@@ -14,16 +20,29 @@ import { ImgNotFound404 } from "theme";
 import { Footer } from "components/Footer";
 AOS.init();
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
+        <ScrollToTop />
+
         <Sidebar />
         <Header />
         <Switch>
           {PrimaryRouters.map(val => {
             return (
               <Route
+                onUpdate={() => window.scrollTo(0, 0)}
                 path={val.path}
                 component={val.Component}
                 key={val.path}
