@@ -3,7 +3,7 @@ import { AppButton } from "components";
 import { useHistory } from "react-router";
 import { makeStyles } from "@material-ui/core/styles";
 import colors from "theme/color/_colors.scss";
-import { Card, CardMedia } from "@material-ui/core";
+import { Card, } from "@material-ui/core";
 
 type HeroType = "left" | "right";
 
@@ -24,7 +24,6 @@ const useStyles = makeStyles(theme => ({
     borderRadius: 10,
     backgroundColor: colors.white,
     maxWidth: 345,
-    marginRight: 60,
     marginBottom: 30
   },
   media: {
@@ -38,7 +37,7 @@ const Lines: React.FC<{ content: string[] }> = ({ content }) => {
     <>
       {content.map((val, idx) => (
         <React.Fragment key={idx}>
-          <p className="text__h2 color__steel font-normal" key={idx}>
+          <p className="text__h2 color__blue-grey font-normal" key={idx}>
             {val}
           </p>
           <br />
@@ -107,7 +106,7 @@ export const HeroCard: React.FC<HeroModel> = ({
     >
       {type === "left" && renderImg()}
       <div className={`self-center ${txMargin}`}>
-        <p className={`text__t1 color__grey`}>{title}</p>
+        <p className={`text__t1 color__grey  font-bold`}>{title}</p>
         <br />
         <Lines content={content} />
         {renderButton()}
