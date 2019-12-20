@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import { MovieModel } from "mock-data/home/movies";
 
 interface Props {

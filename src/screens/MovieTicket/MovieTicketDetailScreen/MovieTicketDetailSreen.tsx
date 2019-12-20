@@ -9,7 +9,6 @@ import { MovieData, CastModel } from "mock-data/home/movies";
 import { ImgNotFound } from "theme";
 import { PageNotFound } from "components/PageNotFound";
 import styles from "./MovieTicketDetailScreen.module.scss";
-import { useWindowSize } from "react-use";
 import ScrollMenu from "react-horizontal-scrolling-menu";
 import { CastAvatar } from "screens/MovieTicket/MovieTicketDetailScreen/components/CastAvatar";
 import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
@@ -19,7 +18,6 @@ interface Props {}
 export const MovieTicketDetailSreen: React.FC<Props> = () => {
   const { id } = useParams();
   const movie = MovieData.find(val => val.id === id);
-  const { height, width } = useWindowSize();
 
   if (!movie) {
     return <PageNotFound Img={ImgNotFound} />;

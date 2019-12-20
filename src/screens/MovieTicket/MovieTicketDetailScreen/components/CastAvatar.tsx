@@ -1,6 +1,5 @@
 import React from "react";
-import { Avatar, createStyles, makeStyles, Theme } from "@material-ui/core";
-import cx from "classnames";;
+import { Avatar } from "@material-ui/core";
 
 interface Props {
   src: string;
@@ -8,10 +7,10 @@ interface Props {
 }
 
 export const CastAvatar: React.FC<Props> = props => {
-  const { src, name } = props;
+  const { name } = props;
   // not real data so we rando img
   const id = Math.floor(Math.random() * 1000) + 1;
-  const size= 70
+  const size = 70;
 
   return (
     <div className="flex-column m-4 items-center justify-center">
@@ -22,7 +21,7 @@ export const CastAvatar: React.FC<Props> = props => {
         style={{
           width: size,
           height: size,
-          alignSelf: "center",
+          alignSelf: "center"
         }}
       />
       <p className="text__d3 color__blue-grey text-center mt-4">{name}</p>

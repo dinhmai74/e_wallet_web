@@ -69,7 +69,9 @@ const [useSidebar] = create<SidebarState>(
         const { width } = useWindowSize();
         return useDrag(({ direction, velocity, last }) => {
           if (direction[0] > D_THRESHOLD && last && velocity > V_THRESHOLD) {
-            if (width > 500) return;
+            if (width > 500) {
+              return;
+            }
             get().toggleSidebar();
           }
         });
@@ -78,7 +80,9 @@ const [useSidebar] = create<SidebarState>(
         const { width } = useWindowSize();
         return useDrag(({ direction, velocity, last }) => {
           if (direction[0] < -D_THRESHOLD && last && velocity > V_THRESHOLD) {
-            if (width > 500) return;
+            if (width > 500) {
+              return;
+            }
             get().toggleSidebar();
           }
         });

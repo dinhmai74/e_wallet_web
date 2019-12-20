@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import ScrollMenu from "react-horizontal-scrolling-menu";
 import { Screen } from "components";
 import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
@@ -8,7 +8,6 @@ import { MovieTicketHots } from "./MovieTicketHots";
 import { MovieData } from "mock-data/home/movies";
 import { MovieCard } from "screens/MovieTicket/components/MovieCard";
 import { observer } from "mobx-react";
-import { MovieTicketStoreContext } from "stores/MovieTicketStore";
 import { useHistory } from "react-router";
 import { Paths } from "router/PrimaryRouters";
 

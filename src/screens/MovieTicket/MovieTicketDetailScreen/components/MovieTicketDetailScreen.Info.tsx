@@ -1,7 +1,6 @@
 import React from "react";
 import moment from "moment";
 import TextTruncate from "react-text-truncate";
-import styled from "styled-components";
 
 import {
   MovieModel,
@@ -10,7 +9,6 @@ import {
 } from "mock-data/home/movies";
 import { DateFormat } from "utils/strings";
 import { useBoolean } from "react-use";
-import { ArrowDownward, ArrowDropUp } from "@material-ui/icons";
 
 interface Props {
   movie: MovieModel;
@@ -26,7 +24,6 @@ export const MovieTicketDeatilScreenInfo: React.FC<Props> = props => {
     dimensionType,
     director,
     duration,
-    casts,
     releaseDate
   } = movie;
   const subTx = `${MovieDimensionType[dimensionType]} | ${

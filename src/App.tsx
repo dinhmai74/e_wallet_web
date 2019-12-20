@@ -1,13 +1,7 @@
 import React, { useEffect } from "react";
 import "./App.scss";
 import "./styles/index.scss";
-import {
-  BrowserRouter,
-  Route,
-  Switch,
-  Router,
-  useLocation
-} from "react-router-dom";
+import { BrowserRouter, Route, Switch, useLocation } from "react-router-dom";
 import { PrimaryRouters } from "router/PrimaryRouters";
 import { ThemeProvider } from "@material-ui/core";
 import { theme } from "theme/materialUITheme";
