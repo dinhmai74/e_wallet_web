@@ -21,7 +21,7 @@
 @tailwind components;
 @tailwind utilities;
 :root {
-  font-size: 8px; }
+  font-size: 10px; }
 
 @media (min-width: 768px) {
   :root {
@@ -129,47 +129,28 @@ body {
 .bg__bg-17 {
   background-color: #DDEDF3; }
 
-.text__t1 {
-  font-size: 3.3125rem; }
-.text__h1 {
-  font-size: 2.25rem; }
-.text__h2 {
-  font-size: 1.875rem; }
-.text__quote {
-  font-size: 1.5rem;
-  font-style: italic; }
-.text__b1 {
-  font-size: 1rem; }
-.text__d1 {
-  font-size: 1rem; }
+.text {
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4a4a4a; }
+  .text__t1 {
+    font-size: 3.3125rem; }
+  .text__h1 {
+    font-size: 2.25rem; }
+  .text__h2 {
+    font-size: 1.875rem; }
+  .text__h4 {
+    font-size: 1.5rem; }
+  .text__quote {
+    font-size: 1rem;
+    font-style: italic; }
+  .text__b1 {
+    font-size: 1rem; }
+  .text__d1 {
+    font-size: 1rem; }
 
-@media (min-width: 768px) {
-  .text {
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #4a4a4a; }
-    .text__t1 {
-      font-size: 3.3125rem;
-      font-weight: bold; }
-    .text__h1 {
-      font-size: 2.25rem;
-      font-weight: bold; }
-    .text__h2 {
-      font-size: 1.875rem;
-      font-weight: bold; }
-    .text__quote {
-      font-size: 1.5rem;
-      font-weight: normal;
-      line-height: 1.42;
-      font-style: italic; }
-    .text__b1 {
-      font-size: 1rem;
-      font-weight: 500; }
-    .text__d1 {
-      font-size: 1rem;
-      font-weight: normal; } }
 /* ------------- img ------------- */
 .img__decorate {
   width: 500px; }
@@ -187,8 +168,8 @@ body {
   width: 320px;
   height: 32rem; }
 .img__movie--normal {
-  width: 300px;
-  height: 28rem; }
+  width: 220px;
+  height: 300px; }
 .img-sm {
   width: 150px;
   height: auto; }

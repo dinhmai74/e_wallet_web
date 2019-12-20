@@ -1,9 +1,11 @@
 import React from "react";
-import { Footer } from "screens/MovieTicket/MovieTicketHots/components/Footer";
-import { useHotMovie } from "screens/MovieTicket/MovieTicketHots/useHotMovie";
-import styles from "./MovieTicketHots.module.scss";
+import TextTruncate from "react-text-truncate";
 import cx from "classnames";
-import { Poster } from "screens/MovieTicket/MovieTicketHots/components/Poster";
+
+import { Footer } from "screens/MovieTicket/MovieTicketGeneralScreen/MovieTicketHots/components/Footer";
+import { useHotMovie } from "screens/MovieTicket/MovieTicketGeneralScreen/MovieTicketHots/useHotMovie";
+import styles from "./MovieTicketHots.module.scss";
+import { Poster } from "screens/MovieTicket/MovieTicketGeneralScreen/MovieTicketHots/components/Poster";
 
 export const MovieTicketHots: React.FC = () => {
   const { movie, isChanging, setNextMovie } = useHotMovie();
@@ -36,11 +38,13 @@ export const InfoContent: React.FC<{
       <p className={`text__t1 color__grey ${anim}`}>{title}</p>
       <br />
       <div className="flex flex-row">
-        <p
-          className={(cx(`text__b1 ${anim} z-10 relative`), styles.description)}
-        >
-          {description}
-        </p>
+        <TextTruncate
+          line={3}
+          element="span"
+          className={(cx(`text__b1 ${anim}`), styles.description)}
+          truncateText="…"
+          text={description}
+        />
       </div>
     </div>
   );
