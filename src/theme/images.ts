@@ -24,6 +24,7 @@ export const images = {
     illu_movie: "asset/images/movies/ill_movie.png"
   },
   phoneCard: {
-    bgPhoneCardDetail: "asset/images/bg/bg-polygon.png"
+    bgPhoneCardDetail: "asset/images/bg/bg-polygon.png",
+    cash: "asset/images/cash.jpg"
   }
 };
