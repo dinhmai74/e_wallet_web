@@ -1,6 +1,6 @@
 import { configure, addDecorator } from '@storybook/react';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import "App.scss";
+import "../src/styles/index.scss"
 
 import StylesDecorator from './styles-decorator';
 
