@@ -75,7 +75,8 @@ $colors: (
   "bg": $window-blue,
   "bg-5": $window-blue-5,
   "bg-10": $window-blue-10,
-  "bg-17": $window-blue-17
+  "bg-17": $window-blue-17,
+  "bg-grey": $gainsboro
 );
 
 @each $name, $glyph in $colors {
@@ -113,12 +114,16 @@ $colors: (
   }
 
   &__b1 {
-    font-size: 1rem;
-    line-height: 1.5rem;
+    font-size: 16px;
+    line-height: 24px;
   }
 
   &__d1 {
     font-size: 1rem;
+  }
+
+  &__d2 {
+    font-size: 1.75rem;
   }
 }
 
@@ -168,6 +173,26 @@ $colors: (
   &-md {
     width: 250px;
     height: auto;
+  }
+}
+
+.icon{
+  width: 32px;
+  height: 32px;
+
+  &--tiny{
+    width: 16px;
+    height: 16px;
+  }
+
+  &--sm {
+    width: 24px;
+    height: 24px;
+  }
+
+  &--md {
+    width: 64px;
+    height: 64px;
   }
 }
 
@@ -233,6 +258,7 @@ $colors: (
   box-shadow: 0 0 15px $shadow-color;
 }
 
-.footer{
+.footer {
   min-height: 40vh;
 }
+

@@ -14,6 +14,7 @@ $window-blue: #3896BA;
 $window-blue-17: #DDEDF3;
 $window-blue-5: #F5F9FB;
 $window-blue-10: #EBF4F8;
+$gainsboro: #F1F1F1;
 
 :export {
   paleGrey: $pale-grey;
@@ -33,6 +34,7 @@ $window-blue-10: #EBF4F8;
   bg5: $window-blue-5;
   bg10: $window-blue-10;
   bg17: $window-blue-17;
+  bgGrey: $gainsboro;
 }
 
 @tailwind base;

@@ -181,6 +181,9 @@ module.exports = {
     }),
     inset: {
       "0": "0",
+      "1/2": "50%",
+      "1/4": "25%",
+      "1/5": "20%",
       auto: "auto"
     },
     letterSpacing: {
@@ -231,10 +234,11 @@ module.exports = {
       full: "100%",
       screen: "100vh"
     },
-    minWidth: {
-      "0": "0",
-      full: "100%"
-    },
+    minWidth: (theme)=>({
+        ...theme("spacing"),
+        "0": "0",
+        full: "100%"
+      }),
     objectPosition: {
       bottom: "bottom",
       center: "center",
@@ -388,6 +392,6 @@ module.exports = {
   },
   corePlugins: {},
   plugins: [
-   
+
   ]
 };

@@ -1,0 +1,27 @@
+:export {
+  paleGrey: #f2f5fa;
+  primary: #ee5f7b;
+  secondary: #5fed77;
+  navy: #001433;
+  blueGrey: #91a2bc;
+  steel: #7a7d86;
+  orangeYellow: #f5a623;
+  red: #d0021b;
+  blue: #4a90e2;
+  grey: #4a4a4a;
+  white: #ffffff;
+  black: #000000;
+  navBg: #000000;
+  bg: #3896BA;
+  bg5: #F5F9FB;
+  bg10: #EBF4F8;
+  bg17: #DDEDF3;
+  bgGrey: #F1F1F1; }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.arrow {
+  color: #91a2bc; }
+
+/*# sourceMappingURL=AppDatePickerMonthSelector.module.css.map */
