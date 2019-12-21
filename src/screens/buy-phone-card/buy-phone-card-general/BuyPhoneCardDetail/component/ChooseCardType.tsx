@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { ItemMoney } from "screens/buy-phone-card/buy-phone-card-general/BuyPhoneCardDetail/component/ItemMoney";
 import { TotalMoney } from "screens/buy-phone-card/buy-phone-card-general/BuyPhoneCardDetail/component/TotalMoney";
 import { images } from "theme";
@@ -38,10 +38,7 @@ function formatMoney(amount, decimalCount = 2, decimal = ".", thousands = ",") {
 export const ChooseCardType: React.FC = () => {
   const renderCardMoney = () => {
     return data.map((val, index) => (
-      <ItemMoney
-        title={formatMoney(val, 0)}
-        key={index}
-      />
+      <ItemMoney title={formatMoney(val, 0)} key={index} />
     ));
   };
 

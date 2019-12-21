@@ -1,8 +1,6 @@
 import React from "react";
 import { AppButton } from "components";
 import { useHistory } from "react-router";
-import { makeStyles } from "@material-ui/core/styles";
-import colors from "theme/color/_colors.scss";
 import { Card, TextField } from "@material-ui/core";
 
 type HeroType = "left" | "right";
@@ -18,20 +16,6 @@ export interface HeroModel {
   money?: number;
   value?: number;
 }
-
-const useStyles = makeStyles(theme => ({
-  card: {
-    minWidth: 275,
-    boxShadow: `0 0 15px 0 rgba(0, 0, 0, 0.1)`,
-    borderRadius: 10,
-    backgroundColor: colors.white,
-    maxWidth: 345
-  },
-  media: {
-    height: 0,
-    paddingTop: "60%" // 16:9
-  }
-}));
 
 export const TotalMoney: React.FC<HeroModel> = ({
   imgStyle,
@@ -53,7 +37,6 @@ export const TotalMoney: React.FC<HeroModel> = ({
   }
 
   const history = useHistory();
-  const classes = useStyles();
 
   const renderImg = () => (
     <img

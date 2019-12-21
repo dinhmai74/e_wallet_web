@@ -3,7 +3,6 @@ import { images } from "theme";
 import { makeStyles } from "@material-ui/core/styles";
 import colors from "theme/color/_colors.scss";
 import { Card, CardMedia } from "@material-ui/core";
-import { AppButton } from "components/AppButton";
 import { Paths } from "router/PrimaryRouters";
 import { useHistory } from "react-router";
 
