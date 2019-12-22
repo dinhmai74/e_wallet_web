@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { DateText } from "./DateText";
-import moment, { Moment } from "moment";
 import {
   AppDatePickerMonthSelector,
   DirectionType
 } from "components/AppDatePicker/AppDatePickerMonthSelector";
-import { DateFormat } from "utils/strings";
+import moment, { Moment } from "moment";
+import React, { useState } from "react";
+import { immer, persist } from "utils/zustand";
+import create from "zustand";
+import { DateText } from "./DateText";
 
 interface Props {
   className?: string;
@@ -14,65 +15,91 @@ interface Props {
   onChange: (date: Moment) => void;
 }
 
-const calcNewDateView = (
-  direction: DirectionType,
-  currentDate: Moment
-): Moment => {
-  const newDate = moment(currentDate);
-  direction === "forward"
-    ? newDate.add(1, "weeks")
-    : newDate.subtract(1, "weeks");
+interface AppDatePickerState {
+  date: Moment;
+  dateMainView: Moment;
+  getDatesViewBaseOnMain: () => Moment[];
+  setDate: (date: Moment) => void;
+  setNextWeek: () => void;
+  setPreWeek: () => void;
+  setMainDateView: (date: Moment) => void;
+}
 
-  return newDate;
-};
+const LS_KEY = "AppPickerSate";
+export const [useAppDatePicker] = create<AppDatePickerState>(
+  persist(LS_KEY)(
+    immer((set, get) => ({
+      date: moment(),
+      dateMainView: moment(),
+      getDatesViewBaseOnMain: () => {
+        const tempDates: Moment[] = [];
+        for (let i = 0; i < 7; i++) {
+          const temp = moment(get().dateMainView);
+          tempDates.push(temp.add(i, "days"));
+        }
+        return tempDates;
+      },
+      setDate: (date: Moment) => {
+        set((state: AppDatePickerState) => {
+          state.date = date;
+        });
+      },
+      setNextWeek: () => {
+        const date = get().dateMainView.add(1, "weeks");
+        get().setMainDateView(date);
+      },
+      setPreWeek: () => {
+        const date = get().dateMainView.subtract(1, "weeks");
+        get().setMainDateView(date);
+      },
+      setMainDateView: (date: Moment) => {
+        set(state => {
+          state.dateMainView = date;
+        });
+      }
+    }))
+  )
+);
 
 export const AppDatePicker: React.FC<Props> = props => {
-  const { onChange, className, minDate, maxDate } = props;
+  const { className } = props;
+  const [force, forceUpdate] = useState(false);
 
-  const [dateView, setDateView] = useState<Moment>(moment());
-  const [dateSelected, setDateSelected] = useState<Moment>(moment());
-  const [dates, setDates] = useState<Moment[]>([]);
+  const {
+    date,
+    dateMainView,
+    getDatesViewBaseOnMain,
+    setDate,
+    setNextWeek,
+    setPreWeek
+  } = useAppDatePicker();
 
   const onWeekClick = (direction: DirectionType) => {
-    const newDate = calcNewDateView(direction, dateView);
-    setDateView(moment(newDate));
+    direction === "forward" ? setNextWeek() : setPreWeek();
+    forceUpdate(!force);
   };
 
-  function updateDates() {
-    return () => {
-      const tempDates: Moment[] = [];
-      for (let i = 0; i < 7; i++) {
-        const temp = moment(dateView);
-        tempDates.push(temp.add(i, "days"));
-      }
-
-      setDates(tempDates);
-    };
-  }
-
-  useEffect(updateDates(), [dateView]);
-
-  useEffect(() => {
-    onChange(moment(dateSelected));
-  }, [dateSelected, onChange]);
+  const dates = getDatesViewBaseOnMain();
 
   return (
     <div className={className}>
       <AppDatePickerMonthSelector
-        date={dateView}
+        date={dateMainView}
         onClick={onWeekClick}
         className="mb-2"
-        minDate={minDate}
-        maxDate={maxDate}
+        minDate={moment()}
       />
-      <div className="flex flex-row">
+      <div className="flex flex-row mx-auto flex-1 items-center justify-center">
         {dates.map((val, idx) => {
           return (
             <DateText
               date={val}
               key={idx}
-              isActive={dateSelected.isSame(val, "day")}
-              onClick={d => setDateSelected(moment(d))}
+              isActive={date.isSame(val, "day")}
+              onClick={d => {
+                setDate(moment(d));
+                props.onChange(d);
+              }}
             />
           );
         })}

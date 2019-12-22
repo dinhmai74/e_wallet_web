@@ -11,7 +11,6 @@ import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 import { PageNotFound } from "components/PageNotFound";
 import { ImgNotFound404 } from "theme";
-import { Footer } from "components/Footer";
 AOS.init();
 
 function ScrollToTop() {
@@ -51,7 +50,6 @@ const App: React.FC = () => {
             )}
           />
         </Switch>
-        <Footer />
       </BrowserRouter>
     </ThemeProvider>
   );
