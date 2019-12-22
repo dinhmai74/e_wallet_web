@@ -12,6 +12,11 @@ export interface I_globalScss {
   secondary: string;
   black: string;
   navBg: string;
+  bgGrey: string;
+  bg: string;
+  bg5: string;
+  bg10: string;
+  bg17: string;
 }
 
 export const styles: I_globalScss;

@@ -2,13 +2,19 @@ import React from "react";
 
 import { useSidebar } from "components/SideBar";
 import { animated } from "react-spring";
+import { Footer } from "components/Footer";
 
 export interface ScreenProps {
   children?: any;
   className?: string;
+  haveFooter?: boolean;
 }
 
-export const Screen: React.FC<ScreenProps> = ({ children, className }) => {
+export const Screen: React.FC<ScreenProps> = ({
+  haveFooter,
+  children,
+  className
+}) => {
   // Sidebar
   const { isMobile, useDragMain, useMainStyle } = useSidebar();
 
@@ -24,6 +30,7 @@ export const Screen: React.FC<ScreenProps> = ({ children, className }) => {
       style={mainStyle}
     >
       {children}
+      {haveFooter && <Footer />}
     </animated.div>
   );
 };

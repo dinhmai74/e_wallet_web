@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Youtube from "react-youtube";
 import cx from "classnames";
 
@@ -13,13 +13,16 @@ import ScrollMenu from "react-horizontal-scrolling-menu";
 import { CastAvatar } from "screens/MovieTicket/MovieTicketDetailScreen/components/CastAvatar";
 import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
 import { Paths } from "router/PrimaryRouters";
+import { MovieTicketStoreContext } from "stores/MovieTicketStore";
+import { observer } from "mobx-react";
 
 interface Props {}
 
-export const MovieTicketDetailSreen: React.FC<Props> = () => {
+export const MovieTicketDetailSreen: React.FC<Props> = observer(() => {
   const { id } = useParams();
   const movie = MovieData.find(val => val.id === id);
   const history = useHistory();
+  const movieContextStore = useContext(MovieTicketStoreContext);
 
   if (!movie) {
     return <PageNotFound Img={ImgNotFound} />;
@@ -28,7 +31,7 @@ export const MovieTicketDetailSreen: React.FC<Props> = () => {
   const opts = {};
 
   const { trailSrc, casts } = movie;
-  const listCasts = genrateListCasts(casts);
+  const listCasts = generateListCasts(casts);
 
   return (
     <Screen className="pl-20 pt-40">
@@ -57,19 +60,22 @@ export const MovieTicketDetailSreen: React.FC<Props> = () => {
         <AppButton
           variant="outlined"
           className={cx("my-12 self-center mx-auto", styles.button)}
-          onClick={() => history.push(Paths.movieTicketChoseInfo)}
+          onClick={() => {
+            history.push(Paths.movieTicketChoseInfo);
+            movieContextStore.id = id || "";
+          }}
         >
           Buy ticket
         </AppButton>
       </div>
     </Screen>
   );
-};
+});
 
-const genrateListCasts = (casts: CastModel[]) => {
-  return casts.map(el => {
+const generateListCasts = (casts: CastModel[]) => {
+  return casts.map((el, idx) => {
     const { name, src } = el;
-    return <CastAvatar name={name} src={src} key={name} />;
+    return <CastAvatar name={name} src={src} key={idx} />;
   });
 };
 

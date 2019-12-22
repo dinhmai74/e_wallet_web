@@ -1,5 +1,6 @@
 export { ReactComponent as ImgNotFound404 } from "./raw-img/404.svg";
 export { ReactComponent as ImgNotFound } from "./raw-img/notFound.svg";
+export { ReactComponent as ImgMovieHooray } from "./raw-img/movies.svg";
 
 export const images = {
   logo: "asset/images/logo.png",
