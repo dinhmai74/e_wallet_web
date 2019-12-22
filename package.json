@@ -5,6 +5,7 @@
   "dependencies": {
     "@material-ui/core": "^4.7.2",
     "@material-ui/icons": "^4.5.1",
+    "@material-ui/styles": "latest",
     "@reach/dialog": "^0.6.4",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -16,6 +17,7 @@
     "aos": "^3.0.0-beta.6",
     "autoprefixer": "^9.7.3",
     "classnames": "^2.2.6",
+    "immer": "^5.1.0",
     "lodash": "^4.17.15",
     "mobx": "^5.15.1",
     "mobx-react": "^6.1.4",
@@ -38,6 +40,7 @@
     "styled-components": "^4.4.1",
     "tailwindcss": "^1.1.4",
     "typescript": "^3.7.3",
+    "use-immer": "^0.3.5",
     "zustand": "^2.2.1"
   },
   "scripts": {

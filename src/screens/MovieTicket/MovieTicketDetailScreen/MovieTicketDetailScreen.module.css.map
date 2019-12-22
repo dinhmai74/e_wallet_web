@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,QAAS;EACP,IAAI,EAAE,GAAG;EACT,GAAG,EAAE,CAAC;EACN,MAAM,EAAE,CAAC;EACT,KAAK,EAAE,CAAC;;AAIV,OAAO;EACL,KAAK,EAAE,KAAK",
+"sources": ["MovieTicketDetailScreen.module.scss"],
+"names": [],
+"file": "MovieTicketDetailScreen.module.css"
+}

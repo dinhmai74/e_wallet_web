@@ -1,5 +1,29 @@
 import moment, { Moment } from "moment";
 
+export interface MovieTicketPriceModel {
+  id: string;
+  name: string;
+  price: number;
+}
+
+export const MovieTicketPriceData: MovieTicketPriceModel[] = [
+  {
+    id: "adult2d",
+    name: "Adult 2D",
+    price: 45000
+  },
+  {
+    id: "adultvip",
+    name: "Adult VIP",
+    price: 60000
+  },
+  {
+    id: "adultcouple",
+    name: "Adult Couple",
+    price: 90000
+  }
+];
+
 export enum MovieDimensionType {
   "2D",
   "3D"
@@ -21,6 +45,7 @@ export interface MovieModel {
   digitalType: MovieDigitalType;
   duration: number;
   source: any;
+  sourceHorizontal: string;
   stars: number;
   releaseDate: string | Date | Moment;
   director: string;
@@ -147,6 +172,8 @@ export const HotMovieData: MovieModel[] = [
     source: {
       uri: "http://www.movienewsletters.net/photos/209706R1.jpg"
     },
+    sourceHorizontal:
+      "https://sfzone1-legalbrandmarket.netdna-ssl.com/wp-content/uploads/2017/03/Ghost-in-the-Shell-static-banner.jpg",
     casts: [
       {
         name: "Leo Rose",
@@ -209,6 +236,8 @@ export const HotMovieData: MovieModel[] = [
   {
     id: "49b48aa1-2261-4b30-9454-0da5ee37520f",
     title: "Mantera",
+    sourceHorizontal:
+      "https://sfzone1-legalbrandmarket.netdna-ssl.com/wp-content/uploads/2017/03/Ghost-in-the-Shell-static-banner.jpg",
     casts: [
       {
         name: "Leo Rose",
@@ -276,6 +305,8 @@ export const HotMovieData: MovieModel[] = [
   {
     id: "75a7c68b-533a-41dc-9c15-ad1afd846d3b",
     title: "Moon light",
+    sourceHorizontal:
+      "https://sfzone1-legalbrandmarket.netdna-ssl.com/wp-content/uploads/2017/03/Ghost-in-the-Shell-static-banner.jpg",
     source: {
       uri:
         "https://images-na.ssl-images-amazon.com/images/I/71rNJQ2g-EL._SY679_.jpg"
@@ -346,6 +377,8 @@ export const HotMovieData: MovieModel[] = [
   {
     id: "f2ea7616-5ecc-468c-9fda-0ecd689490ac",
     title: "Frozen II",
+    sourceHorizontal:
+      "https://sfzone1-legalbrandmarket.netdna-ssl.com/wp-content/uploads/2017/03/Ghost-in-the-Shell-static-banner.jpg",
     source: {
       uri:
         "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRaBMVvmkv08w6m_4FRVQspIV_hc5G_URBlbxnQW_ql18evNvz-"
@@ -419,6 +452,8 @@ export const MovieData: MovieModel[] = [
   {
     id: "5202faa8-d326-4633-8fbf-61c741ed833f",
     title: "Extra ordinary",
+    sourceHorizontal:
+      "https://sfzone1-legalbrandmarket.netdna-ssl.com/wp-content/uploads/2017/03/Ghost-in-the-Shell-static-banner.jpg",
     casts: [
       {
         name: "Leo Rose",
@@ -468,6 +503,8 @@ export const MovieData: MovieModel[] = [
       uri:
         "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/christmas-day-movies-charlies-angels-1567050231.jpg?crop=0.9891196834817012xw:1xh;center,top&resize=480:*"
     },
+    sourceHorizontal:
+      "https://sfzone1-legalbrandmarket.netdna-ssl.com/wp-content/uploads/2017/03/Ghost-in-the-Shell-static-banner.jpg",
     digitalType: 0,
     dimensionType: 1,
     duration: 180,

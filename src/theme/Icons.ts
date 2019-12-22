@@ -3,3 +3,5 @@ export { ReactComponent as IconMenu } from "./raw-img/menu.svg";
 export { ReactComponent as IconStarFull } from "./raw-img/ic_starfull.svg";
 export { ReactComponent as IconStarHalf } from "./raw-img/icon_star_half.svg";
 export { ReactComponent as IconStarEmpty } from "./raw-img/icon_star_empty.svg";
+export { ReactComponent as IconIncrease } from "./raw-img/Icons/add.svg";
+export { ReactComponent as IconDescrease } from "./raw-img/Icons/minus.svg";
