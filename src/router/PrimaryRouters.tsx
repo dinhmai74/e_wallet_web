@@ -18,8 +18,7 @@ export const Paths = {
   buyPhoneCardDetail: "/buy-phone-card-detail",
   movieTicketDetail: "/movie-ticket/detail",
   movieTicketChoseInfo: "/movie-ticket/chose-info",
-  movieTicketChosePos: "/movie-ticket/chose-position",
-  buyPhoneCardGeneral: "/buy-phone-card-general"
+  movieTicketChosePos: "/movie-ticket/chose-position"
 };
 
 export interface RouterModel {
