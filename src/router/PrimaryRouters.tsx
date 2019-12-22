@@ -14,12 +14,11 @@ export const Paths = {
   home: "/",
   about: "/about",
   movieTicket: "/movie-ticket",
-  buyPhoneCardGeneral: "/buy-phone-card-general",
-  buyPhoneCardDetail: "/buy-phone-card-detail",
   movieTicketDetail: "/movie-ticket/detail",
   movieTicketChoseInfo: "/movie-ticket/chose-info",
   movieTicketChosePos: "/movie-ticket/chose-position",
-  buyPhoneCardGeneral: "/buy-phone-card-general"
+  buyPhoneCardGeneral: "/buy-phone-card-general",
+  buyPhoneCardDetail: "/buy-phone-card-detail"
 };
 
 export interface RouterModel {
