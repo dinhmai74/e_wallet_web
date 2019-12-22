@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { ItemMoney } from "screens/buy-phone-card/buy-phone-card-general/BuyPhoneCardDetail/component/ItemMoney";
 import { TotalMoney } from "screens/buy-phone-card/buy-phone-card-general/BuyPhoneCardDetail/component/TotalMoney";
 import { images } from "theme";
 
-const data = [[100000], [200000], [500000], [100000], [200000], [500000]];
+const data = [[10000], [20000], [50000], [100000], [200000], [500000]];
 
 function formatMoney(amount, decimalCount = 2, decimal = ".", thousands = ",") {
   try {
@@ -36,9 +36,17 @@ function formatMoney(amount, decimalCount = 2, decimal = ".", thousands = ",") {
 }
 
 export const ChooseCardType: React.FC = () => {
+  const [selected, setSelected] = useState();
+  console.log("dasdas", selected);
   const renderCardMoney = () => {
     return data.map((val, index) => (
-      <ItemMoney title={formatMoney(val, 0)} key={index} />
+      <ItemMoney
+        title={formatMoney(val, 0)}
+        key={index}
+        onClick={() => {
+          setSelected(val);
+        }}
+      />
     ));
   };
 
@@ -60,8 +68,9 @@ export const ChooseCardType: React.FC = () => {
         src={images.phoneCard.cash}
         quantity="Quantity: "
         total="Total: "
-        navigateTo=""
+        navigateTo=" "
         buttonTx="OK"
+        money = {formatMoney(selected, 0)}
       />
     </div>
   );

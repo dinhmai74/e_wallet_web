@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { AppButton } from "components";
 import { useHistory } from "react-router";
 import { Card, TextField } from "@material-ui/core";
@@ -13,8 +13,7 @@ export interface HeroModel {
   navigateTo?: string;
   buttonTx?: string;
   total?: string;
-  money?: number;
-  value?: number;
+  money?: string;
 }
 
 export const TotalMoney: React.FC<HeroModel> = ({
@@ -25,8 +24,7 @@ export const TotalMoney: React.FC<HeroModel> = ({
   navigateTo,
   buttonTx,
   total,
-  money,
-  value
+  money
 }) => {
   let txMargin = "";
   const imgMargin = "";
@@ -37,7 +35,6 @@ export const TotalMoney: React.FC<HeroModel> = ({
   }
 
   const history = useHistory();
-
   const renderImg = () => (
     <img
       src={src}
@@ -64,6 +61,7 @@ export const TotalMoney: React.FC<HeroModel> = ({
   };
 
   const containerClassName = "flex flex-row items-center justify-center";
+  const [totalValue, setValue] = useState();
   return (
     <div
       className={containerClassName}
@@ -84,14 +82,19 @@ export const TotalMoney: React.FC<HeroModel> = ({
               autoComplete="current-password"
               variant="outlined"
               className="pr-12"
-              value={value}
+              value={totalValue}
+              onChange={e => {
+                setValue(e.target.value);
+              }}
             />
           </div>
           <div className="flex flex-row pb-4">
             <p className={`text__h2 color__grey font-bold text-center pr-32`}>
               {total}
             </p>
-            <p className={`text__h2 color__primary  font-bold pl-6`}>{value}</p>
+            <p className={`text__h2 color__primary  font-bold pl-6`}>
+              {money}d
+            </p>
           </div>
           {renderButton()}
         </div>
