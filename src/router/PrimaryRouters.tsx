@@ -15,7 +15,8 @@ export const Paths = {
   movieTicket: "/movie-ticket",
   movieTicketDetail: "/movie-ticket/detail",
   movieTicketChoseInfo: "/movie-ticket/chose-info",
-  movieTicketChosePos: "/movie-ticket/chose-position"
+  movieTicketChosePos: "/movie-ticket/chose-position",
+  buyPhoneCardGeneral: "/buy-phone-card-general"
 };
 
 export interface RouterModel {
