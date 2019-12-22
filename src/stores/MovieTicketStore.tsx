@@ -25,17 +25,18 @@ function autoSave(store, save) {
 class MovieTicketStore {
   @observable id?: string = undefined;
   @observable ticketInfo?: MovieTicketInfoModel = undefined;
+  @observable seats = {};
 
   constructor() {
     this.load();
     autoSave(this, this.save.bind(this));
   }
 
-  @action changeId(id) {
+  @action changeId(id: string) {
     this.id = id;
   }
 
-  @action changeTicketInfo(ticketIfo) {
+  @action changeTicketInfo(ticketIfo: any) {
     console.log("ticketInfo", ticketIfo);
     this.ticketInfo = { ...ticketIfo };
   }
@@ -50,7 +51,7 @@ class MovieTicketStore {
     }
   }
 
-  save(json) {
+  save(json: any) {
     localStorage.setItem(movieStoreKey, json);
   }
 }

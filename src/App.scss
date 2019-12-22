@@ -125,6 +125,10 @@ $colors: (
   &__d2 {
     font-size: 1.75rem;
   }
+
+  &__d3 {
+    font-size: 0.75rem;
+  }
 }
 
 /* ------------- img ------------- */
@@ -176,11 +180,11 @@ $colors: (
   }
 }
 
-.icon{
+.icon {
   width: 32px;
   height: 32px;
 
-  &--tiny{
+  &--tiny {
     width: 16px;
     height: 16px;
   }
@@ -261,4 +265,3 @@ $colors: (
 .footer {
   min-height: 20vh;
 }
-

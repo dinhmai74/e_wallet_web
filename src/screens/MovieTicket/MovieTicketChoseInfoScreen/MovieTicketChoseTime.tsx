@@ -3,6 +3,8 @@ import { PlaceModel } from "mock-data/home/movies";
 import { MovieTicketChoseInfoCard } from "screens/MovieTicket/MovieTicketChoseInfoScreen/components/MovieTicketChoseInfoCard";
 import { observer } from "mobx-react";
 import { MovieTicketStoreContext } from "stores/MovieTicketStore";
+import { useHistory } from "react-router";
+import { Paths } from "router/PrimaryRouters";
 // import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
 // import ScrollMenu from "react-horizontal-scrolling-menu";
 //
@@ -23,6 +25,7 @@ export const MovieTicketChoseTime: React.FC<Props> = observer(props => {
   const { times, place: placeName } = place;
 
   const movieTicketStore = useContext(MovieTicketStoreContext);
+  const history = useHistory();
 
   // const scrollData = generatePlacesComp(times);
 
@@ -31,7 +34,7 @@ export const MovieTicketChoseTime: React.FC<Props> = observer(props => {
       timeId: time.id,
       placeId: place.id
     };
-
+    history.push(Paths.movieTicketChosePos);
   };
 
   return (

@@ -157,6 +157,10 @@ function Sidebar() {
       <Item onClick={() => handleOnClick(Paths.movieTicket)}>
         Buy movie ticket
       </Item>
+
+      <Item onClick={() => handleOnClick(Paths.buyPhoneCardGeneral)}>
+        Buy phone ticket
+      </Item>
     </animated.div>
   );
 }
