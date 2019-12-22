@@ -6,6 +6,7 @@ import {
   MovieTicketChoseInfoScreen
 } from "screens/MovieTicket";
 import { BuyPhoneCardGeneral } from "screens/buy-phone-card/buy-phone-card-general/buy-phone-card-general";
+import { BuyPhoneCardDetail } from "screens/buy-phone-card/buy-phone-card-general/BuyPhoneCardDetail";
 import { MovieTicketDetailSreen } from "screens/MovieTicket/MovieTicketDetailScreen";
 import { MovieTicketChosePosScreen } from "screens/MovieTicket/MovieTicketChosePosScreen";
 
@@ -13,6 +14,8 @@ export const Paths = {
   home: "/",
   about: "/about",
   movieTicket: "/movie-ticket",
+  buyPhoneCardGeneral: "/buy-phone-card-general",
+  buyPhoneCardDetail: "/buy-phone-card-detail",
   movieTicketDetail: "/movie-ticket/detail",
   movieTicketChoseInfo: "/movie-ticket/chose-info",
   movieTicketChosePos: "/movie-ticket/chose-position",
@@ -61,5 +64,9 @@ export const PrimaryRouters: RouterModel[] = [
   {
     Component: BuyPhoneCardGeneral,
     path: Paths.buyPhoneCardGeneral
+  },
+  {
+    Component: BuyPhoneCardDetail,
+    path: Paths.buyPhoneCardDetail
   }
 ];
