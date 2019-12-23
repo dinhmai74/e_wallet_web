@@ -27,5 +27,11 @@ export const images = {
   phoneCard: {
     bgPhoneCardDetail: "asset/images/bg/bg-polygon.png",
     cash: "asset/images/cash.jpg"
+  },
+  phoneCardPayment: {
+    vcb: "asset/images/vcb.jpeg",
+    viettinbank: "asset/images/viettinbank/png",
+    mb: "asset/images/mb.png",
+    citybank: "asset/images/citybank.png"
   }
 };
