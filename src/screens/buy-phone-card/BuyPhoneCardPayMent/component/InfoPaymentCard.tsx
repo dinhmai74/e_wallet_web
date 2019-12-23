@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { AppButton } from "components";
 import { useHistory } from "react-router";
-import { Card, TextField } from "@material-ui/core";
+import { Card } from "@material-ui/core";
 import Divider from "@material-ui/core/Divider";
 type HeroType = "left" | "right";
 
@@ -63,7 +63,6 @@ export const InfoPaymentCard: React.FC<HeroModel> = ({
   };
 
   const containerClassName = "flex flex-row items-center justify-center";
-  const [totalValue, setValue] = useState();
   return (
     <div
       className={containerClassName}

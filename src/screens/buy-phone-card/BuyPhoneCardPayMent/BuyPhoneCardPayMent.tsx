@@ -1,6 +1,5 @@
 import React from "react";
 import { Screen } from "components";
-import { MethodCard } from "screens/buy-phone-card/BuyPhoneCardPayMent/component/MethodCard";
 import { images } from "theme";
 import { InfoPaymentCard } from "screens/buy-phone-card/BuyPhoneCardPayMent/component/InfoPaymentCard";
 
