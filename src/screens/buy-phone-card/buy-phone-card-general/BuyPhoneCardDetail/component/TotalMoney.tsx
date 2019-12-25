@@ -55,7 +55,9 @@ export const TotalMoney: React.FC<HeroModel> = ({
         variant="outlined"
         tx={buttonTx}
         className="mt-6 text__b1"
-        onClick={() => history.push(navigateTo)}
+        onClick={() => history.push(navigateTo , {
+          money: money
+        })}
       />
     );
   };

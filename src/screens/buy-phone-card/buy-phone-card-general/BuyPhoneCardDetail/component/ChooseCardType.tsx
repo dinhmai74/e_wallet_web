@@ -37,7 +37,6 @@ function formatMoney(amount, decimalCount = 2, decimal = ".", thousands = ",") {
 
 export const ChooseCardType: React.FC = () => {
   const [selected, setSelected] = useState();
-  console.log("dasdas", selected);
   const renderCardMoney = () => {
     return data.map((val, index) => (
       <ItemMoney
