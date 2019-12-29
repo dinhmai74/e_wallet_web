@@ -16,7 +16,7 @@ export const MovieTicketChosePosTicketCard: React.FC<Props> = observer(
     const store = useContext(MovieTicketStoreContext);
 
     useEffect(() => {
-      store.seats[id] = value;
+      store.seatAmount[id] = value;
       // eslint-disable-next-line
     }, [value]);
 

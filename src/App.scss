@@ -92,6 +92,9 @@ $colors: (
 .text {
   font-stretch: normal;
   color: $greyish-brown;
+  &__bold {
+    font-weight: bold;
+  }
   &__t1 {
     font-size: 3.3125rem;
   }
@@ -102,6 +105,10 @@ $colors: (
 
   &__h2 {
     font-size: 1.875rem;
+  }
+
+  &__h3 {
+    font-size: 1.65rem;
   }
 
   &__h4 {
@@ -128,6 +135,12 @@ $colors: (
 
   &__d3 {
     font-size: 0.75rem;
+  }
+}
+
+.font {
+  &__bold {
+    font-weight: bold;
   }
 }
 
@@ -264,4 +277,30 @@ $colors: (
 
 .footer {
   min-height: 20vh;
+}
+
+.menu-item {
+  padding: 0 40px;
+  margin: 5px 10px;
+  user-select: none;
+  cursor: pointer;
+  border: none;
+}
+.menu-item-wrapper {
+  border: none;
+  outline: none;
+
+  .active {
+    border: none;
+    outline: none;
+  }
+}
+.menu-item.active {
+  border: none;
+  outline: none;
+}
+
+.scroll-menu-arrow {
+  padding: 20px;
+  cursor: pointer;
 }

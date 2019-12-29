@@ -70,7 +70,7 @@ export const ChooseCardType: React.FC = () => {
         total="Total: "
         navigateTo=" "
         buttonTx="OK"
-        money = {formatMoney(selected, 0)}
+        money={formatMoney(selected, 0)}
       />
     </div>
   );

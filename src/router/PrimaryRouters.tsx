@@ -1,6 +1,5 @@
 import { HomeScreen } from "screens/Home";
 import { About } from "screens/About";
-import { Post } from "screens/Post";
 import {
   MovieTicketGeneral,
   MovieTicketChoseInfoScreen
@@ -10,17 +9,19 @@ import { BuyPhoneCardDetail } from "screens/buy-phone-card/buy-phone-card-genera
 import { MovieTicketDetailSreen } from "screens/MovieTicket/MovieTicketDetailScreen";
 import { MovieTicketChosePosScreen } from "screens/MovieTicket/MovieTicketChosePosScreen";
 import { MovieTicketChosePosDetailScreen } from "screens/MovieTicket/MovieTicketChosePosDetailScreen/MovieTicketChosePosDetailScreen";
+import { MovieTicketPaymentScreen } from "screens/MovieTicket/MovieTicketPaymentScreen";
 
 export const Paths = {
   home: "/",
   about: "/about",
+  buyPhoneCardGeneral: "/buy-phone-card-general",
+  buyPhoneCardDetail: "/buy-phone-card-detail",
   movieTicket: "/movie-ticket",
   movieTicketDetail: "/movie-ticket/detail",
   movieTicketChoseInfo: "/movie-ticket/chose-info",
   movieTicketChosePos: "/movie-ticket/chose-position",
   movieTicketChosePosDetail: "/movie-ticket/chose-position-detail",
-  buyPhoneCardGeneral: "/buy-phone-card-general",
-  buyPhoneCardDetail: "/buy-phone-card-detail"
+  movieTicketPayment: "/payment/movie-ticket"
 };
 
 export interface RouterModel {
@@ -38,13 +39,19 @@ export const PrimaryRouters: RouterModel[] = [
     path: Paths.about
   },
   {
-    Component: Post,
-    path: "posts/:id"
-  },
-  {
     Component: HomeScreen,
     path: "/"
   },
+
+  {
+    Component: BuyPhoneCardGeneral,
+    path: Paths.buyPhoneCardGeneral
+  },
+  {
+    Component: BuyPhoneCardDetail,
+    path: Paths.buyPhoneCardDetail
+  },
+
   {
     Component: MovieTicketGeneral,
     path: Paths.movieTicket
@@ -66,13 +73,8 @@ export const PrimaryRouters: RouterModel[] = [
     Component: MovieTicketChosePosDetailScreen,
     path: Paths.movieTicketChosePosDetail
   },
-
   {
-    Component: BuyPhoneCardGeneral,
-    path: Paths.buyPhoneCardGeneral
-  },
-  {
-    Component: BuyPhoneCardDetail,
-    path: Paths.buyPhoneCardDetail
+    Component: MovieTicketPaymentScreen,
+    path: Paths.movieTicketPayment
   }
 ];

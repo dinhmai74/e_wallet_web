@@ -32,7 +32,6 @@ export function formatMoney(
             .slice(2)
         : "")
     );
-  } catch (e) {
-  }
+  } catch (e) {}
 }
 export const unitTx = "d";
