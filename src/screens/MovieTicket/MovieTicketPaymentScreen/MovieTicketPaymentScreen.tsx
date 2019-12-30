@@ -4,26 +4,41 @@ import { observer } from "mobx-react";
 import React from "react";
 import { ImgPayment } from "theme/images";
 import { PaymentInfoCard } from "../components/PaymentInfoCard";
+import { useBoolean } from "react-use";
+import { Paths } from "router/PrimaryRouters";
+import { useHistory } from "react-router";
 
 interface Props {}
 
 export const MovieTicketPaymentScreen: React.FC<Props> = observer(props => {
+  const [isSelectedPayment, setSelectedPayment] = useBoolean(false);
+  const history = useHistory();
+
+  const onChangeMethods = () => {
+    setSelectedPayment(true);
+  };
+
   return (
     <Screen>
       <p className="text__h1 my-4 mb-12 color__grey">Simple payment</p>
 
-      <PaymentMethods />
+      <PaymentMethods onChange={onChangeMethods} />
 
       <div className="flex flex-row my-8 justify-center px-16 xl:px-0">
         <ImgPayment
           width={500}
-          className="hidden lg:block mr-48"
+          className="hidden lg:block mr-40"
           style={{ minWidth: 500 }}
         />
 
-        <p className="text__h3 color__steel mb-4">Information</p>
-
-        <PaymentInfoCard />
+        <div className="flex flex-col">
+          <p className="text__h3 color__steel mb-4">Information</p>
+          <PaymentInfoCard
+            buttonTx="Confirm"
+            isSelectedPayment={isSelectedPayment}
+            onSubmit={() => history.push(Paths.movieTicketPaymentSuccess)}
+          />
+        </div>
       </div>
     </Screen>
   );

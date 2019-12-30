@@ -2,7 +2,8 @@ import { HomeScreen } from "screens/Home";
 import { About } from "screens/About";
 import {
   MovieTicketGeneral,
-  MovieTicketChoseInfoScreen
+  MovieTicketChoseInfoScreen,
+  MovieTicketBuySuccessScreen
 } from "screens/MovieTicket";
 import { BuyPhoneCardGeneral } from "screens/buy-phone-card/buy-phone-card-general/buy-phone-card-general";
 import { BuyPhoneCardDetail } from "screens/buy-phone-card/buy-phone-card-general/BuyPhoneCardDetail";
@@ -21,7 +22,8 @@ export const Paths = {
   movieTicketChoseInfo: "/movie-ticket/chose-info",
   movieTicketChosePos: "/movie-ticket/chose-position",
   movieTicketChosePosDetail: "/movie-ticket/chose-position-detail",
-  movieTicketPayment: "/payment/movie-ticket"
+  movieTicketPayment: "/payment/movie-ticket",
+  movieTicketPaymentSuccess: "/payment/movie-ticket/success"
 };
 
 export interface RouterModel {
@@ -64,7 +66,6 @@ export const PrimaryRouters: RouterModel[] = [
     Component: MovieTicketChoseInfoScreen,
     path: Paths.movieTicketChoseInfo
   },
-
   {
     Component: MovieTicketChosePosScreen,
     path: Paths.movieTicketChosePos
@@ -76,5 +77,10 @@ export const PrimaryRouters: RouterModel[] = [
   {
     Component: MovieTicketPaymentScreen,
     path: Paths.movieTicketPayment
+  },
+  {
+    Component: MovieTicketBuySuccessScreen,
+    path: Paths.movieTicketPaymentSuccess
   }
+
 ];

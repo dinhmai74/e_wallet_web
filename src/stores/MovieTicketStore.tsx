@@ -38,8 +38,15 @@ class MovieTicketStore {
   }
 
   @action changeTicketInfo(ticketIfo: any) {
-    console.log("ticketInfo", ticketIfo);
     this.ticketInfo = { ...ticketIfo };
+  }
+
+  @action resetData() {
+    this.id = "";
+    this.ticketInfo = undefined;
+    this.seatPos = [];
+    this.seatAmount = [];
+    this.save(this);
   }
 
   load() {

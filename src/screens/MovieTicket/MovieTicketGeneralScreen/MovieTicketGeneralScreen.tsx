@@ -49,7 +49,6 @@ export const MovieTicketGeneral: React.FC = observer(() => {
             data={onShowing}
             arrowLeft={ArrowLeft()}
             arrowRight={ArrowRight()}
-            useButtonRole={false}
           />
         </div>
       </div>

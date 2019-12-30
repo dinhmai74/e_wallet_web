@@ -29,5 +29,6 @@ export const images = {
   phoneCard: {
     bgPhoneCardDetail: "asset/images/bg/bg-polygon.png",
     cash: "asset/images/cash.jpg"
-  }
+  },
+  success: "asset/images/success.png"
 };

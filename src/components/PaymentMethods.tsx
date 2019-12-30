@@ -6,12 +6,19 @@ import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
 
 interface Props {
   className?: string;
+  onChange: () => void;
 }
 
 export const PaymentMethods: React.FC<Props> = props => {
-  const { className } = props;
+  const { className, onChange } = props;
   const [selectedIdx, setUselectedIdx] = React.useState<number>(-1);
-  const data = ListMethods(idx => setUselectedIdx(idx), selectedIdx);
+
+  const setSelected = idx => {
+    setUselectedIdx(idx);
+    onChange();
+  };
+
+  const data = ListMethods(setSelected, selectedIdx);
   return (
     <div className={className}>
       <p className="text__h3 color__steel ">Methods: </p>
