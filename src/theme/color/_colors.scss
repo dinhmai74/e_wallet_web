@@ -3,18 +3,20 @@ $primary: #ee5f7b;
 $secondary: #5fed77;
 $navy: #001433;
 $blue-grey: #91a2bc;
+$grey: #ccc;
 $steel: #7a7d86;
 $orange-yellow: #f5a623;
 $red: #d0021b;
 $blue: #4a90e2;
+$dark-blue: #687da1;
 $greyish-brown: #4a4a4a;
 $white: #ffffff;
 $black: #000000;
-$window-blue: #3896BA;
-$window-blue-17: #DDEDF3;
-$window-blue-5: #F5F9FB;
-$window-blue-10: #EBF4F8;
-$gainsboro: #F1F1F1;
+$window-blue: #3896ba;
+$window-blue-17: #ddedf3;
+$window-blue-5: #f5f9fb;
+$window-blue-10: #ebf4f8;
+$gainsboro: #f1f1f1;
 
 :export {
   paleGrey: $pale-grey;
@@ -39,4 +41,4 @@ $gainsboro: #F1F1F1;
 
 @tailwind base;
 @tailwind components;
-@tailwind utilities
+@tailwind utilities;

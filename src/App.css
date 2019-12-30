@@ -12,11 +12,11 @@
   white: #ffffff;
   black: #000000;
   navBg: #000000;
-  bg: #3896BA;
-  bg5: #F5F9FB;
-  bg10: #EBF4F8;
-  bg17: #DDEDF3;
-  bgGrey: #F1F1F1; }
+  bg: #3896ba;
+  bg5: #f5f9fb;
+  bg10: #ebf4f8;
+  bg17: #ddedf3;
+  bgGrey: #f1f1f1; }
 
 @tailwind base;
 @tailwind components;
@@ -107,44 +107,48 @@ body {
   background-color: #000000; }
 
 .color__bg {
-  color: #3896BA; }
+  color: #3896ba; }
 
 .bg__bg {
-  background-color: #3896BA; }
+  background-color: #3896ba; }
 
 .color__bg-5 {
-  color: #F5F9FB; }
+  color: #f5f9fb; }
 
 .bg__bg-5 {
-  background-color: #F5F9FB; }
+  background-color: #f5f9fb; }
 
 .color__bg-10 {
-  color: #EBF4F8; }
+  color: #ebf4f8; }
 
 .bg__bg-10 {
-  background-color: #EBF4F8; }
+  background-color: #ebf4f8; }
 
 .color__bg-17 {
-  color: #DDEDF3; }
+  color: #ddedf3; }
 
 .bg__bg-17 {
-  background-color: #DDEDF3; }
+  background-color: #ddedf3; }
 
 .color__bg-grey {
-  color: #F1F1F1; }
+  color: #f1f1f1; }
 
 .bg__bg-grey {
-  background-color: #F1F1F1; }
+  background-color: #f1f1f1; }
 
 .text {
   font-stretch: normal;
   color: #4a4a4a; }
+  .text__bold {
+    font-weight: bold; }
   .text__t1 {
     font-size: 3.3125rem; }
   .text__h1 {
     font-size: 2.25rem; }
   .text__h2 {
     font-size: 1.875rem; }
+  .text__h3 {
+    font-size: 1.65rem; }
   .text__h4 {
     font-size: 1.5rem; }
   .text__quote {
@@ -157,6 +161,11 @@ body {
     font-size: 1rem; }
   .text__d2 {
     font-size: 1.75rem; }
+  .text__d3 {
+    font-size: 0.75rem; }
+
+.font__bold {
+  font-weight: bold; }
 
 /* ------------- img ------------- */
 .img__decorate {
@@ -239,5 +248,27 @@ body {
 
 .footer {
   min-height: 20vh; }
+
+.menu-item {
+  padding: 0 40px;
+  margin: 5px 10px;
+  user-select: none;
+  cursor: pointer;
+  border: none; }
+
+.menu-item-wrapper {
+  border: none;
+  outline: none; }
+  .menu-item-wrapper .active {
+    border: none;
+    outline: none; }
+
+.menu-item.active {
+  border: none;
+  outline: none; }
+
+.scroll-menu-arrow {
+  padding: 20px;
+  cursor: pointer; }
 
 /*# sourceMappingURL=App.css.map */

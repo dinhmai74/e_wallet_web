@@ -6,7 +6,6 @@ import React from "react";
 import { MovieTicketChosePosScreenSideInfo } from "screens/MovieTicket/MovieTicketChosePosScreen/MovieTicketChosePosScreen.SideInfo";
 import { MovieTicketChosePosTicketCard } from "./components/MovieTicketChosePos.TicketCard";
 
-
 interface Props {}
 
 export const MovieTicketChosePosScreen: React.FC<Props> = observer(props => {
