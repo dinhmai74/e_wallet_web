@@ -7,7 +7,7 @@ interface Props {
 export const PurchasedCard: React.FC<Props> = props => {
   const { src } = props;
   return (
-    <div className="max-w-full flex flex-row overflow-hidden shadow-md pl-8 py-4 cursor-pointer mb-6 ">
+    <div className="max-w-full flex flex-row overflow-hidden shadow-md pl-8 py-4 cursor-pointer mb-10 ">
       <StyledImg src={`${process.env.PUBLIC_URL}/${src}`} alt="illu" />
       <div className="flex flex-col justify-center item-center pl-12">
         <div className="flex flex-row">
