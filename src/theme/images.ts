@@ -34,7 +34,8 @@ export const images = {
     vcb: "asset/images/vcb.jpeg",
     viettinbank: "asset/images/viettinbank/png",
     mb: "asset/images/mb.png",
-    citybank: "asset/images/citybank.png"
+    citybank: "asset/images/citybank.png",
+    payment: "asset/images/payment.jpg"
   },
   success: "asset/images/success.png"
 };

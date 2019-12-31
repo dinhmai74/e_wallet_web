@@ -42,7 +42,7 @@ export const InfoPaymentCard: React.FC<HeroModel> = ({
   const renderImg = () => (
     <img
       src={src}
-      className={`self-center ${imgMargin} ${imgStyle} hidden img__decorate sm:hidden md:hidden lg:block xl:block`}
+      className={`self-center ${imgMargin} ${imgStyle} hidden img__decorate sm:hidden md:hidden lg:block xl:block pt-12`}
       alt="illstration"
     />
   );
@@ -58,13 +58,13 @@ export const InfoPaymentCard: React.FC<HeroModel> = ({
         color="primary"
         variant="contained"
         tx={buttonTx}
-        className="mt-6 text__b1 mb-6"
+        className=" text__b1 mb-6"
         onClick={() => history.push(navigateTo)}
       />
     );
   };
 
-  const containerClassName = "flex flex-row items-center justify-center";
+  const containerClassName = "flex flex-row items-center justify-center pt-12";
   return (
     <div
       className={containerClassName}
@@ -73,45 +73,49 @@ export const InfoPaymentCard: React.FC<HeroModel> = ({
       data-aos-duration="1000"
     >
       {type === "left" && renderImg()}
-      <div className="max-w-full  overflow-hidden shadow-md px-8 py-4 cursor-pointer  ml-12">
-        <div className=" pt-4">
-          <div className="flex flex-row pb-6 justify-center align-center">
-            <p className={`text__d1 color__blue-grey font-medium pr-48 pl-2`}>
-              Provider:
-            </p>
-            <p className="text__b1 color__grey font-medium text-right pl-20">
-              {provider}
-            </p>
+      <div className="flex flex-col">
+        <p className="text__h3 color__steel mb-4 px-12 py-6">Information</p>
+        <div className="max-w-full  overflow-hidden shadow-md px-8 py-4 cursor-pointer  ml-12">
+          <div className=" pt-4">
+            <div className="flex flex-row pb-6 justify-center align-center">
+              <p className={`text__d1 color__blue-grey font-medium pr-48 pl-2`}>
+                Provider:
+              </p>
+              <p className="text__b1 color__grey font-medium text-right pl-20">
+                {provider}
+              </p>
+            </div>
+            <div className="flex flex-row pb-6 justify-center align-center">
+              <p className={`text__d1 color__blue-grey font-medium pr-48`}>
+                Price:
+              </p>
+              <p className="text__b1 color__grey font-medium text-right pl-20 ">
+                {price}d
+              </p>
+            </div>
+            <div className="flex flex-row pb-6  justify-center align-center">
+              <p className={`text__d1 color__blue-grey font-medium pr-56`}>
+                Quantity:
+              </p>
+              <p
+                className={`text__b1 color__grey font-medium  text-right pl-20`}
+              >
+                {quantity}{" "}
+              </p>
+            </div>
+            <Divider />
+            <div className="flex flex-row pb-6  pt-6  justify-center align-center">
+              <p className={`text__d1 color__blue-grey font-medium pr-32`}>
+                Total amount:{" "}
+              </p>
+              <p className={`text__b1 color__primary font-medium pl-20`}>
+                {totalAmount}{" "}
+              </p>
+            </div>
+            <div className="">{renderButton()}</div>
           </div>
-          <div className="flex flex-row pb-6 justify-center align-center">
-            <p className={`text__d1 color__blue-grey font-medium pr-48`}>
-              Price:
-            </p>
-            <p className="text__b1 color__grey font-medium text-right pl-20 ">
-              {price}d
-            </p>
-          </div>
-          <div className="flex flex-row pb-6  justify-center align-center">
-            <p className={`text__d1 color__blue-grey font-medium pr-56`}>
-              Quantity:
-            </p>
-            <p className={`text__b1 color__grey font-medium  text-right pl-20`}>
-              {quantity}{" "}
-            </p>
-          </div>
-          <Divider />
-          <div className="flex flex-row pb-6  pt-6  justify-center align-center">
-            <p className={`text__d1 color__blue-grey font-medium pr-32`}>
-              Total amount:{" "}
-            </p>
-            <p className={`text__b1 color__primary font-medium pl-20`}>
-              {totalAmount}{" "}
-            </p>
-          </div>
-          <div className="">{renderButton()}</div>
         </div>
       </div>
-      {type === "right" && renderImg()}
     </div>
   );
 };
