@@ -68,7 +68,7 @@ export const ChooseCardType: React.FC = () => {
         src={images.phoneCard.cash}
         quantity="Quantity: "
         total="Total: "
-        navigateTo=" "
+        navigateTo="payment/buy-phone-card/success"
         buttonTx="OK"
         money={formatMoney(selected, 0)}
       />
