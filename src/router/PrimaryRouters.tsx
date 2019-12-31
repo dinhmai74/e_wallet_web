@@ -81,17 +81,15 @@ export const PrimaryRouters: RouterModel[] = [
     path: Paths.movieTicketPayment
   },
   {
-<<<<<<< HEAD
     Component: BuyPhoneCardDetail,
     path: Paths.buyPhoneCardDetail
   },
   {
     Component: BuyPhoneCardPayMent,
     path: Paths.buyPhoneCardPayment
-=======
+  },
+  {
     Component: MovieTicketBuySuccessScreen,
     path: Paths.movieTicketPaymentSuccess
->>>>>>> develop
   }
-
 ];
