@@ -23,7 +23,9 @@ module.exports = {
       blue: "$blue",
       grey: "$greyish-brown",
       white: "$white",
-      black: "$black"
+      black: "$black",
+      darkBlue: "$dark-blue",
+      darkGrey: "$grey"
     },
 
     spacing: {
@@ -184,6 +186,7 @@ module.exports = {
     inset: {
       "0": "0",
       "1/2": "50%",
+      "1/3": "33%",
       "1/4": "25%",
       "1/5": "20%",
       auto: "auto"

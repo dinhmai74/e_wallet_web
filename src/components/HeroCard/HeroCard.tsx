@@ -3,6 +3,7 @@ import { AppButton } from "components";
 import { useHistory } from "react-router";
 import { makeStyles } from "@material-ui/core/styles";
 import colors from "theme/color/_colors.scss";
+import { Card } from "@material-ui/core";
 
 type HeroType = "left" | "right";
 

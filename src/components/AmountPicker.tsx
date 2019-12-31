@@ -11,7 +11,9 @@ export const AmountPicker: React.FC<Props> = ({ value, onChange }) => {
     <div className="flex-row flex">
       <IconDescrease
         onClick={() => {
-          if (value > 0) onChange(value - 1);
+          if (value > 0) {
+            onChange(value - 1);
+          }
         }}
       />
       <p className="text-center self-center align-middle px-8">{value}</p>

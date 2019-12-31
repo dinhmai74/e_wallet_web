@@ -25,7 +25,8 @@ function autoSave(store, save) {
 class MovieTicketStore {
   @observable id?: string = undefined;
   @observable ticketInfo?: MovieTicketInfoModel = undefined;
-  @observable seats = {};
+  @observable seatAmount = {};
+  @observable seatPos: string[] = [];
 
   constructor() {
     this.load();
@@ -37,8 +38,15 @@ class MovieTicketStore {
   }
 
   @action changeTicketInfo(ticketIfo: any) {
-    console.log("ticketInfo", ticketIfo);
     this.ticketInfo = { ...ticketIfo };
+  }
+
+  @action resetData() {
+    this.id = "";
+    this.ticketInfo = undefined;
+    this.seatPos = [];
+    this.seatAmount = [];
+    this.save(this);
   }
 
   load() {
@@ -48,6 +56,12 @@ class MovieTicketStore {
       const converted = JSON.parse(data);
       this.changeId(converted.id);
       this.changeTicketInfo(converted.ticketInfo);
+      if (converted.seatPos) {
+        this.seatPos = [...converted.seatPos];
+      }
+      if (converted.seatAmount) {
+        this.seatAmount = { ...converted.seatAmount };
+      }
     }
   }
 

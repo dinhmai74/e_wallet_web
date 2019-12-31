@@ -12,11 +12,11 @@
   white: #ffffff;
   black: #000000;
   navBg: #000000;
-  bg: #3896BA;
-  bg5: #F5F9FB;
-  bg10: #EBF4F8;
-  bg17: #DDEDF3;
-  bgGrey: #F1F1F1; }
+  bg: #3896ba;
+  bg5: #f5f9fb;
+  bg10: #ebf4f8;
+  bg17: #ddedf3;
+  bgGrey: #f1f1f1; }
 
 @tailwind base;
 @tailwind components;
