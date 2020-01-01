@@ -1,13 +1,12 @@
-import React from "react";
 import { Screen } from "components";
-import { images } from "theme";
-import { InfoPaymentCard } from "screens/buy-phone-card/BuyPhoneCardPayMent/component/InfoPaymentCard";
-import { useParams } from "react-router";
 import { PaymentMethods } from "components/PaymentMethods";
+import React from "react";
 import { useBoolean } from "react-use";
+import { InfoPaymentCard } from "screens/buy-phone-card/BuyPhoneCardPayMent/component/InfoPaymentCard";
+import { images } from "theme";
 
 export const BuyPhoneCardPayMent: React.FC = props => {
-  const [isSelectedPayment, setSelectedPayment] = useBoolean(false);
+  const [, setSelectedPayment] = useBoolean(false);
 
   const onChangeMethods = () => {
     setSelectedPayment(true);

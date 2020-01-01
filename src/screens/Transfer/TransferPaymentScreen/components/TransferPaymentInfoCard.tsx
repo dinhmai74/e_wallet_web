@@ -13,7 +13,7 @@ interface Props {
 
 export const TransferPaymentInfoCard: React.FC<Props> = props => {
   const { paymentInfo, isSelectedPayment, onSubmit, buttonTx } = props;
-  const { amount, id, message, name, phone, src } = paymentInfo;
+  const { amount, name, phone } = paymentInfo;
   return (
     <InformationCard
       totalAmount={Number(amount)}

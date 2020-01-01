@@ -1,9 +1,8 @@
-import React from "react";
-import { AppButton } from "components";
-import { useHistory } from "react-router";
 import { makeStyles } from "@material-ui/core/styles";
+import { AppButton } from "components";
+import React from "react";
+import { useHistory } from "react-router";
 import colors from "theme/color/_colors.scss";
-import { Card } from "@material-ui/core";
 
 type HeroType = "left" | "right";
 

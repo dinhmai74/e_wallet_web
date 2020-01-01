@@ -1,11 +1,10 @@
-import React from "react";
-import { useLocation, useHistory } from "react-router";
 import { Screen } from "components";
-import { PaymentInfoCard } from "screens/MovieTicket/components/PaymentInfoCard";
-import { Paths } from "router/PrimaryRouters";
-import { images } from "theme";
 import { RowTextSpaceBetween } from "components/RowTextSpaceBetween";
+import React from "react";
+import { useHistory, useLocation } from "react-router";
+import { Paths } from "router/PrimaryRouters";
 import { TransferPaymentInfoCard } from "screens/Transfer/TransferPaymentScreen/components/TransferPaymentInfoCard";
+import { images } from "theme";
 
 interface Props {}
 

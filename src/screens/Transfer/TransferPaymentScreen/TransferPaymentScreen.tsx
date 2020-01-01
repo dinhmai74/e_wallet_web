@@ -1,12 +1,11 @@
-import React from "react";
-import { useLocation, useHistory } from "react-router";
 import { Screen } from "components";
 import { PaymentMethods } from "components/PaymentMethods";
-import { ImgPayment } from "theme";
-import { PaymentInfoCard } from "screens/MovieTicket/components/PaymentInfoCard";
+import React from "react";
+import { useHistory, useLocation } from "react-router";
 import { useBoolean } from "react-use";
 import { Paths } from "router/PrimaryRouters";
 import { TransferPaymentInfoCard } from "screens/Transfer/TransferPaymentScreen/components/TransferPaymentInfoCard";
+import { ImgPayment } from "theme";
 
 interface Props {}
 
