@@ -102,6 +102,7 @@ export const PrimaryRouters: RouterModel[] = [
   {
     Component: TransferGeneralScreen,
     path: Paths.transfer
+  },
   {
     Component: BuyPhoneCardSuccess,
     path: Paths.buyPhoneCardSuccess
