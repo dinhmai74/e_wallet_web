@@ -7,8 +7,6 @@ const transferStoreKey = "transfer-store-key";
 class TransferStore {
   @observable transferUser = {
     id: "",
-    phone: "",
-    name: "",
     money: -1,
     message: ""
   };
@@ -28,7 +26,6 @@ class TransferStore {
   }
 
   save(json: any) {
-    console.log("store", json);
     localStorage.setItem(transferStoreKey, json);
   }
 }
