@@ -33,7 +33,7 @@ export enum MovieDigitalType {
   Digital
 }
 
-export interface CastModel {
+export interface AvatarModel {
   src: string;
   name: string;
 }
@@ -50,7 +50,7 @@ export interface MovieModel {
   releaseDate: string | Date | Moment;
   director: string;
   cast: string;
-  casts: CastModel[];
+  casts: AvatarModel[];
   description: string;
   trailSrc: string;
 }

@@ -551,9 +551,9 @@ video {
 @media (min-width: 1024px) {
   .container {
     max-width: 1024px; } }
-@media (min-width: 1280px) {
+@media (min-width: 1425px) {
   .container {
-    max-width: 1280px; } }
+    max-width: 1425px; } }
 .sr-only {
   position: absolute !important;
   width: 1px !important;
@@ -16614,7 +16614,7 @@ video {
 
   .lg\:z-auto {
     z-index: auto !important; } }
-@media (min-width: 1280px) {
+@media (min-width: 1425px) {
   .xl\:sr-only {
     position: absolute !important;
     width: 1px !important;

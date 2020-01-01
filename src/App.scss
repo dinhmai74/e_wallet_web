@@ -92,6 +92,10 @@ $colors: (
 .text {
   font-stretch: normal;
   color: $greyish-brown;
+  &__btn{
+    font-size: 14px;
+  }
+
   &__bold {
     font-weight: bold;
   }
@@ -156,6 +160,11 @@ $colors: (
 
     &--mobile-card {
       width: 480px;
+    }
+
+    &--side {
+      width: 300px;
+      height: 170px;
     }
   }
 

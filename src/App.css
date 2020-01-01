@@ -163,6 +163,8 @@ body {
     font-size: 1.75rem; }
   .text__d3 {
     font-size: 0.75rem; }
+  .text__center {
+    text-align: center; }
 
 .font__bold {
   font-weight: bold; }
@@ -172,6 +174,9 @@ body {
   width: 500px; }
   .img__decorate--mobile-card {
     width: 480px; }
+  .img__decorate--side {
+    width: 300px;
+    height: 170px; }
 .img__logo {
   cursor: pointer;
   width: 150px;
