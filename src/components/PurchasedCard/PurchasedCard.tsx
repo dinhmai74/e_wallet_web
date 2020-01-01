@@ -11,8 +11,8 @@ export const PurchasedCard: React.FC<Props> = props => {
       <StyledImg src={`${process.env.PUBLIC_URL}/${src}`} alt="illu" />
       <div className="flex flex-col justify-center item-center pl-12">
         <div className="flex flex-row">
-          <p className="text__h2 color__grey pb-4">Viettet -</p>
-          <p className="text__h4 color__steel pb-4 pt-1 pl-6">10,000d</p>
+          <p className="text__h2 color__grey pb-4">Viettet-</p>
+          <p className="text__h4 color__steel pb-4 pt-1 pl-6 pr-16">10,000d</p>
         </div>
         <p className="text__b1 color__primary pb-4">24141634262</p>
         <p className="text__d1 color__blue-grey pb-4">Seri: 378219379123</p>
