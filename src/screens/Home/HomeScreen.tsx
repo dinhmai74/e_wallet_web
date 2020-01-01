@@ -27,7 +27,9 @@ const HerosHome: HeroModel[] = [
       "Your time is money.",
       "Let us take care of that."
     ],
-    type: "right"
+    type: "right",
+    buttonTx: "Transfer",
+    navigateTo: "transfer"
   },
   {
     src: images.home.train,
@@ -42,10 +44,7 @@ const HerosHome: HeroModel[] = [
   {
     src: images.home.mobile,
     title: "Mobile card",
-    content: [
-      "With us, discount is just a number.",
-      "More buy, more discount."
-    ],
+    content: ["Discount is just a number.", "More buy, more discount."],
     type: "right",
     imgStyle: "img__decorate--mobile-card",
     navigateTo: "buy-phone-card-general",
@@ -68,7 +67,8 @@ const HerosHome: HeroModel[] = [
     title: "Game card",
     type: "right",
     content: ["More money, more power.", "Let rule the game."]
-  }
+  },
+
 ];
 
 export const HomeScreen: React.FC<Props> = () => {

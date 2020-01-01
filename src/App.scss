@@ -75,7 +75,8 @@ $colors: (
   "bg": $window-blue,
   "bg-5": $window-blue-5,
   "bg-10": $window-blue-10,
-  "bg-17": $window-blue-17
+  "bg-17": $window-blue-17,
+  "bg-grey": $gainsboro
 );
 
 @each $name, $glyph in $colors {
@@ -91,6 +92,13 @@ $colors: (
 .text {
   font-stretch: normal;
   color: $greyish-brown;
+  &__btn{
+    font-size: 14px;
+  }
+
+  &__bold {
+    font-weight: bold;
+  }
   &__t1 {
     font-size: 3.3125rem;
   }
@@ -103,6 +111,10 @@ $colors: (
     font-size: 1.875rem;
   }
 
+  &__h3 {
+    font-size: 1.65rem;
+  }
+
   &__h4 {
     font-size: 1.5rem;
   }
@@ -113,12 +125,30 @@ $colors: (
   }
 
   &__b1 {
-    font-size: 1rem;
-    line-height: 1.5rem;
+    font-size: 16px;
+    line-height: 24px;
   }
 
   &__d1 {
     font-size: 1rem;
+  }
+
+  &__d2 {
+    font-size: 1.75rem;
+  }
+
+  &__d3 {
+    font-size: 0.75rem;
+  }
+
+  &__center{
+    text-align: center;
+  }
+}
+
+.font {
+  &__bold {
+    font-weight: bold;
   }
 }
 
@@ -131,9 +161,15 @@ $colors: (
     &--mobile-card {
       width: 480px;
     }
+
+    &--side {
+      width: 300px;
+      height: 170px;
+    }
   }
 
   &__logo {
+    cursor: pointer;
     width: 150px;
     height: 52px;
   }
@@ -167,6 +203,26 @@ $colors: (
   &-md {
     width: 250px;
     height: auto;
+  }
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+
+  &--tiny {
+    width: 16px;
+    height: 16px;
+  }
+
+  &--sm {
+    width: 24px;
+    height: 24px;
+  }
+
+  &--md {
+    width: 64px;
+    height: 64px;
   }
 }
 
@@ -232,6 +288,32 @@ $colors: (
   box-shadow: 0 0 15px $shadow-color;
 }
 
-.footer{
-  min-height: 40vh;
+.footer {
+  min-height: 20vh;
+}
+
+.menu-item {
+  padding: 0 40px;
+  margin: 5px 10px;
+  user-select: none;
+  cursor: pointer;
+  border: none;
+}
+.menu-item-wrapper {
+  border: none;
+  outline: none;
+
+  .active {
+    border: none;
+    outline: none;
+  }
+}
+.menu-item.active {
+  border: none;
+  outline: none;
+}
+
+.scroll-menu-arrow {
+  padding: 20px;
+  cursor: pointer;
 }

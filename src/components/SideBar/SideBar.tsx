@@ -69,7 +69,9 @@ const [useSidebar] = create<SidebarState>(
         const { width } = useWindowSize();
         return useDrag(({ direction, velocity, last }) => {
           if (direction[0] > D_THRESHOLD && last && velocity > V_THRESHOLD) {
-            if (width > 500) return;
+            if (width > 500) {
+              return;
+            }
             get().toggleSidebar();
           }
         });
@@ -78,7 +80,9 @@ const [useSidebar] = create<SidebarState>(
         const { width } = useWindowSize();
         return useDrag(({ direction, velocity, last }) => {
           if (direction[0] < -D_THRESHOLD && last && velocity > V_THRESHOLD) {
-            if (width > 500) return;
+            if (width > 500) {
+              return;
+            }
             get().toggleSidebar();
           }
         });
@@ -96,7 +100,7 @@ const Item: React.FC<ItemProps> = ({ onClick, children }) => {
   return (
     <div className="mb-6">
       <button
-        className="btn bg-transparent text-white text__h3"
+        className="btn bg-transparent text-white text__h4"
         onClick={onClick}
       >
         {children}
@@ -150,9 +154,19 @@ function Sidebar() {
       </div>
 
       <Item onClick={() => handleOnClick("/")}>Home</Item>
+
+      <Item onClick={() => handleOnClick(Paths.transfer)}>
+        Transfer
+      </Item>
+
       <Item onClick={() => handleOnClick(Paths.movieTicket)}>
         Buy movie ticket
       </Item>
+
+      <Item onClick={() => handleOnClick(Paths.buyPhoneCardGeneral)}>
+        Buy phone ticket
+      </Item>
+
     </animated.div>
   );
 }

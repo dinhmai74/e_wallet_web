@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Wallpaper } from "components/Wallpaper";
 import { AppButton } from "components";
 import { HotMovieData, MovieModel } from "mock-data/home/movies";
@@ -6,7 +6,6 @@ import { InfoMovieShowing } from "screens/MovieTicket/MovieTicketGeneralScreen/M
 import { IconArrowHalf } from "theme/Icons";
 import { metrics } from "theme/metrics";
 import { observer } from "mobx-react";
-import { MovieTicketStoreContext } from "stores/MovieTicketStore";
 import { useHistory } from "react-router";
 import { Paths } from "router/PrimaryRouters";
 
@@ -33,7 +32,6 @@ export const Footer: React.FC<Props> = observer(({ movie, isChanging }) => {
 
   const anim = isChanging ? "anim--fadeIn" : "";
 
-  const movieTicketStore = useContext(MovieTicketStoreContext);
   const history = useHistory();
 
   return (

@@ -7,7 +7,8 @@ module.exports = {
       sm: "640px",
       md: "768px",
       lg: "1024px",
-      xl: "1280px"
+      xl: "1280px",
+      xxl: "1900px"
     },
 
     colors: {
@@ -23,7 +24,9 @@ module.exports = {
       blue: "$blue",
       grey: "$greyish-brown",
       white: "$white",
-      black: "$black"
+      black: "$black",
+      darkBlue: "$dark-blue",
+      darkGrey: "$grey"
     },
 
     spacing: {
@@ -88,7 +91,8 @@ module.exports = {
       default:
         "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
       md:
-        "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+        // "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+      "0 0 15px 0 rgba(0, 0, 0, 0.1)",
       lg:
         "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
       xl:
@@ -96,6 +100,7 @@ module.exports = {
       "2xl": "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
       inner: "inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)",
       outline: "0 0 0 3px rgba(66, 153, 225, 0.5)",
+      card: "0 0 15px 0 rgba(0, 0, 0, 0.1)",
       none: "none"
     },
     container: {},
@@ -181,6 +186,10 @@ module.exports = {
     }),
     inset: {
       "0": "0",
+      "1/2": "50%",
+      "1/3": "33%",
+      "1/4": "25%",
+      "1/5": "20%",
       auto: "auto"
     },
     letterSpacing: {
@@ -214,6 +223,7 @@ module.exports = {
       screen: "100vh"
     },
     maxWidth: {
+      xss: "16rem",
       xs: "20rem",
       sm: "24rem",
       md: "28rem",
@@ -231,10 +241,11 @@ module.exports = {
       full: "100%",
       screen: "100vh"
     },
-    minWidth: {
-      "0": "0",
-      full: "100%"
-    },
+    minWidth: (theme)=>({
+        ...theme("spacing"),
+        "0": "0",
+        full: "100%"
+      }),
     objectPosition: {
       bottom: "bottom",
       center: "center",
@@ -251,6 +262,7 @@ module.exports = {
       "25": "0.25",
       "50": "0.5",
       "75": "0.75",
+      "90": "0.9",
       "100": "1"
     },
     order: {
@@ -388,6 +400,6 @@ module.exports = {
   },
   corePlugins: {},
   plugins: [
-   
+
   ]
 };

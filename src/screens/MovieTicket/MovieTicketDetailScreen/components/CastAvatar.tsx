@@ -1,6 +1,5 @@
 import React from "react";
-import { Avatar, createStyles, makeStyles, Theme } from "@material-ui/core";
-import cx from "classnames";;
+import { AppAvatar } from "components/AppAvatar";
 
 interface Props {
   src: string;
@@ -8,25 +7,12 @@ interface Props {
 }
 
 export const CastAvatar: React.FC<Props> = props => {
-  const { src, name } = props;
+  const { name } = props;
   // not real data so we rando img
   const id = Math.floor(Math.random() * 1000) + 1;
-  const size= 70
 
   return (
-    <div className="flex-column m-4 items-center justify-center">
-      <Avatar
-        alt={name}
-        src={`https://picsum.photos/id/${id}/200/300`}
-        className="mx-auto"
-        style={{
-          width: size,
-          height: size,
-          alignSelf: "center",
-        }}
-      />
-      <p className="text__d3 color__blue-grey text-center mt-4">{name}</p>
-    </div>
+    <AppAvatar src={`https://picsum.photos/id/${id}/200/300`} name={name} />
   );
 };
 

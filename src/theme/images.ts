@@ -1,5 +1,8 @@
 export { ReactComponent as ImgNotFound404 } from "./raw-img/404.svg";
 export { ReactComponent as ImgNotFound } from "./raw-img/notFound.svg";
+export { ReactComponent as ImgMovieHooray } from "./raw-img/movies.svg";
+export { ReactComponent as ImgScreen } from "./raw-img/screen.svg";
+export { ReactComponent as ImgPayment } from "./raw-img/payment.svg";
 
 export const images = {
   logo: "asset/images/logo.png",
@@ -22,5 +25,17 @@ export const images = {
   movie: {
     illu_watch: "asset/images/movies/illu_watch.png",
     illu_movie: "asset/images/movies/ill_movie.png"
-  }
+  },
+  phoneCard: {
+    bgPhoneCardDetail: "asset/images/bg/bg-polygon.png",
+    cash: "asset/images/cash.jpg"
+  },
+  phoneCardPayment: {
+    vcb: "asset/images/vcb.jpeg",
+    viettinbank: "asset/images/viettinbank/png",
+    mb: "asset/images/mb.png",
+    citybank: "asset/images/citybank.png",
+    payment: "asset/images/payment.jpg"
+  },
+  success: "asset/images/success.png"
 };

@@ -1,16 +1,38 @@
 import { HomeScreen } from "screens/Home";
 import { About } from "screens/About";
-import { Post } from "screens/Post";
-import { MovieTicketGeneral } from "screens/MovieTicket";
+import {
+  MovieTicketGeneral,
+  MovieTicketChoseInfoScreen,
+  MovieTicketBuySuccessScreen
+} from "screens/MovieTicket";
 import { BuyPhoneCardGeneral } from "screens/buy-phone-card/buy-phone-card-general/buy-phone-card-general";
+import { BuyPhoneCardDetail } from "screens/buy-phone-card/buy-phone-card-general/BuyPhoneCardDetail";
 import { MovieTicketDetailSreen } from "screens/MovieTicket/MovieTicketDetailScreen";
+import { MovieTicketChosePosScreen } from "screens/MovieTicket/MovieTicketChosePosScreen";
+import { MovieTicketChosePosDetailScreen } from "screens/MovieTicket/MovieTicketChosePosDetailScreen/MovieTicketChosePosDetailScreen";
+import { BuyPhoneCardPayMent } from "screens/buy-phone-card/BuyPhoneCardPayMent/BuyPhoneCardPayMent";
+import { MovieTicketPaymentScreen } from "screens/MovieTicket/MovieTicketPaymentScreen";
+import { TransferGeneralScreen } from "screens/Transfer";
+import { BuyPhoneCardSuccess } from "screens/buy-phone-card/buy-phone-card-general/BuyPhoneCardSuccess";
 
 export const Paths = {
   home: "/",
   about: "/about",
+  
+  buyPhoneCardGeneral: "/buy-phone-card-general",
+  buyPhoneCardDetail: "/buy-phone-card-detail",
+  buyPhoneCardSuccess: "/payment/buy-phone-card/success",
+
   movieTicket: "/movie-ticket",
   movieTicketDetail: "/movie-ticket/detail",
-  buyPhoneCardGeneral: "/buy-phone-card-general"
+  movieTicketChoseInfo: "/movie-ticket/chose-info",
+  movieTicketChosePos: "/movie-ticket/chose-position",
+  movieTicketChosePosDetail: "/movie-ticket/chose-position-detail",
+  buyPhoneCardPayment: "/buy-phone-card-payment",
+  movieTicketPayment: "/payment/movie-ticket",
+  movieTicketPaymentSuccess: "/payment/movie-ticket/success",
+
+  transfer: "/transfer"
 };
 
 export interface RouterModel {
@@ -28,13 +50,19 @@ export const PrimaryRouters: RouterModel[] = [
     path: Paths.about
   },
   {
-    Component: Post,
-    path: "posts/:id"
-  },
-  {
     Component: HomeScreen,
     path: "/"
   },
+
+  {
+    Component: BuyPhoneCardGeneral,
+    path: Paths.buyPhoneCardGeneral
+  },
+  {
+    Component: BuyPhoneCardDetail,
+    path: Paths.buyPhoneCardDetail
+  },
+
   {
     Component: MovieTicketGeneral,
     path: Paths.movieTicket
@@ -44,7 +72,39 @@ export const PrimaryRouters: RouterModel[] = [
     path: Paths.movieTicketDetail + "/:id"
   },
   {
-    Component: BuyPhoneCardGeneral,
-    path: Paths.buyPhoneCardGeneral
+    Component: MovieTicketChoseInfoScreen,
+    path: Paths.movieTicketChoseInfo
+  },
+  {
+    Component: MovieTicketChosePosScreen,
+    path: Paths.movieTicketChosePos
+  },
+  {
+    Component: MovieTicketChosePosDetailScreen,
+    path: Paths.movieTicketChosePosDetail
+  },
+  {
+    Component: MovieTicketPaymentScreen,
+    path: Paths.movieTicketPayment
+  },
+  {
+    Component: BuyPhoneCardDetail,
+    path: Paths.buyPhoneCardDetail
+  },
+  {
+    Component: BuyPhoneCardPayMent,
+    path: Paths.buyPhoneCardPayment
+  },
+  {
+    Component: MovieTicketBuySuccessScreen,
+    path: Paths.movieTicketPaymentSuccess
+  },
+  {
+    Component: TransferGeneralScreen,
+    path: Paths.transfer
+  },
+  {
+    Component: BuyPhoneCardSuccess,
+    path: Paths.buyPhoneCardSuccess
   }
 ];

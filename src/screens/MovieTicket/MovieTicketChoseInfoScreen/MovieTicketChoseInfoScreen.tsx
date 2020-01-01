@@ -1,0 +1,63 @@
+import React, { useContext, useEffect, useState } from "react";
+import { Screen } from "components";
+import { observer } from "mobx-react";
+import { MovieTicketStoreContext } from "stores/MovieTicketStore";
+import { MovieTicketChoseInfoScreenInfoSide } from "./MovieTicketChoseInfoScreenInfoSide";
+import { MovieData, PlaceData, PlaceModel } from "mock-data/home/movies";
+import { AppDatePicker } from "components/AppDatePicker";
+import moment, { Moment } from "moment";
+import { Divider } from "@material-ui/core";
+import { MovieTicketChoseTime } from "screens/MovieTicket/MovieTicketChoseInfoScreen/MovieTicketChoseTime";
+
+interface Props {}
+
+export const MovieTicketChoseInfoScreen: React.FC<Props> = observer(props => {
+  const movieTicketStore = useContext(MovieTicketStoreContext);
+  const [selectedDate, setSelectedDate] = useState<Moment>(moment());
+  const [places, setPlaces] = useState<PlaceModel[]>([]);
+
+  const movie = MovieData.find(val => val.id === movieTicketStore.id);
+  useEffect(() => {
+    const tempPlaces: PlaceModel[] = [];
+    PlaceData.forEach(place => {
+      const inSelected = place.date.filter(d =>
+        moment(d).isSame(selectedDate, "day")
+      );
+      if (inSelected.length > 0) {
+        tempPlaces.push(place);
+      }
+    });
+
+    setPlaces([...tempPlaces]);
+  }, [selectedDate, setPlaces]);
+
+  if (!movie) {
+    return <div>error</div>;
+  }
+
+  return (
+    <Screen className="pl-20">
+      <div className="flex flex-row">
+        <div className="flex-1 pt-32">
+          <div className="pr-40 py-8">
+            <AppDatePicker
+              onChange={date => {
+                setSelectedDate(date);
+              }}
+              minDate={moment()}
+            />
+            <Divider />
+          </div>
+
+          <div className="max-w-2/4">
+            {places.map(val => (
+              <MovieTicketChoseTime place={val} key={val.id} />
+            ))}
+          </div>
+        </div>
+
+        <MovieTicketChoseInfoScreenInfoSide movie={movie} />
+      </div>
+    </Screen>
+  );
+});
