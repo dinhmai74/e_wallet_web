@@ -1,12 +1,12 @@
 export const formatDigitNumber = myNumber => ("0" + myNumber).slice(-2);
 
 // @ts-ignore
-export function formatMoney(
+export const formatMoney = (
   amount,
   decimalCount = 0,
   decimal = ".",
   thousands = ","
-) {
+): string => {
   try {
     decimalCount = Math.abs(decimalCount);
     decimalCount = isNaN(decimalCount) ? 2 : decimalCount;
@@ -32,6 +32,8 @@ export function formatMoney(
             .slice(2)
         : "")
     );
-  } catch (e) {}
-}
+  } catch (e) {
+    return "";
+  }
+};
 export const unitTx = "d";

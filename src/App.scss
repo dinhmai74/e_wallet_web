@@ -150,6 +150,14 @@ $colors: (
   &__bold {
     font-weight: bold;
   }
+
+  &__normal{
+    font-weight: normal;
+  }
+
+  &__medium{
+    font-weight: medium;
+  }
 }
 
 /* ------------- img ------------- */

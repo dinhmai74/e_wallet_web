@@ -4,6 +4,7 @@ import { Divider } from "@material-ui/core";
 import { AppButton } from "components";
 import { formatMoney } from "utils/number";
 import { useCss } from "react-use";
+import { FeeRow } from "components/FeeRow";
 
 interface Props {
   totalAmount: number;
@@ -25,12 +26,13 @@ export const InformationCard: React.FC<Props> = props => {
     <div>
       <div className={cardCn}>
         {children}
+        <FeeRow className="my-8" />
         <Divider />
 
         <RowTextSpaceBetween
           leftTx="Total amount"
-          leftClassName="text-blueGrey font-normal"
-          className="my-4 mt-8"
+          leftClassName="text-blueGrey font-medium"
+          className="my-4 mt-8 mb-8 font-medium"
           rightTx={formatMoney(totalAmount) + ""}
         />
 
