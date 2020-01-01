@@ -37,7 +37,6 @@ function formatMoney(amount, decimalCount = 2, decimal = ".", thousands = ",") {
 
 export const ChooseCardType: React.FC = () => {
   const [selected, setSelected] = useState();
-  console.log("dasdas", selected);
   const renderCardMoney = () => {
     return data.map((val, index) => (
       <ItemMoney
@@ -52,13 +51,8 @@ export const ChooseCardType: React.FC = () => {
 
   return (
     <div>
-      <div className="mb-20 pl-64 flex-wrap">
-        <p
-          className="text__h2 color__grey font-bold"
-          style={{ paddingLeft: 15 }}
-        >
-          Choose card type:
-        </p>
+      <div className="mb-20 pl-56 flex-wrap">
+        <p className="text__h2 color__grey font-bold">Choose card type:</p>
       </div>
       <div className="flex flex-wrap justify-center mb-10 ml-32">
         {renderCardMoney()}
@@ -68,7 +62,7 @@ export const ChooseCardType: React.FC = () => {
         src={images.phoneCard.cash}
         quantity="Quantity: "
         total="Total: "
-        navigateTo=" "
+        navigateTo="buy-phone-card-payment"
         buttonTx="OK"
         money={formatMoney(selected, 0)}
       />
