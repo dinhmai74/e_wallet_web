@@ -69,13 +69,13 @@ export const HeroCard: React.FC<HeroModel> = ({
   const classes = useStyles();
 
   const renderImg = () => (
-    <Card className={classes.card}>
+    <div className={classes.card}>
       <img
         src={src}
         className={`self-center ${imgMargin} ${imgStyle} hidden img__decorate sm:hidden md:hidden lg:block xl:block`}
         alt="illstration"
       />
-    </Card>
+    </div>
   );
 
   const renderButton = () => {

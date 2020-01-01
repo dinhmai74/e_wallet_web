@@ -30,5 +30,12 @@ export const images = {
     bgPhoneCardDetail: "asset/images/bg/bg-polygon.png",
     cash: "asset/images/cash.jpg"
   },
+  phoneCardPayment: {
+    vcb: "asset/images/vcb.jpeg",
+    viettinbank: "asset/images/viettinbank/png",
+    mb: "asset/images/mb.png",
+    citybank: "asset/images/citybank.png",
+    payment: "asset/images/payment.jpg"
+  },
   success: "asset/images/success.png"
 };
