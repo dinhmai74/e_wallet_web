@@ -16,16 +16,16 @@ export const BuyPhoneCardPayMent: React.FC = props => {
   return (
     <Screen>
       <PaymentMethods onChange={onChangeMethods} />
-        <InfoPaymentCard
-          type="left"
-          src={images.phoneCardPayment.payment}
-          navigateTo="buy-phone-card-payment"
-          buttonTx="Confirm"
-          provider="viettel"
-          price={"100.000"}
-          quantity="3"
-          totalAmount="300.000d"
-        />
+      <InfoPaymentCard
+        type="left"
+        src={images.phoneCardPayment.payment}
+        navigateTo="/payment/buy-phone-card/success"
+        buttonTx="Confirm"
+        provider="viettel"
+        price={"100.000"}
+        quantity="3"
+        totalAmount="300.000d"
+      />
     </Screen>
   );
 };
