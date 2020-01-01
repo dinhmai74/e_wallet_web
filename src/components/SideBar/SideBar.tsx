@@ -100,7 +100,7 @@ const Item: React.FC<ItemProps> = ({ onClick, children }) => {
   return (
     <div className="mb-6">
       <button
-        className="btn bg-transparent text-white text__h3"
+        className="btn bg-transparent text-white text__h4"
         onClick={onClick}
       >
         {children}
@@ -154,6 +154,11 @@ function Sidebar() {
       </div>
 
       <Item onClick={() => handleOnClick("/")}>Home</Item>
+
+      <Item onClick={() => handleOnClick(Paths.transfer)}>
+        Transfer
+      </Item>
+
       <Item onClick={() => handleOnClick(Paths.movieTicket)}>
         Buy movie ticket
       </Item>
@@ -161,6 +166,7 @@ function Sidebar() {
       <Item onClick={() => handleOnClick(Paths.buyPhoneCardGeneral)}>
         Buy phone ticket
       </Item>
+
     </animated.div>
   );
 }

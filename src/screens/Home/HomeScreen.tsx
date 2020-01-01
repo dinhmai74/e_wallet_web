@@ -27,7 +27,9 @@ const HerosHome: HeroModel[] = [
       "Your time is money.",
       "Let us take care of that."
     ],
-    type: "right"
+    type: "right",
+    buttonTx: "Transfer",
+    navigateTo: "transfer"
   },
   {
     src: images.home.train,
@@ -65,7 +67,8 @@ const HerosHome: HeroModel[] = [
     title: "Game card",
     type: "right",
     content: ["More money, more power.", "Let rule the game."]
-  }
+  },
+
 ];
 
 export const HomeScreen: React.FC<Props> = () => {

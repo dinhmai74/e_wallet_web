@@ -42,7 +42,7 @@ export const Hero: React.FC<HeroModel> = ({
   const imgMargin = "";
 
   if (type === "right") {
-    txMargin = "md:ml-20";
+    txMargin = "md:mx-20";
   } else {
     txMargin = "md:ml-20";
   }
@@ -81,6 +81,7 @@ export const Hero: React.FC<HeroModel> = ({
       className={containerClassName}
       data-aos={`fade-${type}`}
       data-aos-delay="50"
+      data-aos-once="true"
       data-aos-duration="1000"
     >
       {type === "left" && renderImg()}

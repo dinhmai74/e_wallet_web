@@ -5,7 +5,7 @@ import cx from "classnames";
 import { Screen, AppButton } from "components";
 import { MovieTicketDeatilScreenInfo } from "./components/MovieTicketDetailScreen.Info";
 import { useParams, useHistory } from "react-router";
-import { MovieData, CastModel } from "mock-data/home/movies";
+import { MovieData, AvatarModel } from "mock-data/home/movies";
 import { ImgNotFound } from "theme";
 import { PageNotFound } from "components/PageNotFound";
 import styles from "./MovieTicketDetailScreen.module.scss";
@@ -72,7 +72,7 @@ export const MovieTicketDetailSreen: React.FC<Props> = observer(() => {
   );
 });
 
-const generateListCasts = (casts: CastModel[]) => {
+const generateListCasts = (casts: AvatarModel[]) => {
   return casts.map((el, idx) => {
     const { name, src } = el;
     return <CastAvatar name={name} src={src} key={idx} />;

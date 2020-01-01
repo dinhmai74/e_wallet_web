@@ -7,7 +7,8 @@ module.exports = {
       sm: "640px",
       md: "768px",
       lg: "1024px",
-      xl: "1280px"
+      xl: "1280px",
+      xxl: "1900px"
     },
 
     colors: {
@@ -222,6 +223,7 @@ module.exports = {
       screen: "100vh"
     },
     maxWidth: {
+      xss: "16rem",
       xs: "20rem",
       sm: "24rem",
       md: "28rem",
