@@ -11,8 +11,8 @@ export const ChooseProvider: React.FC = () => {
       <p className="`text__h2 color__steel font-bold pl-16">Choose Provider:</p>
       <div className="flex flex-row  py-10 px-12 flex-wrap ">
        <ItemProvider src={images.iconProvider.viettel}/>
-       <ItemProvider src={images.iconProvider.viettel}/>
-       <ItemProvider src={images.iconProvider.viettel}/>
+       <ItemProvider src={images.iconProvider.mobiphone}/>
+       <ItemProvider src={images.iconProvider.vtc}/>
       </div>
     </div>
   );
