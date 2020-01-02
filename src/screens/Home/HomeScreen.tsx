@@ -66,7 +66,9 @@ const HerosHome: HeroModel[] = [
     src: images.home.gaming,
     title: "Game card",
     type: "right",
-    content: ["More money, more power.", "Let rule the game."]
+    content: ["More money, more power.", "Let rule the game."],
+    navigateTo:"buy-game-card-general",
+    buttonTx: "Buy Game Card"
   },
 
 ];

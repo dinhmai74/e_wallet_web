@@ -37,5 +37,10 @@ export const images = {
     citybank: "asset/images/citybank.png",
     payment: "asset/images/payment.jpg"
   },
-  success: "asset/images/success.png"
+  success: "asset/images/success.png",
+  gameCard: {
+    iconGarena: "asset/images/garena-logo.png",
+    iconZing: "asset/images/icon-zing.png",
+    iconGate: "asset/images/icon-gate.png"
+  }
 };

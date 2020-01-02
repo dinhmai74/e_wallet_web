@@ -5,6 +5,7 @@ import colors from "theme/color/_colors.scss";
 import { Card, CardMedia } from "@material-ui/core";
 import { Paths } from "router/PrimaryRouters";
 import { useHistory } from "react-router";
+import { ItemProvider } from "components/ItemProvider/ItemProvider";
 
 const useStyles = makeStyles(theme => ({
   card: {
@@ -30,31 +31,9 @@ export const ChooseProvider: React.FC = () => {
     >
       <p className="`text__h2 color__steel font-bold pl-16">Choose Provider:</p>
       <div className="flex flex-row  py-10 px-12 flex-wrap ">
-        <Card
-          className={classes.card}
-          onClick={() => {
-            history.push(Paths.buyPhoneCardDetail);
-          }}
-        >
-          <CardMedia
-            className={classes.media}
-            image={images.iconProvider.viettel}
-          />
-        </Card>
-
-        <Card className={classes.card}>
-          <CardMedia
-            className={classes.media}
-            image={images.iconProvider.viettel}
-          />
-        </Card>
-
-        <Card className={classes.card}>
-          <CardMedia
-            className={classes.media}
-            image={images.iconProvider.viettel}
-          />
-        </Card>
+       <ItemProvider src={images.iconProvider.viettel}/>
+       <ItemProvider src={images.iconProvider.viettel}/>
+       <ItemProvider src={images.iconProvider.viettel}/>
       </div>
     </div>
   );
