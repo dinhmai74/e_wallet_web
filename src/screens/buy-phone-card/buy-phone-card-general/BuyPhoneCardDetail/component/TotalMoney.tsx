@@ -37,7 +37,7 @@ export const TotalMoney: React.FC<HeroModel> = ({
   const history = useHistory();
   const renderImg = () => (
     <img
-      src={src}
+    src={`${process.env.PUBLIC_URL}/${src}`}
       className={`self-center ${imgMargin} ${imgStyle} hidden img__decorate sm:hidden md:hidden lg:block xl:block`}
       alt="illstration"
     />

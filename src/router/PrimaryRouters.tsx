@@ -19,6 +19,7 @@ import {
   TransferPaymentSuccessScreen
 } from "screens/Transfer";
 import { BuyGameCardGeneral } from "screens/BuyGameCard/BuyGameCardGeneral";
+import { BuyGameCardDetail } from "screens/BuyGameCard/BuyGameCardDetail ";
 
 export const Paths = {
   about: "/about",
@@ -40,7 +41,8 @@ export const Paths = {
   transfer: "/transfer",
   transferPayment: "/payment/transfer",
   transferPaymentSuccess: "/payment/transfer/success",
-  buyGameCardGeneral: "/buy-game-card-general"
+  buyGameCardGeneral: "/buy-game-card-general",
+  buyGameCardDetail: "/buy-game-card/detail"
 };
 
 export interface RouterModel {
@@ -124,5 +126,9 @@ export const PrimaryRouters: RouterModel[] = [
   {
     Component: BuyGameCardGeneral,
     path: Paths.buyGameCardGeneral
+  },
+  {
+    Component: BuyGameCardDetail,
+    path: Paths.buyGameCardDetail
   }
 ];
