@@ -1,29 +1,8 @@
 import React from "react";
 import { images } from "theme";
-import { makeStyles } from "@material-ui/core/styles";
-import colors from "theme/color/_colors.scss";
-import { Card, CardMedia } from "@material-ui/core";
-import { Paths } from "router/PrimaryRouters";
-import { useHistory } from "react-router";
 import { ItemProvider } from "components/ItemProvider/ItemProvider";
 
-const useStyles = makeStyles(theme => ({
-  card: {
-    minWidth: 275,
-    boxShadow: `0 0 15px 0 rgba(0, 0, 0, 0.1)`,
-    borderRadius: 10,
-    backgroundColor: colors.white,
-    marginRight: 50
-  },
-  media: {
-    height: 0,
-    paddingTop: "60%" // 16:9
-  }
-}));
-
 export const ChooseProvider: React.FC = () => {
-  const classes = useStyles();
-  const history = useHistory();
   return (
     <div
       className=" d-flex flex-wrap  px-10 py-10 mb-64  justify-center "
