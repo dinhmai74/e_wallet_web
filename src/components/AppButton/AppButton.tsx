@@ -38,7 +38,9 @@ export interface AppButtonProps extends ButtonProps {
 
 export const AppButton = withStyles(styles)((props: AppButtonProps) => {
   const { color, className, tx, children, loading, ...rest } = props;
-  const content = children || tx;
+  const content = children || (
+    <div className={`${loading && "opacity-0 "} flex flex-row`}>{tx}</div>
+  );
   return (
     <Button
       color={color}
@@ -47,9 +49,12 @@ export const AppButton = withStyles(styles)((props: AppButtonProps) => {
       {...rest}
     >
       {loading && (
-        <CircularProgress size={14} className="text-white absolute left-1/2 right-1/2" />
+        <CircularProgress
+          size={14}
+          className="text-white absolute left-1/2 right-1/2"
+        />
       )}
-      <div className={`${loading && "opacity-0 "}`}>{content}</div>
+        {content}
     </Button>
   );
 });
