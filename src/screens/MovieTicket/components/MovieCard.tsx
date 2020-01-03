@@ -1,5 +1,5 @@
-import React from "react";
 import { MovieModel } from "mock-data/home/movies";
+import React from "react";
 
 interface Props {
   movie: MovieModel;

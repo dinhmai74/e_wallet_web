@@ -13,6 +13,7 @@ import { MovieTicketChosePosDetailScreen } from "screens/MovieTicket/MovieTicket
 import { MovieTicketChosePosScreen } from "screens/MovieTicket/MovieTicketChosePosScreen";
 import { MovieTicketDetailSreen } from "screens/MovieTicket/MovieTicketDetailScreen";
 import { MovieTicketPaymentScreen } from "screens/MovieTicket/MovieTicketPaymentScreen";
+import { TrainGeneralScreen } from "screens/Train";
 import {
   TransferGeneralScreen,
   TransferPaymentScreen,
@@ -23,6 +24,8 @@ import { BuyGameCardGeneral } from "screens/BuyGameCard/BuyGameCardGeneral";
 export const Paths = {
   about: "/about",
   home: "/",
+
+  buyGameCardGeneral: "/buy-game-card-general",
 
   buyPhoneCardDetail: "/buy-phone-card-detail",
   buyPhoneCardGeneral: "/buy-phone-card-general",
@@ -40,7 +43,12 @@ export const Paths = {
   transfer: "/transfer",
   transferPayment: "/payment/transfer",
   transferPaymentSuccess: "/payment/transfer/success",
-  buyGameCardGeneral: "/buy-game-card-general"
+
+  train: "/train-ticket",
+  trainChosePos: "/train-ticket/chose-position",
+  trainFillInfo: "/train-ticket/fill-info",
+  trainPayment: "/payment/train-ticket",
+  trainSuccess: "/payment/train-ticket/succcess"
 };
 
 export interface RouterModel {
@@ -62,11 +70,11 @@ export const PrimaryRouters: RouterModel[] = [
     path: "/"
   },
 
+  /* ------------------------ phone card ------------------------ */
   {
     Component: BuyPhoneCardGeneral,
     path: Paths.buyPhoneCardGeneral
   },
-
   {
     Component: BuyPhoneCardDetail,
     path: Paths.buyPhoneCardDetail
@@ -80,6 +88,7 @@ export const PrimaryRouters: RouterModel[] = [
     path: Paths.buyPhoneCardSuccess
   },
 
+  /* ------------------------ movie ------------------------ */
   {
     Component: MovieTicketGeneral,
     path: Paths.movieTicket
@@ -109,6 +118,7 @@ export const PrimaryRouters: RouterModel[] = [
     path: Paths.movieTicketPaymentSuccess
   },
 
+  /* ------------------------ transfer ------------------------ */
   {
     Component: TransferGeneralScreen,
     path: Paths.transfer
@@ -124,5 +134,16 @@ export const PrimaryRouters: RouterModel[] = [
   {
     Component: BuyGameCardGeneral,
     path: Paths.buyGameCardGeneral
+  },
+
+  {
+    Component: TransferPaymentSuccessScreen,
+    path: Paths.transferPaymentSuccess
+  },
+
+  /* ------------------------ train ------------------------ */
+  {
+    Component: TrainGeneralScreen,
+    path: Paths.train
   }
 ];

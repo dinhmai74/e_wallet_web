@@ -1,5 +1,5 @@
-import React from "react";
 import { AppAvatar } from "components/AppAvatar";
+import React from "react";
 
 interface Props {
   src: string;

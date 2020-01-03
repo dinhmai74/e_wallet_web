@@ -1,10 +1,10 @@
-import React from "react";
-import { RowTextSpaceBetween } from "components/RowTextSpaceBetween";
 import { Divider } from "@material-ui/core";
 import { AppButton } from "components";
-import { formatMoney } from "utils/number";
-import { useCss } from "react-use";
 import { FeeRow } from "components/FeeRow";
+import { RowTextSpaceBetween } from "components/RowTextSpaceBetween";
+import React from "react";
+import { useCss } from "react-use";
+import { formatMoney } from "utils/number";
 
 interface Props {
   totalAmount: number;

@@ -1,5 +1,5 @@
-import React, { memo } from "react";
 import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
+import React, { memo } from "react";
 import ScrollMenu from "react-horizontal-scrolling-menu";
 
 import { AppAvatar } from "components/AppAvatar";

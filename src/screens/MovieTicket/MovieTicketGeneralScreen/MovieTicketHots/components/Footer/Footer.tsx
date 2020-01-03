@@ -1,13 +1,13 @@
-import React from "react";
-import { Wallpaper } from "components/Wallpaper";
 import { AppButton } from "components";
+import { Wallpaper } from "components/Wallpaper";
+import { observer } from "mobx-react";
 import { HotMovieData, MovieModel } from "mock-data/home/movies";
+import React from "react";
+import { useHistory } from "react-router";
+import { Paths } from "router/PrimaryRouters";
 import { InfoMovieShowing } from "screens/MovieTicket/MovieTicketGeneralScreen/MovieTicketHots/components/InfoMovieShowing";
 import { IconArrowHalf } from "theme/Icons";
 import { metrics } from "theme/metrics";
-import { observer } from "mobx-react";
-import { useHistory } from "react-router";
-import { Paths } from "router/PrimaryRouters";
 
 interface Props {
   movie: MovieModel;

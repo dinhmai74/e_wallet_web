@@ -25,6 +25,7 @@ export const theme = createMuiTheme({
         fontWeight: 400,
         fontFamily: "Rubik"
       }
-    }
+    },
+    MuiPopover: {}
   }
 });

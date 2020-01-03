@@ -2,11 +2,11 @@ import { Screen } from "components";
 import { PaymentMethods } from "components/PaymentMethods";
 import { observer } from "mobx-react";
 import React from "react";
-import { ImgPayment } from "theme/images";
-import { PaymentInfoCard } from "../components/PaymentInfoCard";
+import { useHistory } from "react-router";
 import { useBoolean } from "react-use";
 import { Paths } from "router/PrimaryRouters";
-import { useHistory } from "react-router";
+import { ImgPayment } from "theme/images";
+import { PaymentInfoCard } from "../components/PaymentInfoCard";
 
 interface Props {}
 

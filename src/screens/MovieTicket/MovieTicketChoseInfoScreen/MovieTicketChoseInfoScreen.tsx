@@ -1,13 +1,13 @@
-import React, { useContext, useEffect, useState } from "react";
+import { Divider } from "@material-ui/core";
 import { Screen } from "components";
+import { AppDatePicker } from "components/AppDatePicker";
 import { observer } from "mobx-react";
+import { MovieData, PlaceData, PlaceModel } from "mock-data/home/movies";
+import moment, { Moment } from "moment";
+import React, { useContext, useEffect, useState } from "react";
+import { MovieTicketChoseTime } from "screens/MovieTicket/MovieTicketChoseInfoScreen/MovieTicketChoseTime";
 import { MovieTicketStoreContext } from "stores/MovieTicketStore";
 import { MovieTicketChoseInfoScreenInfoSide } from "./MovieTicketChoseInfoScreenInfoSide";
-import { MovieData, PlaceData, PlaceModel } from "mock-data/home/movies";
-import { AppDatePicker } from "components/AppDatePicker";
-import moment, { Moment } from "moment";
-import { Divider } from "@material-ui/core";
-import { MovieTicketChoseTime } from "screens/MovieTicket/MovieTicketChoseInfoScreen/MovieTicketChoseTime";
 
 interface Props {}
 

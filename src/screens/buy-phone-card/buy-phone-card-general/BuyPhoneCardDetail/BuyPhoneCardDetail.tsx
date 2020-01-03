@@ -1,7 +1,7 @@
+import { HeroCard, Screen } from "components";
 import React from "react";
-import { Screen, HeroCard } from "components";
-import { images } from "theme";
 import { ChooseCardType } from "screens/buy-phone-card/buy-phone-card-general/BuyPhoneCardDetail/component/ChooseCardType";
+import { images } from "theme";
 
 export const BuyPhoneCardDetail: React.FC = () => {
   return (

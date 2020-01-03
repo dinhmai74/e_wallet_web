@@ -1,11 +1,11 @@
+import cx from "classnames";
 import React from "react";
 import TextTruncate from "react-text-truncate";
-import cx from "classnames";
 
 import { Footer } from "screens/MovieTicket/MovieTicketGeneralScreen/MovieTicketHots/components/Footer";
+import { Poster } from "screens/MovieTicket/MovieTicketGeneralScreen/MovieTicketHots/components/Poster";
 import { useHotMovie } from "screens/MovieTicket/MovieTicketGeneralScreen/MovieTicketHots/useHotMovie";
 import styles from "./MovieTicketHots.module.scss";
-import { Poster } from "screens/MovieTicket/MovieTicketGeneralScreen/MovieTicketHots/components/Poster";
 
 export const MovieTicketHots: React.FC = () => {
   const { movie, isChanging, setNextMovie } = useHotMovie();
