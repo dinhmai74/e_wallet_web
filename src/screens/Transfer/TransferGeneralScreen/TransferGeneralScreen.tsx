@@ -1,18 +1,18 @@
 import { TextField as TextFieldDF } from "@material-ui/core";
 import { AppButton, Screen } from "components";
 import { Field, Form, Formik } from "formik";
-import _ from "lodash";
 import { TextField } from "formik-material-ui";
+import _ from "lodash";
+import { observer } from "mobx-react";
 import React from "react";
 import NumberFormat from "react-number-format";
+import { useHistory } from "react-router";
+import { Paths } from "router/PrimaryRouters";
 import { recentContacts } from "screens/Transfer/TransferGeneralScreen/TransferData";
 import { TransferGeneralListSuggest } from "screens/Transfer/TransferGeneralScreen/TransferGeneralListSuggest";
 import { TransferReceiverInfo } from "screens/Transfer/TransferGeneralScreen/TransferReceiverInfo";
 import * as Yup from "yup";
 import { TransferGeneralScreenSideInfo } from "./component/TransferGeneralScreenSideInfo";
-import { Paths } from "router/PrimaryRouters";
-import { useHistory } from "react-router";
-import { observer } from "mobx-react";
 
 interface Props {}
 

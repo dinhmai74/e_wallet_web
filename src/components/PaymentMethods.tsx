@@ -1,8 +1,8 @@
+import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
 import React from "react";
 import ScrollMenu from "react-horizontal-scrolling-menu";
-import styled from "styled-components";
 import { useCss } from "react-use";
-import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
+import styled from "styled-components";
 
 interface Props {
   className?: string;

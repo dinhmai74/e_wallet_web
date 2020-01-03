@@ -44,5 +44,8 @@ export const images = {
     iconGarena: "asset/images/garena-logo.png",
     iconZing: "asset/images/icon-zing.png",
     iconGate: "asset/images/icon-gate.png"
+  },
+  error: {
+    noResult: "asset/images/no-result-map.png"
   }
 };

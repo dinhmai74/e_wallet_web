@@ -1,18 +1,18 @@
-import React, { useContext } from "react";
 import { InformationCard } from "components/InformationCard";
 import { RowTextSpaceBetween } from "components/RowTextSpaceBetween";
 import _ from "lodash";
-import { observer } from "mobx-react";
 import { toJS } from "mobx";
+import { observer } from "mobx-react";
 import moment from "moment";
+import React, { useContext } from "react";
 
-import { MovieTicketStoreContext } from "stores/MovieTicketStore";
+import { NotFoundMovie } from "components/MovieInfoContent";
 import {
   MovieData,
   MovieTicketPriceData,
   PlaceData
 } from "mock-data/home/movies";
-import { NotFoundMovie } from "components/MovieInfoContent";
+import { MovieTicketStoreContext } from "stores/MovieTicketStore";
 
 interface Props {
   isSelectedPayment: boolean;

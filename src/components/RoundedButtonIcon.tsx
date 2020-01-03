@@ -1,5 +1,5 @@
-import React from "react";
 import { ButtonProps } from "@material-ui/core";
+import React from "react";
 
 interface Props extends ButtonProps {
   className: string;

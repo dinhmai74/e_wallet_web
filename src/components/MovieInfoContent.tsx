@@ -4,12 +4,17 @@ import { TotalRowText } from "components/TotalRowText";
 import _ from "lodash";
 import { toJS } from "mobx";
 import { observer } from "mobx-react";
-import { MovieData, MovieDigitalType, MovieDimensionType, MovieTicketPriceData, PlaceData } from "mock-data/home/movies";
+import {
+  MovieData,
+  MovieDigitalType,
+  MovieDimensionType,
+  MovieTicketPriceData,
+  PlaceData
+} from "mock-data/home/movies";
 import moment from "moment";
 import React, { useContext } from "react";
 import { MovieTicketStoreContext } from "stores/MovieTicketStore";
 import { DateFormat } from "utils/strings";
-
 
 interface Props {
   onConfirm: () => void;

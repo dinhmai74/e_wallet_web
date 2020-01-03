@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
-import { useBoolean, useInterval } from "react-use";
 import { HotMovieData } from "mock-data/home/movies";
+import { useEffect, useState } from "react";
+import { useBoolean, useInterval } from "react-use";
 const nextMovieTime = 5000;
 
 export const useHotMovie = () => {

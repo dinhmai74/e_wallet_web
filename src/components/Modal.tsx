@@ -1,6 +1,6 @@
+import { DialogContent, DialogOverlay } from "@reach/dialog";
 import React from "react";
-import { DialogOverlay, DialogContent } from "@reach/dialog";
-import { useTransition, animated, to } from "react-spring";
+import { animated, to, useTransition } from "react-spring";
 
 export function Modal({ showDialog, close, children }) {
   const AnimatedDialogOverlay = animated(DialogOverlay);

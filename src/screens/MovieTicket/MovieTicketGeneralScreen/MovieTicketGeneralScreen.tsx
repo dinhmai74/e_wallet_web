@@ -1,15 +1,15 @@
+import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
+import { Screen } from "components";
+import _ from "lodash";
 import React from "react";
 import ScrollMenu from "react-horizontal-scrolling-menu";
-import { Screen } from "components";
-import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
-import _ from "lodash";
 
-import { MovieTicketHots } from "./MovieTicketHots";
-import { MovieData } from "mock-data/home/movies";
-import { MovieCard } from "screens/MovieTicket/components/MovieCard";
 import { observer } from "mobx-react";
+import { MovieData } from "mock-data/home/movies";
 import { useHistory } from "react-router";
 import { Paths } from "router/PrimaryRouters";
+import { MovieCard } from "screens/MovieTicket/components/MovieCard";
+import { MovieTicketHots } from "./MovieTicketHots";
 
 const UpcomingListMovies = () => {
   const history = useHistory();

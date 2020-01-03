@@ -1,5 +1,5 @@
-import React from "react";
 import { AppButton } from "components";
+import React from "react";
 import { useHistory } from "react-router";
 
 type HeroType = "left" | "right";

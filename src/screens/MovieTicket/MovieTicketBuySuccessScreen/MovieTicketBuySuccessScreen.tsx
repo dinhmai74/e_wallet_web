@@ -1,14 +1,14 @@
 import React, { useContext } from "react";
 
 import { Screen } from "components";
-import { PaymentInfoCard } from "screens/MovieTicket/components/PaymentInfoCard";
-import { Paths } from "router/PrimaryRouters";
-import { useHistory } from "react-router";
-import { images } from "theme/images";
 import { RowTextSpaceBetween } from "components/RowTextSpaceBetween";
-import { useMount, useUnmount } from "react-use";
-import { MovieTicketStoreContext } from "stores/MovieTicketStore";
 import { observer } from "mobx-react";
+import { useHistory } from "react-router";
+import { useMount, useUnmount } from "react-use";
+import { Paths } from "router/PrimaryRouters";
+import { PaymentInfoCard } from "screens/MovieTicket/components/PaymentInfoCard";
+import { MovieTicketStoreContext } from "stores/MovieTicketStore";
+import { images } from "theme/images";
 
 interface Props {}
 

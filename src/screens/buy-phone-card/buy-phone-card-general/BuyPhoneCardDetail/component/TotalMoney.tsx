@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { AppButton } from "components";
-import { useHistory } from "react-router";
 import { Card, TextField } from "@material-ui/core";
+import { AppButton } from "components";
+import React, { useState } from "react";
+import { useHistory } from "react-router";
 
 type HeroType = "left" | "right";
 
@@ -55,9 +55,11 @@ export const TotalMoney: React.FC<HeroModel> = ({
         variant="outlined"
         tx={buttonTx}
         className="mt-6 text__b1"
-        onClick={() => history.push(navigateTo , {
-          money: money
-        })}
+        onClick={() =>
+          history.push(navigateTo, {
+            money
+          })
+        }
       />
     );
   };

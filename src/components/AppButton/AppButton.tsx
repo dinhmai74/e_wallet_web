@@ -1,7 +1,7 @@
-import React from "react";
 import { Button, ButtonProps, CircularProgress } from "@material-ui/core";
 import { Theme } from "@material-ui/core";
-import { withStyles, createStyles } from "@material-ui/styles";
+import { createStyles, withStyles } from "@material-ui/styles";
+import React from "react";
 
 const styles = ({ palette, spacing }: Theme) =>
   createStyles({
@@ -54,7 +54,7 @@ export const AppButton = withStyles(styles)((props: AppButtonProps) => {
           className="text-white absolute left-1/2 right-1/2"
         />
       )}
-        {content}
+      {content}
     </Button>
   );
 });

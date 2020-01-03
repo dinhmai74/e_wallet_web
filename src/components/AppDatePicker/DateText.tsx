@@ -1,5 +1,5 @@
-import React from "react";
 import moment, { Moment } from "moment";
+import React from "react";
 
 interface Props {
   isActive?: boolean;

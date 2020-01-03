@@ -1,8 +1,8 @@
 import React from "react";
 
+import { Footer } from "components/Footer";
 import { useSidebar } from "components/SideBar";
 import { animated } from "react-spring";
-import { Footer } from "components/Footer";
 
 export interface ScreenProps {
   children?: any;
