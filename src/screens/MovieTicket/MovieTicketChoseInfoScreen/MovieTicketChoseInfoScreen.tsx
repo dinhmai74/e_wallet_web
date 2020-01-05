@@ -36,7 +36,7 @@ export const MovieTicketChoseInfoScreen: React.FC<Props> = observer(props => {
   }
 
   return (
-    <Screen className="pl-20">
+    <Screen className="px-12 md:pl-20 md:px-0">
       <div className="flex flex-row">
         <div className="flex-1 pt-32">
           <div className="pr-40 py-8">

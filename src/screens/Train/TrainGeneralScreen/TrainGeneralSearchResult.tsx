@@ -33,7 +33,7 @@ const TrainAvailable: TrainInfoModel[] = [
 
 export const TrainGeneralSearchFail: React.FC = () => {
   return (
-    <div className="relative left-1/5 my-8">
+    <div className="relative md:left-1/5 my-8">
       <img
         src={`${process.env.PUBLIC_URL}/${images.error.noResult}`}
         alt="no result"

@@ -75,7 +75,7 @@ export const Hero: React.FC<HeroModel> = ({
   };
 
   const containerClassName =
-    "flex flex-row sm:items-center sm:justify-center py-24 self-stretch max-h-screen pl-32 sm:pl-0";
+    "flex flex-row sm:items-center sm:justify-center py-24 self-stretch max-h-screen px-12 md:pl-32";
   return (
     <div
       className={containerClassName}

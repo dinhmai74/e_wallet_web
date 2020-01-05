@@ -7,7 +7,7 @@ interface Props {
 export const OptionOver: React.FC<Props> = props => {
   const { options } = props;
   return (
-    <div className="relative">
+    <div className="relative pb-8 md:pb-0">
       <select
         className="block appearance-none w-full py-3 pr-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
         id="grid-state"

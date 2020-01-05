@@ -63,7 +63,7 @@ export const MovieInfoContent: React.FC<Props> = observer(
     });
 
     return (
-      <div className="fixed pb-4 w-1/2">
+      <div className="pb-4 self-center">
         <img
           src={sourceHorizontal}
           className="mx-auto w-64 block "

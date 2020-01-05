@@ -25,15 +25,15 @@ export const TrainPaymentScreen: React.FC<Props> = props => {
 
       <PaymentMethods onChange={onChangeMethods} />
 
-      <div className="flex flex-row my-8 justify-center px-16 xl:px-0">
+      <div className="flex flex-row my-8 justify-center px-0 md:px-16 xl:px-0">
         <ImgPayment
           width={500}
           className="hidden lg:block mr-40"
           style={{ minWidth: 500 }}
         />
 
-        <div className="flex flex-col">
-          <p className="text__h3 color__steel mb-4">Information</p>
+        <div className="flex flex-col ">
+          <p className="text__h3 color__steel mb-8">Information</p>
           <TrainPaymentInfoCard
             buttonTx="Confirm"
             isSelectedPayment={isSelectedPayment}
