@@ -49,7 +49,7 @@ export const TransferGeneralScreen: React.FC<Props> = observer(() => {
     <Screen className="flex-row flex ">
       <TransferGeneralScreenSideInfo />
 
-      <div className="flex flex-col flex-1 pt-32 pl-32">
+      <div className="flex flex-col flex-1 pt-48 md:pt-32 px-12 md:pl-32">
         <Formik
           initialValues={initialValues}
           validationSchema={TransferSchema}
@@ -109,7 +109,7 @@ export const TransferGeneralScreen: React.FC<Props> = observer(() => {
                 </div>
 
                 {/* message transfer */}
-                <div className="flex flex-col my-12 max-w-xl">
+                <div className="flex flex-col my-12 max-w-xs md:max-w-xl">
                   <p className="text__h3 color__steel font-medium">Message:</p>
                   <Field
                     id="outlined-basic"
@@ -120,7 +120,7 @@ export const TransferGeneralScreen: React.FC<Props> = observer(() => {
                     rows="6"
                     component={TextField}
                     variant="outlined"
-                    className="text__btn max-w-xl mt-4 text-right"
+                    className="text__btn w-full mt-4 text-right"
                     InputProps={{
                       style: { fontSize: 14 } as any
                     }}
@@ -129,7 +129,7 @@ export const TransferGeneralScreen: React.FC<Props> = observer(() => {
                   <div className="justify-center flex mt-12">
                     <AppButton
                       type="submit"
-                      className="mx-auto mb-24  min-w-72 self-center"
+                      className="mx-auto mb-24 min-w-72 self-center"
                       tx="Confirm"
                       loading={bag.isSubmitting}
                       disabled={!isValid || notTouched || bag.isSubmitting}

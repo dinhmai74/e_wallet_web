@@ -22,7 +22,7 @@ const TransferGeneralListSuggestDefault: React.FC<Props> = props => {
   const listCasts = generateListCasts(recentContacts, onChange, selectedId);
 
   return (
-    <div className="max-w-2xl xxl:max-w-5xl lg:max-w-2xl">
+    <div className="max-w-sm md:max-w-2xl xxl:max-w-5xl lg:max-w-2xl">
       <p className="text__h3 color__steel font-medium mb-4">
         Suggestion accounts:
       </p>

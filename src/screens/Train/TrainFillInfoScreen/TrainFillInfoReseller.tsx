@@ -11,7 +11,7 @@ export const TrainFillInfoReseller: React.FC<Props> = () => {
       <TextWithDecorate space={12} className="my-8 mb-12">
         Passenger info
       </TextWithDecorate>
-      <ResellerCard />;
+      <ResellerCard />
     </div>
   );
 };
