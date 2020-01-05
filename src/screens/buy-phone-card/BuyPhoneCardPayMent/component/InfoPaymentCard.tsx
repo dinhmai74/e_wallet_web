@@ -1,8 +1,7 @@
-import React from "react";
 import { AppButton } from "components";
+import { Divider } from "components/Divider";
+import React from "react";
 import { useHistory } from "react-router";
-import { Card } from "@material-ui/core";
-import Divider from "@material-ui/core/Divider";
 type HeroType = "left" | "right";
 
 export interface HeroModel {
@@ -30,13 +29,13 @@ export const InfoPaymentCard: React.FC<HeroModel> = ({
   buttonTx,
   totalAmount
 }) => {
-  let txMargin = "";
   const imgMargin = "";
-  if (type === "right") {
-    txMargin = "ml-20 ";
-  } else {
-    txMargin = "ml-10";
-  }
+  // let txMargin = "";
+  // if (type === "right") {
+  //   txMargin = "ml-20 ";
+  // } else {
+  //   txMargin = "ml-10";
+  // }
 
   const history = useHistory();
   const renderImg = () => (

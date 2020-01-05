@@ -1,5 +1,5 @@
-import React from "react";
 import { RowTextSpaceBetween } from "components/RowTextSpaceBetween";
+import React from "react";
 import { formatMoney } from "utils/number";
 
 interface Props {

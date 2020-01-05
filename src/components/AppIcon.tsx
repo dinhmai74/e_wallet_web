@@ -1,6 +1,6 @@
+import src from "*.bmp";
 import React from "react";
 import { images } from "theme";
-import src from "*.bmp";
 
 export interface IconProps {
   name?: string;

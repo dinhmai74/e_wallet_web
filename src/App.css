@@ -139,6 +139,8 @@ body {
 .text {
   font-stretch: normal;
   color: #4a4a4a; }
+  .text__btn {
+    font-size: 14px; }
   .text__bold {
     font-weight: bold; }
   .text__t1 {
@@ -168,6 +170,10 @@ body {
 
 .font__bold {
   font-weight: bold; }
+.font__normal {
+  font-weight: normal; }
+.font__medium {
+  font-weight: medium; }
 
 /* ------------- img ------------- */
 .img__decorate {

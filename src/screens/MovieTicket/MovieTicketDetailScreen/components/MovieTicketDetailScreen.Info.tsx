@@ -1,14 +1,14 @@
-import React from "react";
 import moment from "moment";
+import React from "react";
 import TextTruncate from "react-text-truncate";
 
 import {
-  MovieModel,
+  MovieDigitalType,
   MovieDimensionType,
-  MovieDigitalType
+  MovieModel
 } from "mock-data/home/movies";
-import { DateFormat } from "utils/strings";
 import { useBoolean } from "react-use";
+import { DateFormat } from "utils/strings";
 
 interface Props {
   movie: MovieModel;

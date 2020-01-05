@@ -1,9 +1,9 @@
 import React from "react";
 
 import { Screen } from "components";
-import { images } from "theme/images";
-import { RowTextSpaceBetween } from "components/RowTextSpaceBetween";
 import { PurchasedCard } from "components/PurchasedCard";
+import { RowTextSpaceBetween } from "components/RowTextSpaceBetween";
+import { images } from "theme/images";
 
 interface Props {}
 

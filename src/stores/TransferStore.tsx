@@ -1,14 +1,12 @@
 import { observable, toJS } from "mobx";
-import { autoSave } from "utils/mobx-autosave";
 import { createContext } from "react";
+import { autoSave } from "utils/mobx-autosave";
 
 const transferStoreKey = "transfer-store-key";
 
 class TransferStore {
   @observable transferUser = {
     id: "",
-    phone: "",
-    name: "",
     money: -1,
     message: ""
   };
@@ -28,7 +26,6 @@ class TransferStore {
   }
 
   save(json: any) {
-    console.log("store", json);
     localStorage.setItem(transferStoreKey, json);
   }
 }

@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
-import { PlaceModel } from "mock-data/home/movies";
-import { MovieTicketChoseInfoCard } from "screens/MovieTicket/MovieTicketChoseInfoScreen/components/MovieTicketChoseInfoCard";
 import { observer } from "mobx-react";
-import { MovieTicketStoreContext } from "stores/MovieTicketStore";
+import { PlaceModel } from "mock-data/home/movies";
+import React, { useContext } from "react";
 import { useHistory } from "react-router";
 import { Paths } from "router/PrimaryRouters";
+import { MovieTicketChoseInfoCard } from "screens/MovieTicket/MovieTicketChoseInfoScreen/components/MovieTicketChoseInfoCard";
+import { MovieTicketStoreContext } from "stores/MovieTicketStore";
 // import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
 // import ScrollMenu from "react-horizontal-scrolling-menu";
 //

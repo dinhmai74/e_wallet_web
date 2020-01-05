@@ -1,6 +1,6 @@
 import React from "react";
+import { animated, useSpring } from "react-spring";
 import { useMeasure } from "react-use";
-import { useSpring, animated } from "react-spring";
 
 interface SectionProps {
   isOpen: boolean;

@@ -1,13 +1,13 @@
-import { observer } from "mobx-react";
-import React, { useContext } from "react";
 import _ from "lodash";
 import { toJS } from "mobx";
+import { observer } from "mobx-react";
+import React, { useContext } from "react";
 
-import { MovieTicketStoreContext } from "stores/MovieTicketStore";
 import { MovieInfoContent } from "components/MovieInfoContent";
 import { RowTextSpaceBetween } from "components/RowTextSpaceBetween";
 import { useHistory } from "react-router";
 import { Paths } from "router/PrimaryRouters";
+import { MovieTicketStoreContext } from "stores/MovieTicketStore";
 
 interface Props {}
 

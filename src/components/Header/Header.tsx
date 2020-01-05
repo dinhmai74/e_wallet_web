@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-import { images } from "theme";
 import { useSidebar } from "components/SideBar";
+import { useHistory } from "react-router";
+import { images } from "theme";
 import { IconMenu } from "theme/Icons";
 import { metrics } from "theme/metrics";
-import { useHistory } from "react-router";
 
 export const Header: React.FC = () => {
   const { toggleSidebar } = useSidebar();

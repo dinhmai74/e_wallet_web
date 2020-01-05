@@ -1,14 +1,14 @@
 import React from "react";
-import create from "zustand";
 import colors from "theme/color/_colors.scss";
+import create from "zustand";
 
-import { useDrag } from "react-use-gesture";
-import { useSpring, animated, to } from "react-spring";
-import { useLocalStorage, useMount, useWindowSize } from "react-use";
-import { persist, immer } from "utils/zustand";
 import { Icon } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
+import { animated, to, useSpring } from "react-spring";
+import { useLocalStorage, useMount, useWindowSize } from "react-use";
+import { useDrag } from "react-use-gesture";
 import { Paths } from "router/PrimaryRouters";
+import { immer, persist } from "utils/zustand";
 
 const LS_KEY = "sidebarState";
 const DEFAULT_WIDTH = 280;
@@ -155,9 +155,7 @@ function Sidebar() {
 
       <Item onClick={() => handleOnClick("/")}>Home</Item>
 
-      <Item onClick={() => handleOnClick(Paths.transfer)}>
-        Transfer
-      </Item>
+      <Item onClick={() => handleOnClick(Paths.transfer)}>Transfer Money</Item>
 
       <Item onClick={() => handleOnClick(Paths.movieTicket)}>
         Buy movie ticket
@@ -167,6 +165,7 @@ function Sidebar() {
         Buy phone ticket
       </Item>
 
+      <Item onClick={() => handleOnClick(Paths.train)}>Buy train ticket</Item>
     </animated.div>
   );
 }

@@ -1,20 +1,20 @@
+import cx from "classnames";
 import React, { useContext } from "react";
 import Youtube from "react-youtube";
-import cx from "classnames";
 
-import { Screen, AppButton } from "components";
-import { MovieTicketDeatilScreenInfo } from "./components/MovieTicketDetailScreen.Info";
-import { useParams, useHistory } from "react-router";
-import { MovieData, AvatarModel } from "mock-data/home/movies";
-import { ImgNotFound } from "theme";
-import { PageNotFound } from "components/PageNotFound";
-import styles from "./MovieTicketDetailScreen.module.scss";
-import ScrollMenu from "react-horizontal-scrolling-menu";
-import { CastAvatar } from "screens/MovieTicket/MovieTicketDetailScreen/components/CastAvatar";
 import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
-import { Paths } from "router/PrimaryRouters";
-import { MovieTicketStoreContext } from "stores/MovieTicketStore";
+import { AppButton, Screen } from "components";
+import { PageNotFound } from "components/PageNotFound";
 import { observer } from "mobx-react";
+import { AvatarModel, MovieData } from "mock-data/home/movies";
+import ScrollMenu from "react-horizontal-scrolling-menu";
+import { useHistory, useParams } from "react-router";
+import { Paths } from "router/PrimaryRouters";
+import { CastAvatar } from "screens/MovieTicket/MovieTicketDetailScreen/components/CastAvatar";
+import { MovieTicketStoreContext } from "stores/MovieTicketStore";
+import { ImgNotFound } from "theme";
+import { MovieTicketDeatilScreenInfo } from "./components/MovieTicketDetailScreen.Info";
+import styles from "./MovieTicketDetailScreen.module.scss";
 
 interface Props {}
 

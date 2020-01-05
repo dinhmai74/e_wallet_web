@@ -1,10 +1,13 @@
 import { TextField as TextFieldDF } from "@material-ui/core";
 import { AppButton, Screen } from "components";
 import { Field, Form, Formik } from "formik";
-import _ from "lodash";
 import { TextField } from "formik-material-ui";
+import _ from "lodash";
+import { observer } from "mobx-react";
 import React from "react";
 import NumberFormat from "react-number-format";
+import { useHistory } from "react-router";
+import { Paths } from "router/PrimaryRouters";
 import { recentContacts } from "screens/Transfer/TransferGeneralScreen/TransferData";
 import { TransferGeneralListSuggest } from "screens/Transfer/TransferGeneralScreen/TransferGeneralListSuggest";
 import { TransferReceiverInfo } from "screens/Transfer/TransferGeneralScreen/TransferReceiverInfo";
@@ -39,7 +42,9 @@ const TransferSchema = Yup.object().shape({
     .required()
 });
 
-export const TransferGeneralScreen: React.FC<Props> = () => {
+export const TransferGeneralScreen: React.FC<Props> = observer(() => {
+  const history = useHistory();
+
   return (
     <Screen className="flex-row flex ">
       <TransferGeneralScreenSideInfo />
@@ -51,9 +56,12 @@ export const TransferGeneralScreen: React.FC<Props> = () => {
           onSubmit={(values, action) => {
             action.setSubmitting(true);
 
-            setTimeout(()=>{
-            action.setSubmitting(false);
-            }, 1500)
+            setTimeout(() => {
+              action.setSubmitting(false);
+              history.push(Paths.transferPayment, {
+                ...values
+              });
+            }, 1500);
           }}
         >
           {bag => {
@@ -117,12 +125,13 @@ export const TransferGeneralScreen: React.FC<Props> = () => {
                       style: { fontSize: 14 } as any
                     }}
                   />
+
                   <div className="justify-center flex mt-12">
                     <AppButton
                       type="submit"
                       className="mx-auto mb-24  min-w-72 self-center"
                       tx="Confirm"
-                      loading={bag.isSubmitting} 
+                      loading={bag.isSubmitting}
                       disabled={!isValid || notTouched || bag.isSubmitting}
                     />
                   </div>
@@ -134,7 +143,7 @@ export const TransferGeneralScreen: React.FC<Props> = () => {
       </div>
     </Screen>
   );
-};
+});
 
 interface NumberFormatCustomProps {
   inputRef: (instance: NumberFormat | null) => void;

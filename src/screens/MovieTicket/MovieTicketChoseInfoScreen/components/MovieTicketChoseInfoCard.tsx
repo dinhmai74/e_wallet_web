@@ -1,6 +1,6 @@
-import React from "react";
 import { MovieTimeModel } from "mock-data/home/movies";
 import moment from "moment";
+import React from "react";
 
 interface Props {
   time: MovieTimeModel;

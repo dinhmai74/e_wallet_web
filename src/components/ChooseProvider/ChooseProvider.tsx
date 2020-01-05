@@ -1,27 +1,10 @@
+import { ItemProvider } from "components/ItemProvider/ItemProvider";
 import React from "react";
-import { images } from "theme";
-import { makeStyles } from "@material-ui/core/styles";
-import colors from "theme/color/_colors.scss";
-import { Card, CardMedia } from "@material-ui/core";
-import { Paths } from "router/PrimaryRouters";
 import { useHistory } from "react-router";
-
-const useStyles = makeStyles(theme => ({
-  card: {
-    minWidth: 275,
-    boxShadow: `0 0 15px 0 rgba(0, 0, 0, 0.1)`,
-    borderRadius: 10,
-    backgroundColor: colors.white,
-    marginRight: 50
-  },
-  media: {
-    height: 0,
-    paddingTop: "60%" // 16:9
-  }
-}));
+import { Paths } from "router/PrimaryRouters";
+import { images } from "theme";
 
 export const ChooseProvider: React.FC = () => {
-  const classes = useStyles();
   const history = useHistory();
   return (
     <div
@@ -30,31 +13,24 @@ export const ChooseProvider: React.FC = () => {
     >
       <p className="`text__h2 color__steel font-bold pl-16">Choose Provider:</p>
       <div className="flex flex-row  py-10 px-12 flex-wrap ">
-        <Card
-          className={classes.card}
+        <ItemProvider
+          src={images.iconProvider.viettel}
           onClick={() => {
             history.push(Paths.buyPhoneCardDetail);
           }}
-        >
-          <CardMedia
-            className={classes.media}
-            image={images.iconProvider.viettel}
-          />
-        </Card>
-
-        <Card className={classes.card}>
-          <CardMedia
-            className={classes.media}
-            image={images.iconProvider.viettel}
-          />
-        </Card>
-
-        <Card className={classes.card}>
-          <CardMedia
-            className={classes.media}
-            image={images.iconProvider.viettel}
-          />
-        </Card>
+        />
+        <ItemProvider
+          src={images.iconProvider.mobiphone}
+          onClick={() => {
+            history.push(Paths.buyPhoneCardDetail);
+          }}
+        />
+        <ItemProvider
+          src={images.iconProvider.vtc}
+          onClick={() => {
+            history.push(Paths.buyPhoneCardDetail);
+          }}
+        />
       </div>
     </div>
   );

@@ -1,11 +1,11 @@
+import { EventSeat } from "@material-ui/icons";
 import { Screen } from "components";
 import { observer } from "mobx-react";
 import React from "react";
-import { EventSeat } from "@material-ui/icons";
 
-import { MovieTicketChosePosDetailScreenSideInfo } from "./MovieTicketChosePosDetailScreen.SideInfo";
-import { ImgScreen } from "theme";
 import { RenderSeats } from "screens/MovieTicket/MovieTicketChosePosDetailScreen/components/RenderSeats";
+import { ImgScreen } from "theme";
+import { MovieTicketChosePosDetailScreenSideInfo } from "./MovieTicketChosePosDetailScreen.SideInfo";
 
 export const MovieTicketChosePosDetailScreen: React.FC = observer(() => {
   return (

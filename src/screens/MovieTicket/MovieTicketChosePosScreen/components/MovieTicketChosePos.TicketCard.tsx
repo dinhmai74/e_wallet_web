@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useContext } from "react";
 import { AmountPicker } from "components/AmountPicker";
-import { formatMoney } from "utils/number";
 import { observer } from "mobx-react";
+import React, { useContext, useEffect, useState } from "react";
 import { MovieTicketStoreContext } from "stores/MovieTicketStore";
+import { formatMoney } from "utils/number";
 
 interface Props {
   id: string;

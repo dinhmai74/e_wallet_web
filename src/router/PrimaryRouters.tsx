@@ -1,38 +1,60 @@
-import { HomeScreen } from "screens/Home";
 import { About } from "screens/About";
-import {
-  MovieTicketGeneral,
-  MovieTicketChoseInfoScreen,
-  MovieTicketBuySuccessScreen
-} from "screens/MovieTicket";
 import { BuyPhoneCardGeneral } from "screens/buy-phone-card/buy-phone-card-general/buy-phone-card-general";
 import { BuyPhoneCardDetail } from "screens/buy-phone-card/buy-phone-card-general/BuyPhoneCardDetail";
-import { MovieTicketDetailSreen } from "screens/MovieTicket/MovieTicketDetailScreen";
-import { MovieTicketChosePosScreen } from "screens/MovieTicket/MovieTicketChosePosScreen";
-import { MovieTicketChosePosDetailScreen } from "screens/MovieTicket/MovieTicketChosePosDetailScreen/MovieTicketChosePosDetailScreen";
-import { BuyPhoneCardPayMent } from "screens/buy-phone-card/BuyPhoneCardPayMent/BuyPhoneCardPayMent";
-import { MovieTicketPaymentScreen } from "screens/MovieTicket/MovieTicketPaymentScreen";
-import { TransferGeneralScreen } from "screens/Transfer";
 import { BuyPhoneCardSuccess } from "screens/buy-phone-card/buy-phone-card-general/BuyPhoneCardSuccess";
+import { BuyPhoneCardPayMent } from "screens/buy-phone-card/BuyPhoneCardPayMent/BuyPhoneCardPayMent";
+import { BuyGameCardGeneral } from "screens/BuyGameCard/BuyGameCardGeneral";
+import { HomeScreen } from "screens/Home";
+import {
+  MovieTicketBuySuccessScreen,
+  MovieTicketChoseInfoScreen,
+  MovieTicketGeneral
+} from "screens/MovieTicket";
+import { MovieTicketChosePosDetailScreen } from "screens/MovieTicket/MovieTicketChosePosDetailScreen/MovieTicketChosePosDetailScreen";
+import { MovieTicketChosePosScreen } from "screens/MovieTicket/MovieTicketChosePosScreen";
+import { MovieTicketDetailSreen } from "screens/MovieTicket/MovieTicketDetailScreen";
+import { MovieTicketPaymentScreen } from "screens/MovieTicket/MovieTicketPaymentScreen";
+import {
+  TrainFillInfoScreen,
+  TrainGeneralScreen,
+  TrainPaymentScreen,
+  TrainPaymentSuccess
+} from "screens/Train";
+import { TrainChosePosScreen } from "screens/Train/TrainChosePosScreen";
+import {
+  TransferGeneralScreen,
+  TransferPaymentScreen,
+  TransferPaymentSuccessScreen
+} from "screens/Transfer";
 
 export const Paths = {
-  home: "/",
   about: "/about",
-  
-  buyPhoneCardGeneral: "/buy-phone-card-general",
+  home: "/",
+
+  buyGameCardGeneral: "/buy-game-card-general",
+
   buyPhoneCardDetail: "/buy-phone-card-detail",
+  buyPhoneCardGeneral: "/buy-phone-card-general",
+  buyPhoneCardPayment: "/buy-phone-card-payment",
   buyPhoneCardSuccess: "/payment/buy-phone-card/success",
 
   movieTicket: "/movie-ticket",
-  movieTicketDetail: "/movie-ticket/detail",
   movieTicketChoseInfo: "/movie-ticket/chose-info",
   movieTicketChosePos: "/movie-ticket/chose-position",
   movieTicketChosePosDetail: "/movie-ticket/chose-position-detail",
-  buyPhoneCardPayment: "/buy-phone-card-payment",
+  movieTicketDetail: "/movie-ticket/detail",
   movieTicketPayment: "/payment/movie-ticket",
   movieTicketPaymentSuccess: "/payment/movie-ticket/success",
 
-  transfer: "/transfer"
+  transfer: "/transfer",
+  transferPayment: "/payment/transfer",
+  transferPaymentSuccess: "/payment/transfer/success",
+
+  train: "/train-ticket",
+  trainChosePos: "/train-ticket/chose-position",
+  trainFillInfo: "/train-ticket/fill-info",
+  trainPayment: "/payment/train-ticket",
+  trainSuccess: "/payment/train-ticket/success"
 };
 
 export interface RouterModel {
@@ -54,6 +76,7 @@ export const PrimaryRouters: RouterModel[] = [
     path: "/"
   },
 
+  /* ------------------------ phone card ------------------------ */
   {
     Component: BuyPhoneCardGeneral,
     path: Paths.buyPhoneCardGeneral
@@ -62,7 +85,16 @@ export const PrimaryRouters: RouterModel[] = [
     Component: BuyPhoneCardDetail,
     path: Paths.buyPhoneCardDetail
   },
+  {
+    Component: BuyPhoneCardPayMent,
+    path: Paths.buyPhoneCardPayment
+  },
+  {
+    Component: BuyPhoneCardSuccess,
+    path: Paths.buyPhoneCardSuccess
+  },
 
+  /* ------------------------ movie ------------------------ */
   {
     Component: MovieTicketGeneral,
     path: Paths.movieTicket
@@ -88,23 +120,49 @@ export const PrimaryRouters: RouterModel[] = [
     path: Paths.movieTicketPayment
   },
   {
-    Component: BuyPhoneCardDetail,
-    path: Paths.buyPhoneCardDetail
-  },
-  {
-    Component: BuyPhoneCardPayMent,
-    path: Paths.buyPhoneCardPayment
-  },
-  {
     Component: MovieTicketBuySuccessScreen,
     path: Paths.movieTicketPaymentSuccess
   },
+
+  /* ------------------------ transfer ------------------------ */
   {
     Component: TransferGeneralScreen,
     path: Paths.transfer
   },
   {
-    Component: BuyPhoneCardSuccess,
-    path: Paths.buyPhoneCardSuccess
-  }
+    Component: TransferPaymentScreen,
+    path: Paths.transferPayment
+  },
+  {
+    Component: TransferPaymentSuccessScreen,
+    path: Paths.transferPaymentSuccess
+  },
+  {
+    Component: BuyGameCardGeneral,
+    path: Paths.buyGameCardGeneral
+  },
+
+  {
+    Component: TransferPaymentSuccessScreen,
+    path: Paths.transferPaymentSuccess
+  },
+
+  /* ------------------------ train ------------------------ */
+  {
+    Component: TrainGeneralScreen,
+    path: Paths.train
+  },
+  {
+    Component: TrainChosePosScreen,
+    path: Paths.trainChosePos
+  },
+  {
+    Component: TrainFillInfoScreen,
+    path: Paths.trainFillInfo
+  },
+  {
+    Component: TrainPaymentScreen,
+    path: Paths.trainPayment
+  },
+  { Component: TrainPaymentSuccess, path: Paths.trainSuccess }
 ];
