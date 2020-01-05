@@ -3,13 +3,16 @@ import styled from "styled-components";
 
 interface Props {
   onClick?: () => void;
-  src?: string
+  src?: string;
 }
 export const ItemProvider: React.FC<Props> = props => {
   const { onClick, src } = props;
   return (
-    <div className="max-w-sm rounded-lg overflow-hidden px-12 py-4 mb-20 bg-white shadow-md  cursor-pointer mr-20" onClick={onClick}>
-     <StyledImg src={`${process.env.PUBLIC_URL}/${src}`} alt="logo" />
+    <div
+      className="max-w-sm rounded-lg overflow-hidden px-12 py-4 mb-20 bg-white shadow-md  cursor-pointer mr-20"
+      onClick={onClick}
+    >
+      <StyledImg src={`${process.env.PUBLIC_URL}/${src}`} alt="logo" />
     </div>
   );
 };

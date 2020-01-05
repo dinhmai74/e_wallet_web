@@ -1,6 +1,6 @@
-import { Divider } from "@material-ui/core";
 import { Screen } from "components";
 import { AppDatePicker } from "components/AppDatePicker";
+import { Divider } from "components/Divider";
 import { observer } from "mobx-react";
 import { MovieData, PlaceData, PlaceModel } from "mock-data/home/movies";
 import moment, { Moment } from "moment";

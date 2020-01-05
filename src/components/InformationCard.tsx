@@ -1,10 +1,10 @@
-import { Divider } from "@material-ui/core";
 import { AppButton } from "components";
+import { Divider } from "components/Divider";
 import { FeeRow } from "components/FeeRow";
 import { RowTextSpaceBetween } from "components/RowTextSpaceBetween";
 import React from "react";
 import { useCss } from "react-use";
-import { formatMoney } from "utils/number";
+import { formatMoney, unitTx } from "utils/number";
 
 interface Props {
   totalAmount: number;
@@ -33,7 +33,7 @@ export const InformationCard: React.FC<Props> = props => {
           leftTx="Total amount"
           leftClassName="text-blueGrey font-medium"
           className="my-4 mt-8 mb-8 font-medium"
-          rightTx={formatMoney(totalAmount) + ""}
+          rightTx={formatMoney(totalAmount) + unitTx}
         />
 
         <AppButton onClick={onSubmit} fullWidth disabled={disabledButton}>

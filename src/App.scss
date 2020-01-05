@@ -76,7 +76,7 @@ $colors: (
   "bg-5": $window-blue-5,
   "bg-10": $window-blue-10,
   "bg-17": $window-blue-17,
-  "bg-grey": $gainsboro
+  "bg-grey": $gainsboro,
 );
 
 @each $name, $glyph in $colors {

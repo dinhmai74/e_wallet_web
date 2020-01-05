@@ -1,8 +1,8 @@
-import React from "react";
 import { Screen } from "components";
-import { IntroBuyGameCard } from "./component/IntroBuyGameCard";
 import { ItemProvider } from "components/ItemProvider";
+import React from "react";
 import { images } from "theme";
+import { IntroBuyGameCard } from "./component/IntroBuyGameCard";
 
 export const BuyGameCardGeneral: React.FC = () => {
   return (
@@ -16,7 +16,7 @@ export const BuyGameCardGeneral: React.FC = () => {
           Choose Provider:
         </p>
         <div className="flex flex-row  py-10 px-12 flex-wrap ">
-          <ItemProvider src={images.gameCard.iconGarena}  />
+          <ItemProvider src={images.gameCard.iconGarena} />
           <ItemProvider src={images.gameCard.iconGate} />
           <ItemProvider src={images.gameCard.iconZing} />
         </div>

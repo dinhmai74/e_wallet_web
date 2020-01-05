@@ -3,6 +3,7 @@ import { BuyPhoneCardGeneral } from "screens/buy-phone-card/buy-phone-card-gener
 import { BuyPhoneCardDetail } from "screens/buy-phone-card/buy-phone-card-general/BuyPhoneCardDetail";
 import { BuyPhoneCardSuccess } from "screens/buy-phone-card/buy-phone-card-general/BuyPhoneCardSuccess";
 import { BuyPhoneCardPayMent } from "screens/buy-phone-card/BuyPhoneCardPayMent/BuyPhoneCardPayMent";
+import { BuyGameCardGeneral } from "screens/BuyGameCard/BuyGameCardGeneral";
 import { HomeScreen } from "screens/Home";
 import {
   MovieTicketBuySuccessScreen,
@@ -13,13 +14,18 @@ import { MovieTicketChosePosDetailScreen } from "screens/MovieTicket/MovieTicket
 import { MovieTicketChosePosScreen } from "screens/MovieTicket/MovieTicketChosePosScreen";
 import { MovieTicketDetailSreen } from "screens/MovieTicket/MovieTicketDetailScreen";
 import { MovieTicketPaymentScreen } from "screens/MovieTicket/MovieTicketPaymentScreen";
-import { TrainGeneralScreen } from "screens/Train";
+import {
+  TrainFillInfoScreen,
+  TrainGeneralScreen,
+  TrainPaymentScreen,
+  TrainPaymentSuccess
+} from "screens/Train";
+import { TrainChosePosScreen } from "screens/Train/TrainChosePosScreen";
 import {
   TransferGeneralScreen,
   TransferPaymentScreen,
   TransferPaymentSuccessScreen
 } from "screens/Transfer";
-import { BuyGameCardGeneral } from "screens/BuyGameCard/BuyGameCardGeneral";
 
 export const Paths = {
   about: "/about",
@@ -48,7 +54,7 @@ export const Paths = {
   trainChosePos: "/train-ticket/chose-position",
   trainFillInfo: "/train-ticket/fill-info",
   trainPayment: "/payment/train-ticket",
-  trainSuccess: "/payment/train-ticket/succcess"
+  trainSuccess: "/payment/train-ticket/success"
 };
 
 export interface RouterModel {
@@ -130,7 +136,7 @@ export const PrimaryRouters: RouterModel[] = [
   {
     Component: TransferPaymentSuccessScreen,
     path: Paths.transferPaymentSuccess
-  }, 
+  },
   {
     Component: BuyGameCardGeneral,
     path: Paths.buyGameCardGeneral
@@ -145,5 +151,18 @@ export const PrimaryRouters: RouterModel[] = [
   {
     Component: TrainGeneralScreen,
     path: Paths.train
-  }
+  },
+  {
+    Component: TrainChosePosScreen,
+    path: Paths.trainChosePos
+  },
+  {
+    Component: TrainFillInfoScreen,
+    path: Paths.trainFillInfo
+  },
+  {
+    Component: TrainPaymentScreen,
+    path: Paths.trainPayment
+  },
+  { Component: TrainPaymentSuccess, path: Paths.trainSuccess }
 ];

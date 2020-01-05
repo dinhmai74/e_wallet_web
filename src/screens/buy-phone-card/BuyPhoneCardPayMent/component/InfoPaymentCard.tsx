@@ -1,5 +1,5 @@
-import Divider from "@material-ui/core/Divider";
 import { AppButton } from "components";
+import { Divider } from "components/Divider";
 import React from "react";
 import { useHistory } from "react-router";
 type HeroType = "left" | "right";

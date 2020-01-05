@@ -69,10 +69,9 @@ const HerosHome: HeroModel[] = [
     title: "Game card",
     type: "right",
     content: ["More money, more power.", "Let rule the game."],
-    navigateTo:"buy-game-card-general",
+    navigateTo: "buy-game-card-general",
     buttonTx: "Buy Game Card"
-  },
-
+  }
 ];
 
 export const HomeScreen: React.FC<Props> = () => {

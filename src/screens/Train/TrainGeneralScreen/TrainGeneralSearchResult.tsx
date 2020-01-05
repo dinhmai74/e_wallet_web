@@ -1,5 +1,7 @@
 import { AppCard } from "components/AppCard";
 import React from "react";
+import { useHistory } from "react-router";
+import { Paths } from "router/PrimaryRouters";
 import { images } from "theme/images";
 import { formatMoney } from "utils/number";
 
@@ -64,8 +66,12 @@ interface OwnProps {
 const CardItem: React.FC<OwnProps> = props => {
   const { item } = props;
   const { price, time, id } = item;
+  const history = useHistory();
   return (
-    <AppCard className="px-8 py-8 text-center my-8 text__btn max-w-xl">
+    <AppCard
+      className="px-8 py-8 text-center my-8 text__btn max-w-xl cursor-pointer"
+      onClick={() => history.push(Paths.trainChosePos)}
+    >
       <div className="flex flex-row self-stretch color__blue-grey text-center pb-4 ">
         <div className="flex flex-1 self-stretch justify-center">
           <p className="text-center">Time</p>

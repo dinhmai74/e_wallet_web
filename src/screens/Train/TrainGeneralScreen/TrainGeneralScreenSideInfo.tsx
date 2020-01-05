@@ -2,13 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import { images } from "theme";
 
-const Bg = styled.div`
+export const TrainSideInfoBG = styled.div`
   background-color: #ddfafe;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const TrainGeneralScreenSideInfo: React.FC = () => {
   return (
-    <Bg className="flex flex-col hidden lg:block min-w-3/5 pt-32 h-screen fixed">
+    <TrainSideInfoBG className="hidden lg:block min-w-3/5 pt-32 h-screen fixed">
       <img
         src={`${process.env.PUBLIC_URL}/${images.home.train}`}
         alt="illu"
@@ -28,6 +30,6 @@ export const TrainGeneralScreenSideInfo: React.FC = () => {
           <p className="">Easy as 1, 2, 3.</p>
         </div>
       </div>
-    </Bg>
+    </TrainSideInfoBG>
   );
 };

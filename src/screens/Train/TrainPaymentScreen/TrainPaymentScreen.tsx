@@ -4,12 +4,12 @@ import React from "react";
 import { useHistory, useLocation } from "react-router";
 import { useBoolean } from "react-use";
 import { Paths } from "router/PrimaryRouters";
-import { TransferPaymentInfoCard } from "screens/Transfer/TransferPaymentScreen/components/TransferPaymentInfoCard";
 import { ImgPayment } from "theme";
+import { TrainPaymentInfoCard } from "./TrainPaymentCard";
 
 interface Props {}
 
-export const TransferPaymentScreen: React.FC<Props> = props => {
+export const TrainPaymentScreen: React.FC<Props> = props => {
   const location = useLocation();
   const { state } = location;
   const [isSelectedPayment, setSelectedPayment] = useBoolean(false);
@@ -33,12 +33,11 @@ export const TransferPaymentScreen: React.FC<Props> = props => {
         />
 
         <div className="flex flex-col">
-          <p className="text__h3 color__steel mb-8">Information</p>
-          <TransferPaymentInfoCard
+          <p className="text__h3 color__steel mb-4">Information</p>
+          <TrainPaymentInfoCard
             buttonTx="Confirm"
-            paymentInfo={{ ...state }}
             isSelectedPayment={isSelectedPayment}
-            onSubmit={() => history.push(Paths.transferPaymentSuccess, state)}
+            onSubmit={() => history.push(Paths.trainSuccess, state)}
           />
         </div>
       </div>
