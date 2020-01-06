@@ -10,3 +10,8 @@ export const metrics = {
     lg: 400
   }
 };
+
+export const screenSize={
+  md: 768,
+  sm: 640
+}

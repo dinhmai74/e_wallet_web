@@ -11,7 +11,7 @@ interface Props {
 
 export const TrainChosePosSideInfo: React.FC<Props> = ({ onConfirm }) => {
   return (
-    <TrainSideInfoBG className="w-2/6 min-h-screen hidden md:inline-block pt-16">
+    <TrainSideInfoBG className="w-2/6 hidden min-h-screen md:inline-block pt-16">
       <img src={`${process.env.PUBLIC_URL}/${images.home.train}`} alt="img" />
 
       <div className="pt-12 pl-12 pr-8">

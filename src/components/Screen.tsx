@@ -1,7 +1,5 @@
-import React from "react";
-
-import { Footer } from "components/Footer";
 import { useSidebar } from "components/SideBar";
+import React from "react";
 import { animated } from "react-spring";
 
 export interface ScreenProps {
@@ -11,7 +9,6 @@ export interface ScreenProps {
 }
 
 export const Screen: React.FC<ScreenProps> = ({
-  haveFooter,
   children,
   className
 }) => {
@@ -30,11 +27,10 @@ export const Screen: React.FC<ScreenProps> = ({
       style={mainStyle}
     >
       {children}
-      {haveFooter && <Footer />}
     </animated.div>
   );
 };
 
 Screen.defaultProps = {
-  className: " md:px-20 lg:px-20 pt-32"
+  className: " px-12 pt-40 md:px-20 lg:px-20 md:pt-32 pb-8"
 };

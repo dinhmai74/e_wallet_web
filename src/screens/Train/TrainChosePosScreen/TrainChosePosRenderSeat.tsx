@@ -11,7 +11,7 @@ const rows = ["a", "b", "c", "d", "e", "g", "h", "j", "k", "f"];
 
 export const TrainChosePosRenderSeat: React.FC<Props> = props => {
   return (
-    <div className="flex flex-col justify-start flex-1 min-w-full">
+    <div className="flex flex-col j">
       {rows.map((val, idx) => (
         <RenderSeat row={val} key={idx} />
       ))}
@@ -31,7 +31,7 @@ const RenderSeat: React.FC<RenderSeatProps> = props => {
       {rowDetails.map((v, idx) => {
         let cln = "";
         if (idx === 1 || idx === 7) {
-          cln += " pr-8";
+          cln += "pr-4 md:pr-8";
         }
         // const isVip = idx > 1 && idx < 8;
         return (

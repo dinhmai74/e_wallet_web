@@ -17,10 +17,17 @@ export const InformationCard: React.FC<Props> = props => {
   const { children, totalAmount, onSubmit, disabledButton, buttonTx } = props;
 
   let cardCn = useCss({
-    minWidth: "500px"
+    '@media only screen and (min-width: 728px)': {
+      minWidth: "500px"
+    },
+
+    '@media (max-width: 728px)': {
+      minWidth: "300px"
+    },
   });
 
-  cardCn += " max-w-sm rounded overflow-hidden shadow-card   px-12 py-8";
+  cardCn +=
+    " max-w-xs  rounded overflow-hidden shadow-card px-4 md:px-12 py-8";
 
   return (
     <div>

@@ -65,7 +65,7 @@ export const TrainGeneralScreenSearchForm: React.FC<Props> = props => {
     <div>
       <p className="text__h3 color__steel mb-8">Info:</p>
       <AppCard className="px-8 py-4 color__blue-grey text__b1 max-w-xl">
-        <div className="flex-row flex">
+        <div className="flex-col flex md:flex-row ">
           <OptionOver options={tripTypes} />
           <OptionOver options={adults} />
           <OptionOver options={child} />
