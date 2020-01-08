@@ -1,6 +1,6 @@
 import { EventSeat } from "@material-ui/icons";
 import { AppButton, Screen } from "components";
-import _ from 'lodash';
+import _ from "lodash";
 import { toJS } from "mobx";
 import { observer } from "mobx-react";
 import React, { useContext } from "react";
@@ -13,12 +13,11 @@ import { ImgScreen } from "theme";
 import { screenSize } from "theme/metrics";
 import { MovieTicketChosePosDetailScreenSideInfo } from "./MovieTicketChosePosDetailScreen.SideInfo";
 
-
 export const MovieTicketChosePosDetailScreen: React.FC = observer(() => {
   const store = useContext(MovieTicketStoreContext);
 
   let seatsTx = "";
-  const { seatPos} =store
+  const { seatPos } = store;
 
   _.forEach(toJS(seatPos), (val, k) => {
     seatsTx += val;
@@ -29,7 +28,7 @@ export const MovieTicketChosePosDetailScreen: React.FC = observer(() => {
   seatsTx = seatsTx.slice(0, -2);
 
   const history = useHistory();
-  const navigate = () => history.push(Paths.movieTicketPayment)
+  const navigate = () => history.push(Paths.movieTicketPayment);
 
   return (
     <Screen className="md:pl-32 px-4 md:px-0 flex">
@@ -53,16 +52,14 @@ export const MovieTicketChosePosDetailScreen: React.FC = observer(() => {
           </div>
         </div>
 
-        {
-          width < screenSize.md &&
-          (
-            <div className="flex items-center flex-col">
-              <p className="text-center pb-8">{seatsTx}</p>
-              <AppButton disabled={!seatsTx} onClick={navigate} fullWidth>Confirm</AppButton>
-            </div>
-          )
-        }
-
+        {width < screenSize.md && (
+          <div className="flex items-center flex-col">
+            <p className="text-center pb-8">{seatsTx}</p>
+            <AppButton disabled={!seatsTx} onClick={navigate} fullWidth>
+              Confirm
+            </AppButton>
+          </div>
+        )}
       </div>
       <MovieTicketChosePosDetailScreenSideInfo />
     </Screen>

@@ -13,7 +13,7 @@ export const Header: React.FC = () => {
   const history = useHistory();
   return (
     <div
-      className={`flex min-w-screen py-12 pl-20 md:pr-20 flex-row justify-between inset-x-0 top-0 ${absolute} z-0`}
+      className={`flex min-w-screen py-12 pl-20 md:pr-20 flex-row justify-between inset-x-0 top-0 ${absolute} z-10`}
     >
       <img
         src={process.env.PUBLIC_URL + "/" + images.logo}

@@ -10,7 +10,6 @@ import { Paths } from "router/PrimaryRouters";
 import { MovieCard } from "screens/MovieTicket/components/MovieCard";
 import { MovieTicketHots } from "./MovieTicketHots";
 
-
 const UpcomingListMovies = () => {
   const history = useHistory();
   return _.shuffle(MovieData).map(el => {
@@ -19,7 +18,7 @@ const UpcomingListMovies = () => {
       <MovieCard
         movie={el}
         key={eID}
-        onClick={()=> {
+        onClick={() => {
           history.push(Paths.movieTicketDetail + `/${eID}`);
         }}
       />

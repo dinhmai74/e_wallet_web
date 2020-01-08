@@ -1,3 +1,4 @@
+import { AppButton } from "components";
 import { Divider } from "components/Divider";
 import { Screen } from "components/Screen";
 import React, { useState } from "react";
@@ -6,11 +7,10 @@ import { useWindowSize } from "react-use";
 import { Paths } from "router/PrimaryRouters";
 import { NoteSeat } from "screens/MovieTicket/MovieTicketChosePosDetailScreen";
 import { TrainChosePosSideInfo } from "screens/Train/TrainChosePosScreen/TrainChosePosSideInfo";
-import { TrainChosePosRenderSeat } from "./TrainChosePosRenderSeat";
-import { AppButton } from "components";
 import { screenSize } from "theme/metrics";
+import { TrainChosePosRenderSeat } from "./TrainChosePosRenderSeat";
 
-interface Props { }
+interface Props {}
 
 const carriages = [0, 1, 2];
 
@@ -38,7 +38,7 @@ export const TrainChosePosScreen: React.FC<Props> = () => {
         </div>
 
         <Divider orientation={dividerOrientation} className="md:mr-8" />
-        <div >
+        <div>
           <div className="mt-8 md:mt-0">
             <p className="mb-8">Seat position: </p>
             <TrainChosePosRenderSeat />
@@ -49,17 +49,19 @@ export const TrainChosePosScreen: React.FC<Props> = () => {
             <NoteSeat className="text-darkGrey" text="Empty seat" />
             <NoteSeat className="text-darkBlue" text="Was booked" />
           </div>
-
         </div>
       </div>
-          {width < screenSize.md && (
-            <div className="flex flex-1 flex-col px-6 items-center py-4">
-              <p className="text-center py-4">1-B1,2-B2</p>
-              <AppButton onClick={() => history.push(Paths.trainFillInfo)} fullWidth>Confirm</AppButton>
-            </div>
-          )
-          }
-
+      {width < screenSize.md && (
+        <div className="flex flex-1 flex-col px-6 items-center py-4">
+          <p className="text-center py-4">1-B1,2-B2</p>
+          <AppButton
+            onClick={() => history.push(Paths.trainFillInfo)}
+            fullWidth
+          >
+            Confirm
+          </AppButton>
+        </div>
+      )}
 
       <TrainChosePosSideInfo
         onConfirm={() => history.push(Paths.trainFillInfo)}

@@ -36,7 +36,10 @@ export const MovieTicketDetailSreen: React.FC<Props> = observer(() => {
   return (
     <Screen className="md:pl-20 px-12 pt-40">
       <div className="flex flex-row">
-        <MovieTicketDeatilScreenInfo movie={movie} className="md:w-1/2 md:pr-20" />
+        <MovieTicketDeatilScreenInfo
+          movie={movie}
+          className="md:w-1/2 md:pr-20"
+        />
         <div className={cx(styles.youtube, "hidden md:block")}>
           <Youtube
             videoId={trailSrc}

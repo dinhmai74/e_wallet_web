@@ -8,10 +8,7 @@ export interface ScreenProps {
   haveFooter?: boolean;
 }
 
-export const Screen: React.FC<ScreenProps> = ({
-  children,
-  className
-}) => {
+export const Screen: React.FC<ScreenProps> = ({ children, className }) => {
   // Sidebar
   const { isMobile, useDragMain, useMainStyle } = useSidebar();
 

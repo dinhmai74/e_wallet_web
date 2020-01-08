@@ -5,16 +5,24 @@ import { images } from "theme";
 
 export const BuyPhoneCardDetail: React.FC = () => {
   return (
-    <Screen className="px-0">
-      <img src={images.phoneCard.bgPhoneCardDetail} alt="" />
-      <HeroCard
-        type="left"
-        src={images.iconProvider.viettel}
-        title="Viettel mobile card"
-        content={["Region: VN", "Discount: 4%"]}
+    <Screen className="px-4 md:px:0">
+      <img
+        src={images.phoneCard.bgPhoneCardDetail}
+        alt=""
+        className="absolute inset-0 z-0"
       />
+      <div className="flex flex-col absolute inset-0 z-10 mt-56">
+        <HeroCard
+          type="left"
+          src={images.iconProvider.viettel}
+          imgStyle="p-8"
+          containerStyle="mb-12"
+          title="Viettel mobile card"
+          content={["Region: VN", "Discount: 4%"]}
+        />
 
-      <ChooseCardType />
+        <ChooseCardType />
+      </div>
     </Screen>
   );
 };

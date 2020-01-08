@@ -2,7 +2,11 @@ import { AppButton, Screen } from "components";
 import _ from "lodash";
 import { toJS } from "mobx";
 import { observer } from "mobx-react";
-import { MovieData, MovieTicketPriceData, PlaceData } from "mock-data/home/movies";
+import {
+  MovieData,
+  MovieTicketPriceData,
+  PlaceData
+} from "mock-data/home/movies";
 import React, { useContext } from "react";
 import { useHistory } from "react-router";
 import { useWindowSize } from "react-use";
@@ -12,11 +16,11 @@ import { MovieTicketStoreContext } from "stores/MovieTicketStore";
 import { screenSize } from "theme/metrics";
 import { MovieTicketChosePosTicketCard } from "./components/MovieTicketChosePos.TicketCard";
 
-interface Props { }
+interface Props {}
 
 export const MovieTicketChosePosScreen: React.FC<Props> = observer(props => {
   const history = useHistory();
-  const navigate = () => history.push(Paths.movieTicketChosePosDetail)
+  const navigate = () => history.push(Paths.movieTicketChosePosDetail);
   const { width } = useWindowSize();
 
   const store = useContext(MovieTicketStoreContext);
@@ -56,7 +60,16 @@ export const MovieTicketChosePosScreen: React.FC<Props> = observer(props => {
             );
           })}
 
-          {width < screenSize.md && <AppButton onClick={navigate} fullWidth className="mt-4" disabled={price ===0}>Confirm</AppButton>}
+          {width < screenSize.md && (
+            <AppButton
+              onClick={navigate}
+              fullWidth
+              className="mt-4"
+              disabled={price === 0}
+            >
+              Confirm
+            </AppButton>
+          )}
         </div>
 
         <MovieTicketChosePosScreenSideInfo />
@@ -64,7 +77,6 @@ export const MovieTicketChosePosScreen: React.FC<Props> = observer(props => {
     </Screen>
   );
 });
-
 
 const NotFoundMovie: React.FC = () => {
   return (

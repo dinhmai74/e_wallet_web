@@ -11,7 +11,7 @@ export const metrics = {
   }
 };
 
-export const screenSize={
+export const screenSize = {
   md: 768,
   sm: 640
-}
+};

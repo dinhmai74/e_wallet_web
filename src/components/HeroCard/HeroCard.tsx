@@ -12,6 +12,7 @@ export interface HeroModel {
   src: string;
   type?: HeroType;
   imgStyle?: string;
+  containerStyle?: string;
   navigateTo?: string;
   buttonTx?: string;
 }
@@ -48,6 +49,7 @@ const Lines: React.FC<{ content: string[] }> = ({ content }) => {
 
 export const HeroCard: React.FC<HeroModel> = ({
   imgStyle,
+  containerStyle,
   title,
   content,
   src,
@@ -59,9 +61,9 @@ export const HeroCard: React.FC<HeroModel> = ({
   const imgMargin = "";
 
   if (type === "right") {
-    txMargin = "ml-20";
+    txMargin = "ml-0 md:ml-20";
   } else {
-    txMargin = "ml-20";
+    txMargin = "ml-0 md:ml-20";
   }
 
   const history = useHistory();
@@ -95,7 +97,7 @@ export const HeroCard: React.FC<HeroModel> = ({
   };
 
   const containerClassName =
-    "flex flex-row items-center justify-center absolute inset-y-0 right-0 left-0 ";
+    "flex flex-row items-center justify-center " + containerStyle;
   return (
     <div
       className={containerClassName}

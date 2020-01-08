@@ -5,7 +5,7 @@ import { IntroBuyPhoneCard } from "screens/buy-phone-card/buy-phone-card-general
 
 export const BuyPhoneCardGeneral: React.FC = () => {
   return (
-    <Screen className="px-0">
+    <Screen className="px-0 pt-32">
       <IntroBuyPhoneCard />
       <ChooseProvider />
     </Screen>
