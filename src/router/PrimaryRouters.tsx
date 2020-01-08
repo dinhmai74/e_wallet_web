@@ -146,12 +146,10 @@ export const PrimaryRouters: RouterModel[] = [
     Component: BuyGameCardGeneral,
     path: Paths.buyGameCardGeneral
   },
-<<<<<<< HEAD
   {
     Component: BuyGameCardDetail,
     path: Paths.buyGameCardDetail
-  }
-=======
+  },
 
   {
     Component: TransferPaymentSuccessScreen,
@@ -176,5 +174,4 @@ export const PrimaryRouters: RouterModel[] = [
     path: Paths.trainPayment
   },
   { Component: TrainPaymentSuccess, path: Paths.trainSuccess }
->>>>>>> develop
 ];
