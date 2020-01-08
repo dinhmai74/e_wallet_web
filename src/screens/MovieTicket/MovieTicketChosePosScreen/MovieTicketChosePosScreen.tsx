@@ -46,7 +46,7 @@ export const MovieTicketChosePosScreen: React.FC<Props> = observer(props => {
     price += val * p!.price;
   });
   return (
-    <Screen className="md:pl-24 px-12 md:px-0">
+    <Screen className="lg:px-24 px-8 md:px-0">
       <div className="flex flex-row">
         <div className="flex-1 py-32 px-4">
           {_.map(MovieTicketPriceData, (val, idx) => {
