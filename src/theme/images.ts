@@ -19,10 +19,8 @@ export const images = {
   },
   iconProvider: {
     viettel: "asset/images/viettel.png",
-    vcb: "asset/images/vcb.jpeg",
-    viettinbank: "asset/images/viettinbank.png",
-    mobiphone: "asset/images/mobi.jpg",
-    vtc: "asset/images/Logo_VTC.png"
+    mobiphone: "asset/images/mobi.png",
+    vnpt: "asset/images/vnpt.png"
   },
   movie: {
     illu_watch: "asset/images/movies/illu_watch.png",
@@ -44,5 +42,8 @@ export const images = {
     iconGarena: "asset/images/garena-logo.png",
     iconZing: "asset/images/icon-zing.png",
     iconGate: "asset/images/icon-gate.png"
+  },
+  error: {
+    noResult: "asset/images/no-result-map.png"
   }
 };

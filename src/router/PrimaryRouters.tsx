@@ -3,6 +3,7 @@ import { BuyPhoneCardGeneral } from "screens/buy-phone-card/buy-phone-card-gener
 import { BuyPhoneCardDetail } from "screens/buy-phone-card/buy-phone-card-general/BuyPhoneCardDetail";
 import { BuyPhoneCardSuccess } from "screens/buy-phone-card/buy-phone-card-general/BuyPhoneCardSuccess";
 import { BuyPhoneCardPayMent } from "screens/buy-phone-card/BuyPhoneCardPayMent/BuyPhoneCardPayMent";
+import { BuyGameCardGeneral } from "screens/BuyGameCard/BuyGameCardGeneral";
 import { HomeScreen } from "screens/Home";
 import {
   MovieTicketBuySuccessScreen,
@@ -14,16 +15,28 @@ import { MovieTicketChosePosScreen } from "screens/MovieTicket/MovieTicketChoseP
 import { MovieTicketDetailSreen } from "screens/MovieTicket/MovieTicketDetailScreen";
 import { MovieTicketPaymentScreen } from "screens/MovieTicket/MovieTicketPaymentScreen";
 import {
+  TrainFillInfoScreen,
+  TrainGeneralScreen,
+  TrainPaymentScreen,
+  TrainPaymentSuccess
+} from "screens/Train";
+import { TrainChosePosScreen } from "screens/Train/TrainChosePosScreen";
+import {
   TransferGeneralScreen,
   TransferPaymentScreen,
   TransferPaymentSuccessScreen
 } from "screens/Transfer";
+<<<<<<< HEAD
 import { BuyGameCardGeneral } from "screens/BuyGameCard/BuyGameCardGeneral";
 import { BuyGameCardDetail } from "screens/BuyGameCard/BuyGameCardDetail ";
+=======
+>>>>>>> develop
 
 export const Paths = {
   about: "/about",
   home: "/",
+
+  buyGameCardGeneral: "/buy-game-card-general",
 
   buyPhoneCardDetail: "/buy-phone-card-detail",
   buyPhoneCardGeneral: "/buy-phone-card-general",
@@ -41,8 +54,12 @@ export const Paths = {
   transfer: "/transfer",
   transferPayment: "/payment/transfer",
   transferPaymentSuccess: "/payment/transfer/success",
-  buyGameCardGeneral: "/buy-game-card-general",
-  buyGameCardDetail: "/buy-game-card/detail"
+  buyGameCardDetail: "/buy-game-card/detail",
+  train: "/train-ticket",
+  trainChosePos: "/train-ticket/chose-position",
+  trainFillInfo: "/train-ticket/fill-info",
+  trainPayment: "/payment/train-ticket",
+  trainSuccess: "/payment/train-ticket/success"
 };
 
 export interface RouterModel {
@@ -64,11 +81,11 @@ export const PrimaryRouters: RouterModel[] = [
     path: "/"
   },
 
+  /* ------------------------ phone card ------------------------ */
   {
     Component: BuyPhoneCardGeneral,
     path: Paths.buyPhoneCardGeneral
   },
-
   {
     Component: BuyPhoneCardDetail,
     path: Paths.buyPhoneCardDetail
@@ -82,6 +99,7 @@ export const PrimaryRouters: RouterModel[] = [
     path: Paths.buyPhoneCardSuccess
   },
 
+  /* ------------------------ movie ------------------------ */
   {
     Component: MovieTicketGeneral,
     path: Paths.movieTicket
@@ -111,6 +129,7 @@ export const PrimaryRouters: RouterModel[] = [
     path: Paths.movieTicketPaymentSuccess
   },
 
+  /* ------------------------ transfer ------------------------ */
   {
     Component: TransferGeneralScreen,
     path: Paths.transfer
@@ -122,13 +141,40 @@ export const PrimaryRouters: RouterModel[] = [
   {
     Component: TransferPaymentSuccessScreen,
     path: Paths.transferPaymentSuccess
-  }, 
+  },
   {
     Component: BuyGameCardGeneral,
     path: Paths.buyGameCardGeneral
   },
+<<<<<<< HEAD
   {
     Component: BuyGameCardDetail,
     path: Paths.buyGameCardDetail
   }
+=======
+
+  {
+    Component: TransferPaymentSuccessScreen,
+    path: Paths.transferPaymentSuccess
+  },
+
+  /* ------------------------ train ------------------------ */
+  {
+    Component: TrainGeneralScreen,
+    path: Paths.train
+  },
+  {
+    Component: TrainChosePosScreen,
+    path: Paths.trainChosePos
+  },
+  {
+    Component: TrainFillInfoScreen,
+    path: Paths.trainFillInfo
+  },
+  {
+    Component: TrainPaymentScreen,
+    path: Paths.trainPayment
+  },
+  { Component: TrainPaymentSuccess, path: Paths.trainSuccess }
+>>>>>>> develop
 ];

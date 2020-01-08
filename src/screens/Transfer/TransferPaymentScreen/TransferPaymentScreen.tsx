@@ -33,7 +33,7 @@ export const TransferPaymentScreen: React.FC<Props> = props => {
         />
 
         <div className="flex flex-col">
-          <p className="text__h3 color__steel mb-4">Information</p>
+          <p className="text__h3 color__steel mb-8">Information</p>
           <TransferPaymentInfoCard
             buttonTx="Confirm"
             paymentInfo={{ ...state }}

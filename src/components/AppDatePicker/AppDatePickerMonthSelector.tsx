@@ -1,8 +1,8 @@
-import React, { useEffect } from "react";
-import moment, { Moment } from "moment";
-import { DateFormatWithoutDate } from "utils/strings";
 import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
+import moment, { Moment } from "moment";
+import React, { useEffect } from "react";
 import { useBoolean } from "react-use";
+import { DateFormatWithoutDate } from "utils/strings";
 
 export type DirectionType = "back" | "forward";
 

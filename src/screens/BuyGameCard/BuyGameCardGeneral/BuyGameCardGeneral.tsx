@@ -1,13 +1,10 @@
-import React from "react";
 import { Screen } from "components";
-import { IntroBuyGameCard } from "./component/IntroBuyGameCard";
 import { ItemProvider } from "components/ItemProvider";
+import React from "react";
 import { images } from "theme";
-import { useHistory } from "react-router";
-import { Paths } from "router/PrimaryRouters";
+import { IntroBuyGameCard } from "./component/IntroBuyGameCard";
 
 export const BuyGameCardGeneral: React.FC = () => {
-  const history = useHistory();
   return (
     <Screen className="px-0">
       <IntroBuyGameCard />
@@ -19,24 +16,9 @@ export const BuyGameCardGeneral: React.FC = () => {
           Choose Provider:
         </p>
         <div className="flex flex-row  py-10 px-12 flex-wrap ">
-          <ItemProvider
-            src={images.gameCard.iconGarena}
-            onClick={() => {
-              history.push(Paths.buyGameCardDetail);
-            }}
-          />
-          <ItemProvider
-            src={images.gameCard.iconGate}
-            onClick={() => {
-              history.push(Paths.buyGameCardDetail);
-            }}
-          />
-          <ItemProvider
-            src={images.gameCard.iconZing}
-            onClick={() => {
-              history.push(Paths.buyGameCardDetail);
-            }}
-          />
+          <ItemProvider src={images.gameCard.iconGarena} />
+          <ItemProvider src={images.gameCard.iconGate} />
+          <ItemProvider src={images.gameCard.iconZing} />
         </div>
       </div>
     </Screen>

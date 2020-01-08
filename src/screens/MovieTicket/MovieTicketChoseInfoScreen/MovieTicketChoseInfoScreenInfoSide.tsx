@@ -1,12 +1,12 @@
-import React from "react";
 import {
   MovieDigitalType,
   MovieDimensionType,
   MovieModel
 } from "mock-data/home/movies";
 import moment from "moment";
-import { DateFormat } from "utils/strings";
+import React from "react";
 import { ImgMovieHooray } from "theme/images";
+import { DateFormat } from "utils/strings";
 
 interface Props {
   movie: MovieModel;

@@ -1,26 +1,19 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Card, { CardProps } from "@material-ui/core/Card";
-import colors from "theme/color/_colors.scss";
 
-const useStyles = makeStyles({
-  card: {
-    minWidth: 275,
-    boxShadow: `0 0 15px 0 rgba(0, 0, 0, 0.1)`,
-    borderRadius: 10,
-    backgroundColor: colors.white
-  }
-});
-
-export interface AppCardProps extends CardProps {}
+export interface AppCardProps {
+  className?: string;
+  [rest: string]: any;
+}
 
 export const AppCard: React.FC<AppCardProps> = props => {
-  const classes = useStyles();
-  const { children, ...rest } = props;
+  const { children, className, ...rest } = props;
 
   return (
-    <Card className={classes.card} {...rest}>
+    <div
+      className={` rounded overflow-hidden shadow-card    ${className}`}
+      {...rest}
+    >
       {children}
-    </Card>
+    </div>
   );
 };

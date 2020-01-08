@@ -1,10 +1,10 @@
-import React from "react";
-import { RowTextSpaceBetween } from "components/RowTextSpaceBetween";
-import { Divider } from "@material-ui/core";
 import { AppButton } from "components";
-import { formatMoney } from "utils/number";
-import { useCss } from "react-use";
+import { Divider } from "components/Divider";
 import { FeeRow } from "components/FeeRow";
+import { RowTextSpaceBetween } from "components/RowTextSpaceBetween";
+import React from "react";
+import { useCss } from "react-use";
+import { formatMoney, unitTx } from "utils/number";
 
 interface Props {
   totalAmount: number;
@@ -17,10 +17,16 @@ export const InformationCard: React.FC<Props> = props => {
   const { children, totalAmount, onSubmit, disabledButton, buttonTx } = props;
 
   let cardCn = useCss({
-    minWidth: "500px"
+    "@media only screen and (min-width: 728px)": {
+      minWidth: "500px"
+    },
+
+    "@media (max-width: 728px)": {
+      minWidth: "300px"
+    }
   });
 
-  cardCn += " max-w-sm rounded overflow-hidden shadow-card   px-12 py-8";
+  cardCn += " max-w-xs  rounded overflow-hidden shadow-card px-4 md:px-12 py-8";
 
   return (
     <div>
@@ -33,7 +39,7 @@ export const InformationCard: React.FC<Props> = props => {
           leftTx="Total amount"
           leftClassName="text-blueGrey font-medium"
           className="my-4 mt-8 mb-8 font-medium"
-          rightTx={formatMoney(totalAmount) + ""}
+          rightTx={formatMoney(totalAmount) + unitTx}
         />
 
         <AppButton onClick={onSubmit} fullWidth disabled={disabledButton}>

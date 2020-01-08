@@ -13,6 +13,9 @@ interface Props {
 
 export const TransferPaymentInfoCard: React.FC<Props> = props => {
   const { paymentInfo, isSelectedPayment, onSubmit, buttonTx } = props;
+  if (!paymentInfo) {
+    return null;
+  }
   const { amount, name, phone } = paymentInfo;
   return (
     <InformationCard

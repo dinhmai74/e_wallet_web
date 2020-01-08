@@ -1,14 +1,15 @@
+import { ThemeProvider } from "@material-ui/core";
+import AOS from "aos";
+import { Header, Sidebar } from "components";
 import React, { useEffect } from "react";
-import "./App.scss";
-import "./styles/index.scss";
 import { BrowserRouter, Route, Switch, useLocation } from "react-router-dom";
 import { PrimaryRouters } from "router/PrimaryRouters";
-import { ThemeProvider } from "@material-ui/core";
 import { theme } from "theme/materialUITheme";
-import { Sidebar, Header } from "components";
-import AOS from "aos";
+import "./App.scss";
+import "./styles/index.scss";
 
 import "aos/dist/aos.css"; // You can also use <link> for styles
+import { Footer } from "components/Footer";
 import { PageNotFound } from "components/PageNotFound";
 import { ImgNotFound404 } from "theme";
 
@@ -43,6 +44,8 @@ function ScrollToTop() {
   return null;
 }
 
+theme.shadows[24] = "0 0 15px 0 rgba(0, 0, 0, 0.1)";
+
 const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
@@ -70,6 +73,7 @@ const App: React.FC = () => {
             )}
           />
         </Switch>
+        <Footer />
       </BrowserRouter>
     </ThemeProvider>
   );

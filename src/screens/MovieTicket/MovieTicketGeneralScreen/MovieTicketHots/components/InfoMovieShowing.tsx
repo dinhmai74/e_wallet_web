@@ -1,8 +1,8 @@
 import React from "react";
 
 import { HotMovieData } from "mock-data/home/movies";
-import { Pagination } from "screens/MovieTicket/MovieTicketGeneralScreen/MovieTicketHots/components/Footer/Pagination";
 import { AnimText } from "screens/MovieTicket/MovieTicketGeneralScreen/MovieTicketHots/components/AnimText";
+import { Pagination } from "screens/MovieTicket/MovieTicketGeneralScreen/MovieTicketHots/components/Footer/Pagination";
 
 interface Props {
   idx: number;

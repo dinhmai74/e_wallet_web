@@ -3,14 +3,6 @@ import { createMuiTheme } from "@material-ui/core/styles";
 import styles from "theme/color/_colors.scss";
 
 export const theme = createMuiTheme({
-  palette: {
-    primary: {
-      main: styles.primary
-    },
-    secondary: {
-      main: styles.blue
-    }
-  },
   overrides: {
     MuiButton: {
       outlinedPrimary: {
@@ -20,11 +12,19 @@ export const theme = createMuiTheme({
         }
       },
       text: {
-        fontSize: 40,
         color: "blue",
+        fontSize: 40,
         fontWeight: 400,
         fontFamily: "Rubik"
       }
+    }
+  },
+  palette: {
+    primary: {
+      main: styles.primary
+    },
+    secondary: {
+      main: styles.blue
     }
   }
 });

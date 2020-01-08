@@ -1,11 +1,11 @@
+import cx from "classnames";
 import React from "react";
 import TextTruncate from "react-text-truncate";
-import cx from "classnames";
 
 import { Footer } from "screens/MovieTicket/MovieTicketGeneralScreen/MovieTicketHots/components/Footer";
+import { Poster } from "screens/MovieTicket/MovieTicketGeneralScreen/MovieTicketHots/components/Poster";
 import { useHotMovie } from "screens/MovieTicket/MovieTicketGeneralScreen/MovieTicketHots/useHotMovie";
 import styles from "./MovieTicketHots.module.scss";
-import { Poster } from "screens/MovieTicket/MovieTicketGeneralScreen/MovieTicketHots/components/Poster";
 
 export const MovieTicketHots: React.FC = () => {
   const { movie, isChanging, setNextMovie } = useHotMovie();
@@ -14,7 +14,7 @@ export const MovieTicketHots: React.FC = () => {
 
   return (
     <div className="md:min-h-screen pt-56 md:pt-40 ">
-      <div className={`px-24`}>
+      <div className={`md:px-24 px-12`}>
         <p className="text__h1 my-8 md:hidden ">Hot movie</p>
         <div className={"flex flex-row"}>
           <InfoContent description={description} title={title} anim={anim} />

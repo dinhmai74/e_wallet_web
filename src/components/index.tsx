@@ -4,4 +4,4 @@ export * from "./SideBar";
 export * from "./Modal";
 export * from "./Header";
 export * from "./Screen";
-export * from "./HeroCard";
+export * from "./ProviderLogoHeader";

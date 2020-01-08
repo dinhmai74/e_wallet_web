@@ -1,20 +1,20 @@
+import cx from "classnames";
 import React, { useContext } from "react";
 import Youtube from "react-youtube";
-import cx from "classnames";
 
-import { Screen, AppButton } from "components";
-import { MovieTicketDeatilScreenInfo } from "./components/MovieTicketDetailScreen.Info";
-import { useParams, useHistory } from "react-router";
-import { MovieData, AvatarModel } from "mock-data/home/movies";
-import { ImgNotFound } from "theme";
-import { PageNotFound } from "components/PageNotFound";
-import styles from "./MovieTicketDetailScreen.module.scss";
-import ScrollMenu from "react-horizontal-scrolling-menu";
-import { CastAvatar } from "screens/MovieTicket/MovieTicketDetailScreen/components/CastAvatar";
 import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
-import { Paths } from "router/PrimaryRouters";
-import { MovieTicketStoreContext } from "stores/MovieTicketStore";
+import { AppButton, Screen } from "components";
+import { PageNotFound } from "components/PageNotFound";
 import { observer } from "mobx-react";
+import { AvatarModel, MovieData } from "mock-data/home/movies";
+import ScrollMenu from "react-horizontal-scrolling-menu";
+import { useHistory, useParams } from "react-router";
+import { Paths } from "router/PrimaryRouters";
+import { CastAvatar } from "screens/MovieTicket/MovieTicketDetailScreen/components/CastAvatar";
+import { MovieTicketStoreContext } from "stores/MovieTicketStore";
+import { ImgNotFound } from "theme";
+import { MovieTicketDeatilScreenInfo } from "./components/MovieTicketDetailScreen.Info";
+import styles from "./MovieTicketDetailScreen.module.scss";
 
 interface Props {}
 
@@ -34,9 +34,12 @@ export const MovieTicketDetailSreen: React.FC<Props> = observer(() => {
   const listCasts = generateListCasts(casts);
 
   return (
-    <Screen className="pl-20 pt-40">
+    <Screen className="md:pl-20 px-12 pt-40">
       <div className="flex flex-row">
-        <MovieTicketDeatilScreenInfo movie={movie} className="md:w-1/2 pr-20" />
+        <MovieTicketDeatilScreenInfo
+          movie={movie}
+          className="md:w-1/2 md:pr-20"
+        />
         <div className={cx(styles.youtube, "hidden md:block")}>
           <Youtube
             videoId={trailSrc}
@@ -46,7 +49,7 @@ export const MovieTicketDetailSreen: React.FC<Props> = observer(() => {
         </div>
       </div>
 
-      <div className="mr-20">
+      <div className="md:mr-20">
         <p className="text__h2 color__grey mb-8">Cast:</p>
         <ScrollMenu
           alignCenter={false}

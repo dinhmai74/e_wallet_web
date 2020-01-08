@@ -1,15 +1,14 @@
+import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
+import { Screen } from "components";
+import _ from "lodash";
+import { observer } from "mobx-react";
+import { MovieData } from "mock-data/home/movies";
 import React from "react";
 import ScrollMenu from "react-horizontal-scrolling-menu";
-import { Screen } from "components";
-import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
-import _ from "lodash";
-
-import { MovieTicketHots } from "./MovieTicketHots";
-import { MovieData } from "mock-data/home/movies";
-import { MovieCard } from "screens/MovieTicket/components/MovieCard";
-import { observer } from "mobx-react";
 import { useHistory } from "react-router";
 import { Paths } from "router/PrimaryRouters";
+import { MovieCard } from "screens/MovieTicket/components/MovieCard";
+import { MovieTicketHots } from "./MovieTicketHots";
 
 const UpcomingListMovies = () => {
   const history = useHistory();
@@ -19,7 +18,7 @@ const UpcomingListMovies = () => {
       <MovieCard
         movie={el}
         key={eID}
-        onClick={id => {
+        onClick={() => {
           history.push(Paths.movieTicketDetail + `/${eID}`);
         }}
       />
@@ -38,7 +37,7 @@ export const MovieTicketGeneral: React.FC = observer(() => {
     <Screen className="">
       <MovieTicketHots />
 
-      <div className="my-20 px-20">
+      <div className="my-20 px-8 md:px-20">
         <div>
           <div className="flex-row flex justify-between pb-8">
             <p className="text__h1 color__grey">Comming soon</p>

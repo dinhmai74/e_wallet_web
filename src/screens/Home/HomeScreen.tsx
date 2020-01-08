@@ -5,8 +5,8 @@ import { RouteComponentProps } from "react-router-dom";
 
 import { Screen } from "components";
 
-import { Hero, HeroModel } from "./components/Hero";
 import { images } from "theme";
+import { Hero, HeroModel } from "./components/Hero";
 
 interface Props extends RouteComponentProps {
   [rest: string]: any;
@@ -38,7 +38,9 @@ const HerosHome: HeroModel[] = [
       "Easy as 1, 2, 3.",
       "Get there your way.",
       "Every time, anywhere."
-    ]
+    ],
+    navigateTo: "train-ticket",
+    buttonTx: "Buy train ticket"
   },
 
   {
@@ -67,10 +69,9 @@ const HerosHome: HeroModel[] = [
     title: "Game card",
     type: "right",
     content: ["More money, more power.", "Let rule the game."],
-    navigateTo:"buy-game-card-general",
+    navigateTo: "buy-game-card-general",
     buttonTx: "Buy Game Card"
-  },
-
+  }
 ];
 
 export const HomeScreen: React.FC<Props> = () => {

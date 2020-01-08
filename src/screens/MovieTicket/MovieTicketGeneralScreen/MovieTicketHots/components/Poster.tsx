@@ -1,10 +1,10 @@
-import React from "react";
 import ArrowBackIosRoundedIcon from "@material-ui/icons/ArrowBackIosRounded";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
+import cx from "classnames";
 import { RoundedButton } from "components/RoundedButtonIcon";
+import React from "react";
 import { metrics } from "theme/metrics";
 import styles from "../MovieTicketHots.module.scss";
-import cx from "classnames";
 import { NextMovieType } from "../useHotMovie";
 
 interface Props {

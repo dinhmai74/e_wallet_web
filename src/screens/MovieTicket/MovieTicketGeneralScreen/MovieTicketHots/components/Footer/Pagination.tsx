@@ -1,6 +1,6 @@
 import React from "react";
-import { formatDigitNumber } from "utils/number";
 import { AnimText } from "screens/MovieTicket/MovieTicketGeneralScreen/MovieTicketHots/components/AnimText";
+import { formatDigitNumber } from "utils/number";
 
 interface Props {
   activeIdx: number;

@@ -1,13 +1,13 @@
-import React, { useContext, useEffect, useState } from "react";
 import { Screen } from "components";
+import { AppDatePicker } from "components/AppDatePicker";
+import { Divider } from "components/Divider";
 import { observer } from "mobx-react";
+import { MovieData, PlaceData, PlaceModel } from "mock-data/home/movies";
+import moment, { Moment } from "moment";
+import React, { useContext, useEffect, useState } from "react";
+import { MovieTicketChoseTime } from "screens/MovieTicket/MovieTicketChoseInfoScreen/MovieTicketChoseTime";
 import { MovieTicketStoreContext } from "stores/MovieTicketStore";
 import { MovieTicketChoseInfoScreenInfoSide } from "./MovieTicketChoseInfoScreenInfoSide";
-import { MovieData, PlaceData, PlaceModel } from "mock-data/home/movies";
-import { AppDatePicker } from "components/AppDatePicker";
-import moment, { Moment } from "moment";
-import { Divider } from "@material-ui/core";
-import { MovieTicketChoseTime } from "screens/MovieTicket/MovieTicketChoseInfoScreen/MovieTicketChoseTime";
 
 interface Props {}
 
@@ -36,7 +36,7 @@ export const MovieTicketChoseInfoScreen: React.FC<Props> = observer(props => {
   }
 
   return (
-    <Screen className="pl-20">
+    <Screen className="px-12 md:pl-20 md:px-0">
       <div className="flex flex-row">
         <div className="flex-1 pt-32">
           <div className="pr-40 py-8">

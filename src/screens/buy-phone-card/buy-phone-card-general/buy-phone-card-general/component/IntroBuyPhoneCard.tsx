@@ -1,6 +1,6 @@
 import React from "react";
-import { images } from "theme";
 import { Hero } from "screens/Home/components/Hero";
+import { images } from "theme";
 
 export const IntroBuyPhoneCard: React.FC = () => {
   return (
