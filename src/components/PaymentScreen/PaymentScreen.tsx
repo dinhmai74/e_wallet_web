@@ -10,13 +10,15 @@ export interface Props {
   price?: string;
   quantity?: string;
   totalAmount?: string;
+  navigateTo?: string
 }
 
 export const PaymentScreen: React.FC<Props> = ({
   titleProvider,
   price,
   quantity,
-  totalAmount
+  totalAmount,
+  navigateTo
 }) => {
   const [, setSelectedPayment] = useBoolean(false);
 
@@ -30,7 +32,7 @@ export const PaymentScreen: React.FC<Props> = ({
       <InfoPaymentCard
         type="left"
         src={images.phoneCardPayment.payment}
-        navigateTo="/payment/buy-phone-card/success"
+        navigateTo={navigateTo}
         buttonTx="Confirm"
         provider={titleProvider}
         price={price}
