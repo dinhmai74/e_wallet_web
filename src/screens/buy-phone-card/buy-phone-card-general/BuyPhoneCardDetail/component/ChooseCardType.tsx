@@ -6,7 +6,13 @@ import { formatMoney } from "utils/number";
 
 const data = [10000, 20000, 50000, 100000, 200000, 500000];
 
-export const ChooseCardType: React.FC = () => {
+export interface Props {
+  navigate?: string
+}
+
+export const ChooseCardType: React.FC<Props> = ({
+  navigate
+}) => {
   const [selected, setSelected] = useState<number>(0);
   const renderCardMoney = () => {
     return data.map((val, index) => (
@@ -36,7 +42,7 @@ export const ChooseCardType: React.FC = () => {
         src={images.phoneCard.cash}
         quantity="Quantity: "
         total="Total: "
-        navigateTo="buy-phone-card-payment"
+        navigateTo={navigate}
         buttonTx="OK"
         money={selected}
       />

@@ -4,6 +4,8 @@ import { BuyPhoneCardDetail } from "screens/buy-phone-card/buy-phone-card-genera
 import { BuyPhoneCardSuccess } from "screens/buy-phone-card/buy-phone-card-general/BuyPhoneCardSuccess";
 import { BuyPhoneCardPayMent } from "screens/buy-phone-card/BuyPhoneCardPayMent/BuyPhoneCardPayMent";
 import { BuyGameCardGeneral } from "screens/BuyGameCard/BuyGameCardGeneral";
+import { BuyGameCardPayment } from "screens/BuyGameCard/BuyGameCardPayment";
+
 import { HomeScreen } from "screens/Home";
 import {
   MovieTicketBuySuccessScreen,
@@ -51,11 +53,12 @@ export const Paths = {
   transferPayment: "/payment/transfer",
   transferPaymentSuccess: "/payment/transfer/success",
   buyGameCardDetail: "/buy-game-card/detail",
+  buyGameCardPayment: "/payment/buy-game-card",
   train: "/train-ticket",
   trainChosePos: "/train-ticket/chose-position",
   trainFillInfo: "/train-ticket/fill-info",
   trainPayment: "/payment/train-ticket",
-  trainSuccess: "/payment/train-ticket/success"
+  trainSuccess: "/payment/train-ticket/success",
 };
 
 export interface RouterModel {
@@ -145,6 +148,10 @@ export const PrimaryRouters: RouterModel[] = [
   {
     Component: BuyGameCardDetail,
     path: Paths.buyGameCardDetail
+  },
+  {
+    Component: BuyGameCardPayment,
+    path: Paths.buyGameCardPayment
   },
 
   {

@@ -19,7 +19,7 @@ export const BuyGameCardDetail: React.FC = () => {
           content={["Region: VN", "Discount: 4%"]}
         />
 
-        <ChooseCardType />
+        <ChooseCardType navigate="/payment/buy-game-card"/>
       </div>
     </Screen>
   );
