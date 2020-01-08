@@ -40,6 +40,7 @@ export const InformationCard: React.FC<Props> = props => {
           leftClassName="text-blueGrey font-medium"
           className="my-4 mt-8 mb-8 font-medium"
           rightTx={formatMoney(totalAmount) + unitTx}
+          rightClassName="text-primary"
         />
 
         <AppButton onClick={onSubmit} fullWidth disabled={disabledButton}>

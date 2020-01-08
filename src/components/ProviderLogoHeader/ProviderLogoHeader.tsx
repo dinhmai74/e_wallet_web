@@ -67,7 +67,7 @@ export const ProviderLogoHeader: React.FC<HeroModel> = ({
   const renderImg = () => (
     <div className={classes.card}>
       <img
-       src={`${process.env.PUBLIC_URL}/${src}`}
+        src={`${process.env.PUBLIC_URL}/${src}`}
         className={`self-center ${imgMargin} ${imgStyle} hidden img__decorate sm:hidden md:hidden lg:block xl:block px-12`}
         alt="illstration"
       />

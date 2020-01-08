@@ -6,12 +6,10 @@ import { RowTextSpaceBetween } from "components/RowTextSpaceBetween";
 import { images } from "theme/images";
 
 interface Props {
-  urlImage?: string
+  urlImage?: string;
 }
 
-export const SuccessScreen: React.FC<Props> = ({
-  urlImage
-})  => {
+export const SuccessScreen: React.FC<Props> = ({ urlImage }) => {
   return (
     <Screen className="flex flex-row">
       <div className="flex flex-col mt-40 mx-12 lg:mx-32 md:mx-24 flex-1">

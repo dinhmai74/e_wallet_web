@@ -1,1 +1,1 @@
-export * from "./BuyGameCardSuccess"
+export * from "./BuyGameCardSuccess";

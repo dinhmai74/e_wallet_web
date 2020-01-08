@@ -1,9 +1,9 @@
-import {  TextField } from "@material-ui/core";
+import { TextField } from "@material-ui/core";
 import { AppButton, AppCard } from "components";
+import { RowTextSpaceBetween } from "components/RowTextSpaceBetween";
 import React, { useState } from "react";
 import { useHistory } from "react-router";
 import { formatMoney, unitTx } from "utils/number";
-import { RowTextSpaceBetween } from "components/RowTextSpaceBetween";
 
 type HeroType = "left" | "right";
 
@@ -31,15 +31,15 @@ export const TotalMoney: React.FC<HeroModel> = ({
   let txMargin = "";
   const imgMargin = "";
   if (type === "right") {
-    txMargin = "mr-20 ";
+    txMargin = "md:mr-20 ";
   } else {
-    txMargin = "ml-20 ";
+    txMargin = "md:ml-20 ";
   }
 
   const history = useHistory();
   const renderImg = () => (
     <img
-    src={`${process.env.PUBLIC_URL}/${src}`}
+      src={`${process.env.PUBLIC_URL}/${src}`}
       className={`self-center ${imgMargin} ${imgStyle} hidden img__decorate sm:hidden md:hidden lg:block xl:block`}
       alt="illstration"
       style={{
@@ -72,9 +72,6 @@ export const TotalMoney: React.FC<HeroModel> = ({
   return (
     <div
       className="flex flex-row items-center justify-center "
-      data-aos={`fade-${type}`}
-      data-aos-delay="50"
-      data-aos-duration="1000"
     >
       {type === "left" && renderImg()}
       <AppCard className={txMargin + " px-8 py-8 "}>

@@ -1,16 +1,16 @@
+import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
 import { ItemProvider } from "components/ItemProvider/ItemProvider";
+import _ from "lodash";
 import React from "react";
+import ScrollMenu from "react-horizontal-scrolling-menu";
 import { useHistory } from "react-router";
 import { Paths } from "router/PrimaryRouters";
 import { images } from "theme";
-import _ from "lodash";
-import ScrollMenu from "react-horizontal-scrolling-menu";
-import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
 
 const ProviderImgs: string[] = [
   images.iconProvider.mobiphone,
   images.iconProvider.viettel,
-  images.iconProvider.vnpt,
+  images.iconProvider.vnpt
 ];
 
 const GenerateData = () => {

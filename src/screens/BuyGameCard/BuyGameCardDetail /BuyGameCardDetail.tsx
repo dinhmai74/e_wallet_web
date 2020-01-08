@@ -1,7 +1,7 @@
+import { ProviderLogoHeader, Screen } from "components";
 import React from "react";
-import { Screen, ProviderLogoHeader } from "components";
-import { images } from "theme";
 import { ChooseCardType } from "screens/buy-phone-card/buy-phone-card-general/BuyPhoneCardDetail/component/ChooseCardType";
+import { images } from "theme";
 
 export const BuyGameCardDetail: React.FC = () => {
   return (
@@ -19,7 +19,7 @@ export const BuyGameCardDetail: React.FC = () => {
           content={["Region: VN", "Discount: 4%"]}
         />
 
-        <ChooseCardType navigate="/payment/buy-game-card"/>
+        <ChooseCardType navigate="/payment/buy-game-card" />
       </div>
     </Screen>
   );

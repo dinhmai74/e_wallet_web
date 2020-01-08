@@ -4,14 +4,24 @@ import React from "react";
 interface Props {
   title?: any;
   onClick?: () => void;
+  isHighLight?: boolean;
+  selected: number;
 }
+
 export const ItemMoney: React.FC<Props> = props => {
-  const { title, onClick } = props;
+  const { title, onClick, isHighLight, selected } = props;
+  let highlightClass = "";
+  if (selected !== -1) {
+    highlightClass = isHighLight ? " border-primary border " : " opacity-25";
+  }
+
   return (
     <AppCard
-      className="max-w-sm p-8 text-center my-4 mx-8 cursor-pointer"
+      className={
+        "max-w-sm p-8 text-center my-4 md:mx-8 cursor-pointer" + highlightClass
+      }
       style={{
-        width: 250
+        minWidth: 250
       }}
       onClick={onClick}
     >

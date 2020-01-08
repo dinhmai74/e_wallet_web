@@ -6,6 +6,8 @@ import { BuyPhoneCardPayMent } from "screens/buy-phone-card/BuyPhoneCardPayMent/
 import { BuyGameCardGeneral } from "screens/BuyGameCard/BuyGameCardGeneral";
 import { BuyGameCardPayment } from "screens/BuyGameCard/BuyGameCardPayment";
 
+import { BuyGameCardDetail } from "screens/BuyGameCard/BuyGameCardDetail ";
+import { BuyGameCarSuccess } from "screens/BuyGameCard/BuyGameCardSuccess";
 import { HomeScreen } from "screens/Home";
 import {
   MovieTicketBuySuccessScreen,
@@ -28,8 +30,6 @@ import {
   TransferPaymentScreen,
   TransferPaymentSuccessScreen
 } from "screens/Transfer";
-import { BuyGameCardDetail } from "screens/BuyGameCard/BuyGameCardDetail ";
-import { BuyGameCarSuccess } from "screens/BuyGameCard/BuyGameCardSuccess";
 
 export const Paths = {
   about: "/about",
@@ -60,7 +60,7 @@ export const Paths = {
   trainChosePos: "/train-ticket/chose-position",
   trainFillInfo: "/train-ticket/fill-info",
   trainPayment: "/payment/train-ticket",
-  trainSuccess: "/payment/train-ticket/success",
+  trainSuccess: "/payment/train-ticket/success"
 };
 
 export interface RouterModel {

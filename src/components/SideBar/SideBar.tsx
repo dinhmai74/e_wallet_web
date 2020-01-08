@@ -161,8 +161,12 @@ function Sidebar() {
         Buy movie ticket
       </Item>
 
+      <Item onClick={() => handleOnClick(Paths.buyGameCardGeneral)}>
+        Buy game card
+      </Item>
+
       <Item onClick={() => handleOnClick(Paths.buyPhoneCardGeneral)}>
-        Buy phone ticket
+        Buy phone card
       </Item>
 
       <Item onClick={() => handleOnClick(Paths.train)}>Buy train ticket</Item>

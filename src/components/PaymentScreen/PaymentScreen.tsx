@@ -6,11 +6,11 @@ import { InfoPaymentCard } from "screens/buy-phone-card/BuyPhoneCardPayMent/comp
 import { images } from "theme";
 
 export interface Props {
-  titleProvider?: string;
-  price?: string;
-  quantity?: string;
-  totalAmount?: string;
-  navigateTo?: string
+  titleProvider: string;
+  price: string;
+  quantity: string;
+  totalAmount: number;
+  navigateTo: string;
 }
 
 export const PaymentScreen: React.FC<Props> = ({
@@ -20,7 +20,7 @@ export const PaymentScreen: React.FC<Props> = ({
   totalAmount,
   navigateTo
 }) => {
-  const [, setSelectedPayment] = useBoolean(false);
+  const [selectedPayment, setSelectedPayment] = useBoolean(false);
 
   const onChangeMethods = () => {
     setSelectedPayment(true);
@@ -28,17 +28,20 @@ export const PaymentScreen: React.FC<Props> = ({
 
   return (
     <Screen>
-      <PaymentMethods onChange={onChangeMethods} />
-      <InfoPaymentCard
-        type="left"
-        src={images.phoneCardPayment.payment}
-        navigateTo={navigateTo}
-        buttonTx="Confirm"
-        provider={titleProvider}
-        price={price}
-        quantity={quantity}
-        totalAmount={totalAmount}
-      />
+      <div className="mt-16">
+        <PaymentMethods onChange={onChangeMethods} />
+        <InfoPaymentCard
+          type="left"
+          src={images.phoneCardPayment.payment}
+          navigateTo={navigateTo}
+          buttonTx="Confirm"
+          provider={titleProvider}
+          price={price}
+          quantity={quantity}
+          isSelectedPayment={selectedPayment}
+          totalAmount={totalAmount}
+        />
+      </div>
     </Screen>
   );
 };

@@ -1,6 +1,7 @@
 import React from "react";
-import styled from "styled-components";
 import { useCss } from "react-use";
+import styled from "styled-components";
+import { AppCard } from "components/AppCard";
 
 interface Props {
   onClick?: () => void;
@@ -9,26 +10,29 @@ interface Props {
 export const ItemProvider: React.FC<Props> = props => {
   const { onClick, src } = props;
   let className = useCss({
-    minWidth: "200px",
+    maxHeight: "120px",
     minHeight: "120px",
-    maxHeight: "120px"
+    minWidth: "200px"
   });
 
-  className +=
-    " max-w-sm rounded overflow-hidden shadow-card cursor-pointer  my-12 mx-8 bg-white";
+  className += " max-w-sm  cursor-pointer align-middle  my-12 mx-8 bg-white";
 
   return (
-    <div className={className} onClick={onClick}>
-      <StyledImg src={`${process.env.PUBLIC_URL}/${src}`} alt="logo" className="mx-8 my-4"/>
-    </div>
+    <AppCard className={className} onClick={onClick}>
+      <StyledImg
+        src={`${process.env.PUBLIC_URL}/${src}`}
+        alt="logo"
+        className="mt-4"
+      />
+    </AppCard>
   );
 };
 
 const StyledImg = styled.img`
-  display: block;
   max-width: 150px;
   max-height: 100px;
   width: auto;
   height: auto;
   margin: auto;
+  vertical-align: middle;
 `;

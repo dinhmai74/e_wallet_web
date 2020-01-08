@@ -7,13 +7,11 @@ import { formatMoney } from "utils/number";
 const data = [10000, 20000, 50000, 100000, 200000, 500000];
 
 export interface Props {
-  navigate?: string
+  navigate?: string;
 }
 
-export const ChooseCardType: React.FC<Props> = ({
-  navigate
-}) => {
-  const [selected, setSelected] = useState<number>(0);
+export const ChooseCardType: React.FC<Props> = ({ navigate }) => {
+  const [selected, setSelected] = useState<number>(-1);
   const renderCardMoney = () => {
     return data.map((val, index) => (
       <ItemMoney
@@ -22,6 +20,8 @@ export const ChooseCardType: React.FC<Props> = ({
         onClick={() => {
           setSelected(val);
         }}
+        isHighLight={selected===val}
+        selected={selected}
       />
     ));
   };
