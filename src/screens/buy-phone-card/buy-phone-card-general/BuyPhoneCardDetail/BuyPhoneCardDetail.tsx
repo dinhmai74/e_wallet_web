@@ -21,7 +21,7 @@ export const BuyPhoneCardDetail: React.FC = () => {
           content={["Region: VN", "Discount: 4%"]}
         />
 
-        <ChooseCardType />
+        <ChooseCardType navigate="/buy-phone-card-payment" />
       </div>
     </Screen>
   );
