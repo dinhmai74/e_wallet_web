@@ -21,13 +21,16 @@ export const ChooseCardType: React.FC = () => {
   };
 
   return (
-    <div>
-      <div className="mb-20 pl-56 flex-wrap">
-        <p className="text__h2 color__grey font-bold">Choose card type:</p>
+    <div className="my-8">
+      <div className="my-8">
+        <div className="mb-12 pl-0 md:pl-64 ">
+          <p className="text__h2 color__grey font-bold">Choose card type:</p>
+        </div>
+        <div className="md:flex md:flex-wrap justify-center ml-0 md:ml-32">
+          {renderCardMoney()}
+        </div>
       </div>
-      <div className="flex flex-wrap justify-center mb-10 ml-32">
-        {renderCardMoney()}
-      </div>
+
       <TotalMoney
         type="left"
         src={images.phoneCard.cash}

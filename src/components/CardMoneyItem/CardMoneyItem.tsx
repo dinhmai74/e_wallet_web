@@ -1,4 +1,4 @@
-import { HeroCard, Screen } from "components";
+import { ProviderLogoHeader, Screen } from "components";
 import React from "react";
 import { Hero } from "screens/Home/components/Hero";
 import { images } from "theme";

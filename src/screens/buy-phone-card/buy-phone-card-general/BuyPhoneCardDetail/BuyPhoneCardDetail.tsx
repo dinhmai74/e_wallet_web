@@ -1,4 +1,4 @@
-import { HeroCard, Screen } from "components";
+import { ProviderLogoHeader, Screen } from "components";
 import React from "react";
 import { ChooseCardType } from "screens/buy-phone-card/buy-phone-card-general/BuyPhoneCardDetail/component/ChooseCardType";
 import { images } from "theme";
@@ -11,8 +11,8 @@ export const BuyPhoneCardDetail: React.FC = () => {
         alt=""
         className="absolute inset-0 z-0"
       />
-      <div className="flex flex-col absolute inset-0 z-10 mt-56">
-        <HeroCard
+      <div className="flex flex-col absolute inset-0 z-10 mt-56 px-12 md:px-0">
+        <ProviderLogoHeader
           type="left"
           src={images.iconProvider.viettel}
           imgStyle="p-8"

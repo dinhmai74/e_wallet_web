@@ -9,15 +9,16 @@ export const ItemMoney: React.FC<Props> = props => {
   const { title, onClick } = props;
   return (
     <AppCard
-      className="max-w-sm px-6 py-4 pt-8 mb-20 cursor-pointer mr-20 outline-none items-center text-center justify-center align-middle"
+      className="max-w-sm p-8 text-center my-4 mx-8 cursor-pointer"
       style={{
-        height: 150,
         width: 250
       }}
       onClick={onClick}
     >
-      <p className=" text__h1 color__grey pb-4 font-bold">{title}</p>
-      <p className=" text__d1 color__blue-grey ">Cashback: 200d</p>
+      <div className="m-auto">
+        <p className=" text__h1 color__grey pb-4 font-bold">{title}</p>
+        <p className=" text__d1 color__blue-grey ">Cashback: 200d</p>
+      </div>
     </AppCard>
   );
 };

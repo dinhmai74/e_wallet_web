@@ -47,26 +47,23 @@ const Lines: React.FC<{ content: string[] }> = ({ content }) => {
   );
 };
 
-export const HeroCard: React.FC<HeroModel> = ({
+export const ProviderLogoHeader: React.FC<HeroModel> = ({
   imgStyle,
   containerStyle,
   title,
   content,
   src,
-  type,
-  navigateTo,
-  buttonTx
+  type
 }) => {
   let txMargin = "";
   const imgMargin = "";
 
   if (type === "right") {
-    txMargin = "ml-0 md:ml-20";
+    txMargin = "md:mx-20";
   } else {
-    txMargin = "ml-0 md:ml-20";
+    txMargin = "md:ml-20";
   }
 
-  const history = useHistory();
   const classes = useStyles();
 
   const renderImg = () => (
@@ -79,25 +76,8 @@ export const HeroCard: React.FC<HeroModel> = ({
     </div>
   );
 
-  const renderButton = () => {
-    if (navigateTo === undefined) {
-      return null;
-    }
-
-    return (
-      <AppButton
-        fullWidth
-        color="primary"
-        variant="outlined"
-        tx={buttonTx}
-        className="mt-6 text__b1"
-        onClick={() => history.push(navigateTo)}
-      />
-    );
-  };
-
   const containerClassName =
-    "flex flex-row items-center justify-center " + containerStyle;
+    "md:flex md:flex-row md:items-center md:justify-center  " + containerStyle;
   return (
     <div
       className={containerClassName}
@@ -110,14 +90,13 @@ export const HeroCard: React.FC<HeroModel> = ({
         <p className={`text__t1 color__grey  font-bold`}>{title}</p>
         <br />
         <Lines content={content} />
-        {renderButton()}
       </div>
       {type === "right" && renderImg()}
     </div>
   );
 };
 
-HeroCard.defaultProps = {
+ProviderLogoHeader.defaultProps = {
   type: "left",
   imgStyle: "img__decorate "
 };
