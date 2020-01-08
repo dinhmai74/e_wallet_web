@@ -8,6 +8,7 @@ export const BuyGameCardPayment: React.FC = props => {
       price="100.000"
       quantity="3"
       totalAmount="300.000d"
+      navigateTo="/payment/buy-game-card/success"
     />
   );
 };

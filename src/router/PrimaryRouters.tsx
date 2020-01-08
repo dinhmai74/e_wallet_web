@@ -29,6 +29,7 @@ import {
   TransferPaymentSuccessScreen
 } from "screens/Transfer";
 import { BuyGameCardDetail } from "screens/BuyGameCard/BuyGameCardDetail ";
+import { BuyGameCarSuccess } from "screens/BuyGameCard/BuyGameCardSuccess";
 
 export const Paths = {
   about: "/about",
@@ -54,6 +55,7 @@ export const Paths = {
   transferPaymentSuccess: "/payment/transfer/success",
   buyGameCardDetail: "/buy-game-card/detail",
   buyGameCardPayment: "/payment/buy-game-card",
+  buyGameCardSuccess: "/payment/buy-game-card/success",
   train: "/train-ticket",
   trainChosePos: "/train-ticket/chose-position",
   trainFillInfo: "/train-ticket/fill-info",
@@ -148,6 +150,10 @@ export const PrimaryRouters: RouterModel[] = [
   {
     Component: BuyGameCardDetail,
     path: Paths.buyGameCardDetail
+  },
+  {
+    Component: BuyGameCarSuccess,
+    path: Paths.buyGameCardSuccess
   },
   {
     Component: BuyGameCardPayment,
