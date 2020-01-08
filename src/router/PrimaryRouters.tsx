@@ -26,11 +26,7 @@ import {
   TransferPaymentScreen,
   TransferPaymentSuccessScreen
 } from "screens/Transfer";
-<<<<<<< HEAD
-import { BuyGameCardGeneral } from "screens/BuyGameCard/BuyGameCardGeneral";
 import { BuyGameCardDetail } from "screens/BuyGameCard/BuyGameCardDetail ";
-=======
->>>>>>> develop
 
 export const Paths = {
   about: "/about",
