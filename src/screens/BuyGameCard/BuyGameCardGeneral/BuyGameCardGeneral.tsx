@@ -1,13 +1,13 @@
+import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
 import { Screen } from "components";
 import { ItemProvider } from "components/ItemProvider";
+import _ from "lodash";
 import React from "react";
+import ScrollMenu from "react-horizontal-scrolling-menu";
 import { useHistory } from "react-router";
 import { Paths } from "router/PrimaryRouters";
 import { images } from "theme";
 import { IntroBuyGameCard } from "./component/IntroBuyGameCard";
-import ScrollMenu from "react-horizontal-scrolling-menu";
-import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
-import _ from "lodash";
 
 const ProviderImgs: string[] = [
   images.gameCard.iconGarena,

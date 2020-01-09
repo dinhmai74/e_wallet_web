@@ -20,7 +20,7 @@ export const ChooseCardType: React.FC<Props> = ({ navigate }) => {
         onClick={() => {
           setSelected(val);
         }}
-        isHighLight={selected===val}
+        isHighLight={selected === val}
         selected={selected}
       />
     ));

@@ -10,7 +10,7 @@ export const TrainSideInfoBG = styled.div`
 
 export const TrainGeneralScreenSideInfo: React.FC = () => {
   return (
-    <TrainSideInfoBG className="hidden lg:block min-w-3/5 pt-32 h-screen fixed">
+    <TrainSideInfoBG className="hidden lg:block min-w-3/5 pt-32 h-screen ">
       <img
         src={`${process.env.PUBLIC_URL}/${images.home.train}`}
         alt="illu"

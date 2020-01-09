@@ -1,9 +1,7 @@
-import { AppButton } from "components";
-import { Divider } from "components/Divider";
 import { InformationCard } from "components/InformationCard";
+import { RowTextSpaceBetween } from "components/RowTextSpaceBetween";
 import React from "react";
 import { useHistory } from "react-router";
-import { RowTextSpaceBetween } from "components/RowTextSpaceBetween";
 type HeroType = "left" | "right";
 
 export interface HeroModel {

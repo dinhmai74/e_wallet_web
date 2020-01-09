@@ -2,13 +2,10 @@ import { AppButton, Screen } from "components";
 import _ from "lodash";
 import { toJS } from "mobx";
 import { observer } from "mobx-react";
-import {
-  MovieData,
-  MovieTicketPriceData,
-  PlaceData
-} from "mock-data/home/movies";
+import { MovieData, MovieTicketPriceData, PlaceData } from "mock-data/home/movies";
 import React, { useContext } from "react";
 import { useHistory } from "react-router";
+import { animated, useTransition } from "react-spring";
 import { useWindowSize } from "react-use";
 import { Paths } from "router/PrimaryRouters";
 import { MovieTicketChosePosScreenSideInfo } from "screens/MovieTicket/MovieTicketChosePosScreen/MovieTicketChosePosScreen.SideInfo";
@@ -45,20 +42,28 @@ export const MovieTicketChosePosScreen: React.FC<Props> = observer(props => {
     const p = MovieTicketPriceData.find(v => v.id === key);
     price += val * p!.price;
   });
+
+  const transitions = useTransition(MovieTicketPriceData, item => item.id, {
+    unique: true,
+    trail: 400 / MovieTicketPriceData.length,
+    from: { opacity: 0, transform: "scale(0)" },
+    enter: { opacity: 1, transform: "scale(1)" },
+    leave: { opacity: 0, transform: "scale(0)" }
+  });
+
   return (
-    <Screen className="lg:px-24 px-8 md:px-0">
+    <Screen className="lg:pl-24 pl-8 md:px-0">
       <div className="flex flex-row">
         <div className="flex-1 py-32 px-4">
-          {_.map(MovieTicketPriceData, (val, idx) => {
-            return (
+          {transitions.map(({ item, key, props }) => (
+            <animated.div style={props} key={item.id}>
               <MovieTicketChosePosTicketCard
-                id={val.id}
-                name={val.name}
-                price={val.price}
-                key={idx}
+                id={item.id}
+                name={item.name}
+                price={item.price}
               />
-            );
-          })}
+            </animated.div>
+          ))}
 
           {width < screenSize.md && (
             <AppButton

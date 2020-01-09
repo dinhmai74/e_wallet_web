@@ -1,7 +1,7 @@
+import { AppCard } from "components/AppCard";
 import React from "react";
 import { useCss } from "react-use";
 import styled from "styled-components";
-import { AppCard } from "components/AppCard";
 
 interface Props {
   onClick?: () => void;

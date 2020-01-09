@@ -80,7 +80,7 @@ export const TrainGeneralScreenSearchForm: React.FC<Props> = props => {
             onChange={handleChange}
             variant="outlined"
             size="small"
-            className="text__btn border-none mr-4 w-full"
+            className="text__btn border-none mr-4 w-full bg-white"
             InputLabelProps={{
               style: { color: colors.blueGrey, opacity: "0.6" } as any
             }}
@@ -92,7 +92,7 @@ export const TrainGeneralScreenSearchForm: React.FC<Props> = props => {
               <MenuItem
                 key={option.value}
                 value={option.value}
-                className="text-blueGrey"
+                className="text-blueGrey "
               >
                 {option.label}
               </MenuItem>

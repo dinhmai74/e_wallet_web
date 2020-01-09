@@ -70,9 +70,7 @@ export const TotalMoney: React.FC<HeroModel> = ({
 
   const [totalQuantity, setQuantity] = useState();
   return (
-    <div
-      className="flex flex-row items-center justify-center "
-    >
+    <div className="flex flex-row items-center justify-center ">
       {type === "left" && renderImg()}
       <AppCard className={txMargin + " px-8 py-8 "}>
         <div className="flex flex-row justify-between items-center mb-8">

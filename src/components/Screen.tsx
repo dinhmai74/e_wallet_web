@@ -6,9 +6,16 @@ export interface ScreenProps {
   children?: any;
   className?: string;
   haveFooter?: boolean;
+  style?: any;
+  [rest: string]: any;
 }
 
-export const Screen: React.FC<ScreenProps> = ({ children, className }) => {
+export const Screen: React.FC<ScreenProps> = ({
+  children,
+  className,
+  style,
+  ...rest
+}) => {
   // Sidebar
   const { isMobile, useDragMain, useMainStyle } = useSidebar();
 
@@ -21,7 +28,8 @@ export const Screen: React.FC<ScreenProps> = ({ children, className }) => {
     <animated.div
       {...(isMobile ? bindMain() : {})}
       className={clName}
-      style={mainStyle}
+      style={{ ...mainStyle, ...style }}
+      {...rest}
     >
       {children}
     </animated.div>

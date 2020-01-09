@@ -49,7 +49,7 @@ export const MovieTicketChoseInfoScreen: React.FC<Props> = observer(props => {
             <Divider />
           </div>
 
-          <div className="max-w-2/4">
+          <div className="">
             {places.map(val => (
               <MovieTicketChoseTime place={val} key={val.id} />
             ))}
