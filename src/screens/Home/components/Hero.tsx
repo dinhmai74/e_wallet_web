@@ -2,7 +2,6 @@ import { AppButton } from "components";
 import React from "react";
 import { useHistory } from "react-router";
 import { animated, useSpring } from "react-spring";
-import { useWindowSize } from "react-use";
 import "./hero.scss";
 
 type HeroType = "left" | "right";
@@ -57,8 +56,6 @@ export const Hero: React.FC<HeroModel> = ({
 
   const [props, set] = useSpring(() => ({ x: 0, opacity: 100 }));
 
-  const { width } = useWindowSize();
-
   const renderButton = () => {
     if (navigateTo === undefined) {
       return null;
@@ -72,8 +69,10 @@ export const Hero: React.FC<HeroModel> = ({
         tx={buttonTx}
         className="mt-6 text__b1"
         onClick={() => {
-          if (width > 1000) set({ x: 100, opacity: 0 });
-          else history.push(navigateTo + "");
+         set({ x: 100, opacity: 0 });
+          setTimeout(()=>{
+            history.push(navigateTo + "");
+          },350)
         }}
       />
     );
