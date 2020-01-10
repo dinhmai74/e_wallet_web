@@ -89,6 +89,10 @@ $colors: (
   }
 }
 
+.bg__train{
+  background-color: #ddfafe;
+}
+
 .text {
   font-stretch: normal;
   color: $greyish-brown;
@@ -298,6 +302,7 @@ $colors: (
 
 .footer {
   min-height: 20vh;
+  background-color: transparent;
 }
 
 .menu-item {
@@ -324,4 +329,29 @@ $colors: (
 .scroll-menu-arrow {
   padding: 20px;
   cursor: pointer;
+}
+
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 250ms ease-in;
+}
+
+.item-enter {
+  opacity: 0;
+}
+.item-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+.item-exit {
+  opacity: 1;
+}
+.item-exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease-in;
 }

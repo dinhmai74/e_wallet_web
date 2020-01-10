@@ -5,6 +5,8 @@ import { useHistory } from "react-router";
 import { Paths } from "router/PrimaryRouters";
 import { MovieTicketChoseInfoCard } from "screens/MovieTicket/MovieTicketChoseInfoScreen/components/MovieTicketChoseInfoCard";
 import { MovieTicketStoreContext } from "stores/MovieTicketStore";
+import { useScaleGroup, useFadeIn } from "utils/animations/useAnimations";
+import { animated } from "react-spring";
 // import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
 // import ScrollMenu from "react-horizontal-scrolling-menu";
 //
@@ -37,18 +39,24 @@ export const MovieTicketChoseTime: React.FC<Props> = observer(props => {
     history.push(Paths.movieTicketChosePos);
   };
 
+  const transitions = useScaleGroup(times);
+
+  const fadeIn = useFadeIn();
+
   return (
     <div className="my-8">
-      <p className="text__h2">{placeName}</p>
-      {/*<ScrollMenu*/}
-      {/*  alignCenter={false}*/}
-      {/*  data={scrollData}*/}
-      {/*  arrowLeft={ArrowLeft()}*/}
-      {/*  arrowRight={ArrowRight()}*/}
-      {/*/>*/}
+      <animated.p className="text__h2" style={fadeIn}>
+        {placeName}
+      </animated.p>
       <div className="flex flex-row">
-        {times.map(val => (
-          <MovieTicketChoseInfoCard time={val} key={val.id} onClick={onClick} />
+        {transitions.map(({ item, key, props }) => (
+          <animated.div key={item.id} style={props}>
+            <MovieTicketChoseInfoCard
+              time={item}
+              key={item.id}
+              onClick={onClick}
+            />
+          </animated.div>
         ))}
       </div>
     </div>

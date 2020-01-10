@@ -2,41 +2,16 @@ import React, { useState } from "react";
 import { ItemMoney } from "screens/buy-phone-card/buy-phone-card-general/BuyPhoneCardDetail/component/ItemMoney";
 import { TotalMoney } from "screens/buy-phone-card/buy-phone-card-general/BuyPhoneCardDetail/component/TotalMoney";
 import { images } from "theme";
+import { formatMoney } from "utils/number";
 
-const data = [[10000], [20000], [50000], [100000], [200000], [500000]];
+const data = [10000, 20000, 50000, 100000, 200000, 500000];
 
-function formatMoney(amount, decimalCount = 2, decimal = ".", thousands = ",") {
-  try {
-    decimalCount = Math.abs(decimalCount);
-    decimalCount = isNaN(decimalCount) ? 2 : decimalCount;
-
-    const negativeSign = amount < 0 ? "-" : "";
-
-    const i = parseInt(
-      (amount = Math.abs(Number(amount) || 0).toFixed(decimalCount))
-    ).toString();
-    const j = i.length > 3 ? i.length % 3 : 0;
-
-    return (
-      negativeSign +
-      (j ? i.substr(0, j) + thousands : "") +
-      i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + thousands) +
-      // @ts-ignore
-      (decimalCount
-        ? decimal +
-          // @ts-ignore
-          Math.abs(amount - i)
-            .toFixed(decimalCount)
-            .slice(2)
-        : "")
-    );
-  } catch (e) {
-    console.log(e);
-  }
+export interface Props {
+  navigate?: string;
 }
 
-export const ChooseCardType: React.FC = () => {
-  const [selected, setSelected] = useState();
+export const ChooseCardType: React.FC<Props> = ({ navigate }) => {
+  const [selected, setSelected] = useState<number>(-1);
   const renderCardMoney = () => {
     return data.map((val, index) => (
       <ItemMoney
@@ -45,26 +20,31 @@ export const ChooseCardType: React.FC = () => {
         onClick={() => {
           setSelected(val);
         }}
+        isHighLight={selected === val}
+        selected={selected}
       />
     ));
   };
 
   return (
-    <div>
-      <div className="mb-20 pl-56 flex-wrap">
-        <p className="text__h2 color__grey font-bold">Choose card type:</p>
+    <div className="my-8">
+      <div className="my-8">
+        <div className="mb-12 pl-0 md:pl-64 ">
+          <p className="text__h2 color__grey font-bold">Choose card type:</p>
+        </div>
+        <div className="md:flex md:flex-wrap justify-center ml-0 md:ml-32">
+          {renderCardMoney()}
+        </div>
       </div>
-      <div className="flex flex-wrap justify-center mb-10 ml-32">
-        {renderCardMoney()}
-      </div>
+
       <TotalMoney
         type="left"
         src={images.phoneCard.cash}
         quantity="Quantity: "
         total="Total: "
-        navigateTo="buy-phone-card-payment"
+        navigateTo={navigate}
         buttonTx="OK"
-        money={formatMoney(selected, 0)}
+        money={selected}
       />
     </div>
   );

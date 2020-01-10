@@ -15,6 +15,7 @@ import { MovieTicketStoreContext } from "stores/MovieTicketStore";
 import { ImgNotFound } from "theme";
 import { MovieTicketDeatilScreenInfo } from "./components/MovieTicketDetailScreen.Info";
 import styles from "./MovieTicketDetailScreen.module.scss";
+import { useFadeIn } from "utils/animations/useAnimations";
 
 interface Props {}
 
@@ -33,10 +34,15 @@ export const MovieTicketDetailSreen: React.FC<Props> = observer(() => {
   const { trailSrc, casts } = movie;
   const listCasts = generateListCasts(casts);
 
+  const fadeIn = useFadeIn();
+
   return (
-    <Screen className="pl-20 pt-40">
+    <Screen className="md:pl-20 px-12 pt-40" style={fadeIn}>
       <div className="flex flex-row">
-        <MovieTicketDeatilScreenInfo movie={movie} className="md:w-1/2 pr-20" />
+        <MovieTicketDeatilScreenInfo
+          movie={movie}
+          className="md:w-1/2 md:pr-20"
+        />
         <div className={cx(styles.youtube, "hidden md:block")}>
           <Youtube
             videoId={trailSrc}
@@ -46,7 +52,7 @@ export const MovieTicketDetailSreen: React.FC<Props> = observer(() => {
         </div>
       </div>
 
-      <div className="mr-20">
+      <div className="md:mr-20">
         <p className="text__h2 color__grey mb-8">Cast:</p>
         <ScrollMenu
           alignCenter={false}

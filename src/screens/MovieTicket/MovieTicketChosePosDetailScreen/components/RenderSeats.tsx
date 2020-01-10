@@ -28,14 +28,14 @@ const RenderSeat: React.FC<RenderSeatProps> = props => {
   const { row } = props;
   return (
     <div className="flex flex-row flex-1 items-center">
-      <SeatLabelWrapper className="color__white rounded-full items-center ">
+      <SeatLabelWrapper className="color__white rounded-full items-center hidden md:block ">
         <TextRounded className="uppercase">{row}</TextRounded>
       </SeatLabelWrapper>
       <div className="pr-4" />
       {rowDetails.map((v, idx) => {
         let cln = "";
         if (idx === 1 || idx === 7) {
-          cln += " pr-8";
+          cln += " md:pr-8 pr-4";
         }
         const isVip = idx > 1 && idx < 8;
         return (

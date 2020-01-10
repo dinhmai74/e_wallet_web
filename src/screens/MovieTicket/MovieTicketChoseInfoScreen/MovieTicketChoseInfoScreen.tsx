@@ -36,10 +36,10 @@ export const MovieTicketChoseInfoScreen: React.FC<Props> = observer(props => {
   }
 
   return (
-    <Screen className="pl-20">
+    <Screen className="px-12 md:pl-20 md:px-0">
       <div className="flex flex-row">
-        <div className="flex-1 pt-32">
-          <div className="pr-40 py-8">
+        <div className="flex flex-1  flex-col pt-32">
+          <div className="py-8 max-w-xl mx-8">
             <AppDatePicker
               onChange={date => {
                 setSelectedDate(date);
@@ -49,7 +49,7 @@ export const MovieTicketChoseInfoScreen: React.FC<Props> = observer(props => {
             <Divider />
           </div>
 
-          <div className="max-w-2/4">
+          <div className="">
             {places.map(val => (
               <MovieTicketChoseTime place={val} key={val.id} />
             ))}

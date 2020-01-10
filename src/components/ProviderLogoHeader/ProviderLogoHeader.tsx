@@ -1,7 +1,5 @@
 import { makeStyles } from "@material-ui/core/styles";
-import { AppButton } from "components";
 import React from "react";
-import { useHistory } from "react-router";
 import colors from "theme/color/_colors.scss";
 
 type HeroType = "left" | "right";
@@ -12,6 +10,7 @@ export interface HeroModel {
   src: string;
   type?: HeroType;
   imgStyle?: string;
+  containerStyle?: string;
   navigateTo?: string;
   buttonTx?: string;
 }
@@ -46,56 +45,37 @@ const Lines: React.FC<{ content: string[] }> = ({ content }) => {
   );
 };
 
-export const HeroCard: React.FC<HeroModel> = ({
+export const ProviderLogoHeader: React.FC<HeroModel> = ({
   imgStyle,
+  containerStyle,
   title,
   content,
   src,
-  type,
-  navigateTo,
-  buttonTx
+  type
 }) => {
   let txMargin = "";
   const imgMargin = "";
 
   if (type === "right") {
-    txMargin = "ml-20";
+    txMargin = "md:mx-20";
   } else {
-    txMargin = "ml-20";
+    txMargin = "md:ml-20";
   }
 
-  const history = useHistory();
   const classes = useStyles();
 
   const renderImg = () => (
     <div className={classes.card}>
       <img
-        src={src}
-        className={`self-center ${imgMargin} ${imgStyle} hidden img__decorate sm:hidden md:hidden lg:block xl:block`}
+        src={`${process.env.PUBLIC_URL}/${src}`}
+        className={`self-center ${imgMargin} ${imgStyle} hidden img__decorate sm:hidden md:hidden lg:block xl:block px-12`}
         alt="illstration"
       />
     </div>
   );
 
-  const renderButton = () => {
-    if (navigateTo === undefined) {
-      return null;
-    }
-
-    return (
-      <AppButton
-        fullWidth
-        color="primary"
-        variant="outlined"
-        tx={buttonTx}
-        className="mt-6 text__b1"
-        onClick={() => history.push(navigateTo)}
-      />
-    );
-  };
-
   const containerClassName =
-    "flex flex-row items-center justify-center absolute inset-y-0 right-0 left-0 ";
+    "md:flex md:flex-row md:items-center md:justify-center  " + containerStyle;
   return (
     <div
       className={containerClassName}
@@ -108,14 +88,13 @@ export const HeroCard: React.FC<HeroModel> = ({
         <p className={`text__t1 color__grey  font-bold`}>{title}</p>
         <br />
         <Lines content={content} />
-        {renderButton()}
       </div>
       {type === "right" && renderImg()}
     </div>
   );
 };
 
-HeroCard.defaultProps = {
+ProviderLogoHeader.defaultProps = {
   type: "left",
   imgStyle: "img__decorate "
 };

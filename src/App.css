@@ -136,6 +136,9 @@ body {
 .bg__bg-grey {
   background-color: #f1f1f1; }
 
+.bg__train {
+  background-color: #ddfafe; }
+
 .text {
   font-stretch: normal;
   color: #4a4a4a; }
@@ -258,7 +261,8 @@ body {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); }
 
 .footer {
-  min-height: 20vh; }
+  min-height: 20vh;
+  background-color: transparent; }
 
 .menu-item {
   padding: 0 40px;
@@ -281,5 +285,27 @@ body {
 .scroll-menu-arrow {
   padding: 20px;
   cursor: pointer; }
+
+.fade-enter {
+  opacity: 0;
+  z-index: 1; }
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 250ms ease-in; }
+
+.item-enter {
+  opacity: 0; }
+
+.item-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in; }
+
+.item-exit {
+  opacity: 1; }
+
+.item-exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease-in; }
 
 /*# sourceMappingURL=App.css.map */

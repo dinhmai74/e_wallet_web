@@ -3,7 +3,7 @@ import { createMuiTheme } from "@material-ui/core/styles";
 import styles from "theme/color/_colors.scss";
 
 export const theme = createMuiTheme({
- overrides: {
+  overrides: {
     MuiButton: {
       outlinedPrimary: {
         "&:hover": {
@@ -26,6 +26,5 @@ export const theme = createMuiTheme({
     secondary: {
       main: styles.blue
     }
-  },
- 
+  }
 });

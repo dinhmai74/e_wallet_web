@@ -2,9 +2,9 @@ import React from "react";
 import { images } from "theme/images";
 
 interface Props {}
-export const TransferGeneralScreenSideInfo: React.FC<Props> = props => {
+export const TransferGeneralScreenSideInfo: React.FC<Props> = () => {
   return (
-    <div className="w-2/6 bg__bg-5 min-h-screen hidden md:inline-block pt-64 flex-col">
+    <div>
       <img
         src={`${process.env.PUBLIC_URL}/${images.home.transfer}`}
         className="img__decorate--side mx-auto"
@@ -12,7 +12,7 @@ export const TransferGeneralScreenSideInfo: React.FC<Props> = props => {
       />
       <div className="my-12">
         <p className="text-center text__h2 color__steel font-bold mb-4">
-          Transfer phone
+          Transfer money
         </p>
         <p className="text-center  color__steel">
           With us, easy transfer easy get more time!

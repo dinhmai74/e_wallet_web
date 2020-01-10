@@ -11,7 +11,7 @@ export const FeeRow: React.FC<Props> = props => {
   const { className, ...rest } = props;
   return (
     <RowTextSpaceBetween
-      leftTx="Free:"
+      leftTx="Fee:"
       leftClassName="text-blueGrey font-medium"
       rightTx={formatMoney(0) + unitTx}
       rightClassName="font-medium"

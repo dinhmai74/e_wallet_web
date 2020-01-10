@@ -1,11 +1,10 @@
 import { AppCard } from "components/AppCard";
 import React from "react";
 import { useHistory } from "react-router";
+import { animated, config, useChain, useSpring, useTransition } from "react-spring";
 import { Paths } from "router/PrimaryRouters";
 import { images } from "theme/images";
 import { formatMoney } from "utils/number";
-
-interface Props {}
 
 interface TrainInfoModel {
   time: string;
@@ -33,7 +32,7 @@ const TrainAvailable: TrainInfoModel[] = [
 
 export const TrainGeneralSearchFail: React.FC = () => {
   return (
-    <div className="relative left-1/5 my-8">
+    <div className="relative md:left-1/5 my-8">
       <img
         src={`${process.env.PUBLIC_URL}/${images.error.noResult}`}
         alt="no result"
@@ -48,12 +47,46 @@ export const TrainGeneralSearchFail: React.FC = () => {
   );
 };
 
-export const TrainGeneralSearchResult: React.FC<Props> = () => {
+export const TrainGeneralSearchResult: React.FC<{ show: boolean }> = ({
+  show
+}) => {
+  const springRef = React.useRef(null);
+  const { opacity } = useSpring({
+    config: config.stiff,
+    from: { opacity: 0 },
+    ref: springRef,
+    to: { opacity: 1 }
+  });
+
+  const transRef = React.useRef(null);
+  const transitions = useTransition(
+    show? TrainAvailable : [],
+    item => item.id,
+    {
+      unique: true,
+      trail: 400 / TrainAvailable.length,
+      from: { opacity: 0, transform: "scale(0)" },
+      enter: { opacity: 1, transform: "scale(1)" },
+      leave: { opacity: 0, transform: "scale(0)" }
+    }
+  );
+  useChain(show? [springRef, transRef] : [transRef, springRef], [
+    0,
+    show? 0.1 : 0.6
+  ]);
+
   return (
     <div className="mt-12">
-      <p className="text__h3 my-8 color__steel">Available Train:</p>
-      {TrainAvailable.map(val => (
-        <CardItem item={val} key={val.id} />
+      <animated.p
+        className="text__h3 my-8 color__steel"
+        style={{ opacity }}
+      >
+        Available Train:
+      </animated.p>
+      {transitions.map(({ item, key, props }) => (
+        <animated.div style={props} key={item.id}>
+          <CardItem item={item} />
+        </animated.div>
       ))}
     </div>
   );

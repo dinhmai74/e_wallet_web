@@ -1,0 +1,21 @@
+.anim__hero-exit {
+  opacity: 1; }
+
+.anim__hero-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 2000ms linear, transform 2000ms; }
+
+.anim__hero-exit-done {
+  opacity: 0; }
+
+.anim__hero-enter {
+  opacity: 0;
+  transform: scale(0.9); }
+
+.anim__hero-enter-active {
+  opacity: 1;
+  transition: translateX(0);
+  transition: opacity 2000ms, transform 2000ms; }
+
+/*# sourceMappingURL=hero.css.map */

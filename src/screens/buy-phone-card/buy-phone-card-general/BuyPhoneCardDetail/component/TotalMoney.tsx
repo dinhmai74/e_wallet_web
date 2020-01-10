@@ -1,7 +1,9 @@
-import { Card, TextField } from "@material-ui/core";
-import { AppButton } from "components";
+import { TextField } from "@material-ui/core";
+import { AppButton, AppCard } from "components";
+import { RowTextSpaceBetween } from "components/RowTextSpaceBetween";
 import React, { useState } from "react";
 import { useHistory } from "react-router";
+import { formatMoney, unitTx } from "utils/number";
 
 type HeroType = "left" | "right";
 
@@ -11,9 +13,9 @@ export interface HeroModel {
   type?: HeroType;
   imgStyle?: string;
   navigateTo?: string;
-  buttonTx?: string;
-  total?: string;
-  money?: string;
+  buttonTx: string;
+  total: string;
+  money: number;
 }
 
 export const TotalMoney: React.FC<HeroModel> = ({
@@ -29,17 +31,20 @@ export const TotalMoney: React.FC<HeroModel> = ({
   let txMargin = "";
   const imgMargin = "";
   if (type === "right") {
-    txMargin = "ml-20 ";
+    txMargin = "md:mr-20 ";
   } else {
-    txMargin = "ml-10";
+    txMargin = "md:ml-20 ";
   }
 
   const history = useHistory();
   const renderImg = () => (
     <img
-      src={src}
+      src={`${process.env.PUBLIC_URL}/${src}`}
       className={`self-center ${imgMargin} ${imgStyle} hidden img__decorate sm:hidden md:hidden lg:block xl:block`}
       alt="illstration"
+      style={{
+        width: 400
+      }}
     />
   );
 
@@ -52,7 +57,6 @@ export const TotalMoney: React.FC<HeroModel> = ({
       <AppButton
         fullWidth
         color="primary"
-        variant="outlined"
         tx={buttonTx}
         className="mt-6 text__b1"
         onClick={() =>
@@ -64,45 +68,31 @@ export const TotalMoney: React.FC<HeroModel> = ({
     );
   };
 
-  const containerClassName = "flex flex-row items-center justify-center";
-  const [totalValue, setValue] = useState();
+  const [totalQuantity, setQuantity] = useState();
   return (
-    <div
-      className={containerClassName}
-      data-aos={`fade-${type}`}
-      data-aos-delay="50"
-      data-aos-duration="1000"
-    >
+    <div className="flex flex-row items-center justify-center ">
       {type === "left" && renderImg()}
-      <Card className="pt-12 pb-12 ml-12 ">
-        <div className={`self-center ${txMargin}`}>
-          <div className="flex flex-row pb-12">
-            <p className={`text__h2 color__grey font-bold pr-16 pt-4`}>
-              {quantity}
-            </p>
-            <TextField
-              id="filled-size-small"
-              label=""
-              autoComplete="current-password"
-              variant="outlined"
-              className="pr-12"
-              value={totalValue}
-              onChange={e => {
-                setValue(e.target.value);
-              }}
-            />
-          </div>
-          <div className="flex flex-row pb-4">
-            <p className={`text__h2 color__grey font-bold text-center pr-32`}>
-              {total}
-            </p>
-            <p className={`text__h2 color__primary  font-bold pl-6`}>
-              {money}d
-            </p>
-          </div>
-          {renderButton()}
+      <AppCard className={txMargin + " px-8 py-8 "}>
+        <div className="flex flex-row justify-between items-center mb-8">
+          <p className="color__steel font__medium mx-2 w-2/3">{quantity}</p>
+          <TextField
+            id="outlined-size-small"
+            variant="outlined"
+            className="mx-4"
+            size="small"
+            value={totalQuantity}
+            onChange={e => {
+              setQuantity(e.target.value);
+            }}
+          />
         </div>
-      </Card>
+        <RowTextSpaceBetween
+          leftTx={total}
+          rightTx={formatMoney(money * totalQuantity) + unitTx}
+          rightClassName="text-primary"
+        />
+        {renderButton()}
+      </AppCard>
       {type === "right" && renderImg()}
     </div>
   );

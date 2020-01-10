@@ -4,6 +4,10 @@ import { BuyPhoneCardDetail } from "screens/buy-phone-card/buy-phone-card-genera
 import { BuyPhoneCardSuccess } from "screens/buy-phone-card/buy-phone-card-general/BuyPhoneCardSuccess";
 import { BuyPhoneCardPayMent } from "screens/buy-phone-card/BuyPhoneCardPayMent/BuyPhoneCardPayMent";
 import { BuyGameCardGeneral } from "screens/BuyGameCard/BuyGameCardGeneral";
+import { BuyGameCardPayment } from "screens/BuyGameCard/BuyGameCardPayment";
+
+import { BuyGameCardDetail } from "screens/BuyGameCard/BuyGameCardDetail ";
+import { BuyGameCarSuccess } from "screens/BuyGameCard/BuyGameCardSuccess";
 import { HomeScreen } from "screens/Home";
 import {
   MovieTicketBuySuccessScreen,
@@ -49,7 +53,9 @@ export const Paths = {
   transfer: "/transfer",
   transferPayment: "/payment/transfer",
   transferPaymentSuccess: "/payment/transfer/success",
-
+  buyGameCardDetail: "/buy-game-card/detail",
+  buyGameCardPayment: "/payment/buy-game-card",
+  buyGameCardSuccess: "/payment/buy-game-card/success",
   train: "/train-ticket",
   trainChosePos: "/train-ticket/chose-position",
   trainFillInfo: "/train-ticket/fill-info",
@@ -140,6 +146,18 @@ export const PrimaryRouters: RouterModel[] = [
   {
     Component: BuyGameCardGeneral,
     path: Paths.buyGameCardGeneral
+  },
+  {
+    Component: BuyGameCardDetail,
+    path: Paths.buyGameCardDetail
+  },
+  {
+    Component: BuyGameCarSuccess,
+    path: Paths.buyGameCardSuccess
+  },
+  {
+    Component: BuyGameCardPayment,
+    path: Paths.buyGameCardPayment
   },
 
   {
