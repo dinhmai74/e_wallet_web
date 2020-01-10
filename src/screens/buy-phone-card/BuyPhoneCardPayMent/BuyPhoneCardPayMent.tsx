@@ -1,5 +1,6 @@
 import { PaymentScreen } from "components/PaymentScreen";
 import React from "react";
+import { Paths } from "router/PrimaryRouters";
 
 export const BuyPhoneCardPayMent: React.FC = props => {
   return (
@@ -8,7 +9,7 @@ export const BuyPhoneCardPayMent: React.FC = props => {
       price="100.000d"
       quantity="3"
       totalAmount={300000}
-      navigateTo="/payment/buy-phone-card/success"
+      navigateTo={Paths.buyPhoneCardSuccess}
     />
   );
 };

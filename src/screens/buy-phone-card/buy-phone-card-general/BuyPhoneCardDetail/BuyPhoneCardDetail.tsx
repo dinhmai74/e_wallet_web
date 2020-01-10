@@ -2,6 +2,7 @@ import { ProviderLogoHeader, Screen } from "components";
 import React from "react";
 import { ChooseCardType } from "screens/buy-phone-card/buy-phone-card-general/BuyPhoneCardDetail/component/ChooseCardType";
 import { images } from "theme";
+import { Paths } from "router/PrimaryRouters";
 
 export const BuyPhoneCardDetail: React.FC = () => {
   return (
@@ -21,7 +22,7 @@ export const BuyPhoneCardDetail: React.FC = () => {
           content={["Region: VN", "Discount: 4%"]}
         />
 
-        <ChooseCardType navigate="/buy-phone-card-payment" />
+        <ChooseCardType navigate={Paths.buyGameCardPayment} />
       </div>
     </Screen>
   );
