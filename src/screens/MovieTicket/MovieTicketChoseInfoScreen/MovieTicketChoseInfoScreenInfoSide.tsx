@@ -26,7 +26,7 @@ export const MovieTicketChoseInfoScreenInfoSide: React.FC<Props> = props => {
         <br />
         <p className="text__d1 color__blue-grey text-center">{subTx}</p>
 
-        <ImgMovieHooray className="mx-auto mt-16" />
+        <ImgMovieHooray className="mx-auto mt-16" width={450} />
       </div>
     </div>
   );

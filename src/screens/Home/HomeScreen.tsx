@@ -76,8 +76,14 @@ const HerosHome: HeroModel[] = [
 
 export const HomeScreen: React.FC<Props> = () => {
   const renderHeros = () => {
-    return HerosHome.map((val, idx) => <Hero key={idx} {...val} />);
+    return HerosHome.map(({ src, ...val }, idx) => (
+      <Hero key={idx} {...val} src={process.env.PUBLIC_URL + "/" + src} />
+    ));
   };
 
-  return <Screen style={{ alignItem: "center", justifyContent: "center"}}>{renderHeros()}</Screen>;
+  return (
+    <Screen style={{ alignItem: "center", justifyContent: "center" }}>
+      {renderHeros()}
+    </Screen>
+  );
 };
