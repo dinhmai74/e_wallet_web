@@ -53,7 +53,6 @@ export const Hero: React.FC<HeroModel> = ({
 
   const containerClassName =
     "flex flex-row sm:items-center sm:justify-center py-24 self-stretch max-h-screen px-12 md:pl-32";
-
   const [props, set] = useSpring(() => ({ x: 0, opacity: 100 }));
 
   const renderButton = () => {
@@ -80,7 +79,6 @@ export const Hero: React.FC<HeroModel> = ({
 
   return (
     <animated.div
-      className={containerClassName}
       onAnimationEnd={() => history.push(navigateTo + "")}
       style={{
         opacity: props.opacity,
@@ -91,11 +89,11 @@ export const Hero: React.FC<HeroModel> = ({
       }}
     >
       <div
-        className="flex flex-1"
+        className={containerClassName}
         data-aos={`fade-${type}`}
         data-aos-delay="50"
         data-aos-once="true"
-        data-aos-duration="1000"
+        data-aos-duration="500"
       >
         {type === "left" && (
           <HeroImg imgMargin={imgMargin} src={src} imgStyle={imgStyle} />

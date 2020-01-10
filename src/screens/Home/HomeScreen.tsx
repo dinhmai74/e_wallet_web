@@ -79,5 +79,5 @@ export const HomeScreen: React.FC<Props> = () => {
     return HerosHome.map((val, idx) => <Hero key={idx} {...val} />);
   };
 
-  return <Screen>{renderHeros()}</Screen>;
+  return <Screen style={{ alignItem: "center", justifyContent: "center"}}>{renderHeros()}</Screen>;
 };
