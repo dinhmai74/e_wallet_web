@@ -70,7 +70,7 @@ const AnimateApp: React.FC = () => {
             return (
               <Route
                 onUpdate={() => window.scrollTo(0, 0)}
-                path={baseUrl + val.path}
+                path={val.path}
                 component={val.Component}
                 key={val.path}
                 exact
