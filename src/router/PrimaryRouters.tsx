@@ -31,7 +31,7 @@ import {
   TransferPaymentSuccessScreen
 } from "screens/Transfer";
 
-export const Paths = {
+const Paths = {
   about: "/about",
   home: "/",
 
@@ -62,6 +62,12 @@ export const Paths = {
   trainPayment: "/payment/train-ticket",
   trainSuccess: "/payment/train-ticket/success"
 };
+
+Object.keys(Paths).map(function(key, index) {
+  Paths[key] = process.env.PUBLIC_URL+Paths[key];
+});
+
+export { Paths }
 
 export interface RouterModel {
   path: string;
