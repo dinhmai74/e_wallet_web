@@ -83,11 +83,6 @@ export const PrimaryRouters: RouterModel[] = [
     Component: About,
     path: Paths.about
   },
-  {
-    Component: HomeScreen,
-    path: "/"
-  },
-
   /* ------------------------ phone card ------------------------ */
   {
     Component: BuyPhoneCardGeneral,
