@@ -6,7 +6,7 @@ import { useBoolean } from "react-use";
 import { Paths } from "router/PrimaryRouters";
 import { TransferPaymentInfoCard } from "screens/Transfer/TransferPaymentScreen/components/TransferPaymentInfoCard";
 import { ImgPayment } from "theme";
-import {  useScaleAndFadeIn } from "utils/animations/useAnimations";
+import { useScaleAndFadeIn } from "utils/animations/useAnimations";
 import { animated, useSpring } from "react-spring";
 
 interface Props {}
@@ -28,8 +28,6 @@ export const TransferPaymentScreen: React.FC<Props> = props => {
     opacity: 1
   }));
 
-  console.log(animCardOut);
-
   return (
     <Screen style={animIn}>
       <p className="text__h1 my-4 mb-12 color__grey mt-12">Simple payment</p>
@@ -48,9 +46,6 @@ export const TransferPaymentScreen: React.FC<Props> = props => {
           style={{
             opacity: animCardOut.opacity
           }}
-          onAnimationEnd={() =>
-            history.push(Paths.transferPaymentSuccess, state)
-          }
         >
           <p className="text__h3 color__steel mb-8">Information</p>
           <TransferPaymentInfoCard
@@ -59,10 +54,12 @@ export const TransferPaymentScreen: React.FC<Props> = props => {
             isSelectedPayment={isSelectedPayment}
             // onSubmit={() => history.push(Paths.transferPaymentSuccess, state)}
             onSubmit={() => {
-              console.log("hello");
               setAnimCardOut({
                 opacity: 0
               });
+              setTimeout(() => {
+                history.push(Paths.transferPaymentSuccess, state);
+              }, 300);
             }}
           />
         </animated.div>
