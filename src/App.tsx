@@ -10,7 +10,7 @@ import { ImgNotFound404 } from "theme";
 import { theme } from "theme/materialUITheme";
 import "./App.scss";
 import "./styles/index.scss";
-
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 AOS.init({
   // Global settings:
@@ -53,6 +53,18 @@ const App: React.FC = () => {
 
         <Sidebar />
         <Header />
+        <AnimateApp />
+      </BrowserRouter>
+    </ThemeProvider>
+  );
+};
+
+const AnimateApp: React.FC = () => {
+  const location = useLocation();
+
+  return (
+    <TransitionGroup>
+      <CSSTransition key={location.key} classNames="fade" timeout={300}>
         <Switch>
           {PrimaryRouters.map(val => {
             return (
@@ -72,8 +84,8 @@ const App: React.FC = () => {
             )}
           />
         </Switch>
-      </BrowserRouter>
-    </ThemeProvider>
+      </CSSTransition>
+    </TransitionGroup>
   );
 };
 

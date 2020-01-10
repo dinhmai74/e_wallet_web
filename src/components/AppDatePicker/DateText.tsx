@@ -1,5 +1,5 @@
 import moment, { Moment } from "moment";
-import React from "react";
+import React, { memo } from "react";
 
 interface Props {
   isActive?: boolean;
@@ -7,7 +7,7 @@ interface Props {
   date: Moment;
 }
 
-export const DateText: React.FC<Props> = props => {
+export const DateText: React.FC<Props> = memo((props)=> {
   const { isActive, date, onClick } = props;
   const color = isActive ? "primary" : "steel";
   const isToday = date.isSame(moment(), "day");
@@ -25,4 +25,4 @@ export const DateText: React.FC<Props> = props => {
       </p>
     </div>
   );
-};
+});

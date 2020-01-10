@@ -1,7 +1,10 @@
 import React from "react";
 
+export type HoverType= "zoomIn" | "zoomIn3D"
+
 export interface AppCardProps {
   className?: string;
+  hoverEffect?: HoverType;
   [rest: string]: any;
 }
 

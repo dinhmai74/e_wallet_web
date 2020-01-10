@@ -7,6 +7,8 @@ import React, { useState } from "react";
 import { immer, persist } from "utils/zustand";
 import create from "zustand";
 import { DateText } from "./DateText";
+import { animated, useSpring } from "react-spring";
+import { useBoolean } from "react-use";
 
 interface Props {
   className?: string;
@@ -62,7 +64,7 @@ export const [useAppDatePicker] = create<AppDatePickerState>(
 );
 
 export const AppDatePicker: React.FC<Props> = props => {
-  const { className } = props;
+  const { className, onChange } = props;
   const [force, forceUpdate] = useState(false);
 
   const {
@@ -76,10 +78,23 @@ export const AppDatePicker: React.FC<Props> = props => {
 
   const onWeekClick = (direction: DirectionType) => {
     direction === "forward" ? setNextWeek() : setPreWeek();
-    forceUpdate(!force);
+    setOpen(false);
+    setTimeout(() => {
+      forceUpdate(!force);
+      setOpen(true);
+    }, 300);
   };
 
   const dates = getDatesViewBaseOnMain();
+
+  const [isOpen, setOpen] = useBoolean(true);
+
+  const { opacity } = useSpring({
+    from: { opacity: 0 },
+    to: {
+      opacity: isOpen ? 1 : 0
+    }
+  });
 
   return (
     <div className={className}>
@@ -89,7 +104,10 @@ export const AppDatePicker: React.FC<Props> = props => {
         className="mb-2"
         minDate={moment()}
       />
-      <div className="flex flex-row mx-auto flex-1 items-center justify-center">
+      <animated.div
+        className="flex flex-row mx-auto items-center justify-center"
+        style={{ opacity }}
+      >
         {dates.map((val, idx) => {
           return (
             <DateText
@@ -98,12 +116,12 @@ export const AppDatePicker: React.FC<Props> = props => {
               isActive={date.isSame(val, "day")}
               onClick={d => {
                 setDate(moment(d));
-                props.onChange(d);
+                onChange(d);
               }}
             />
           );
         })}
-      </div>
+      </animated.div>
     </div>
   );
 };

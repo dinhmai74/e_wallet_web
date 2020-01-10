@@ -72,3 +72,23 @@ export const useScaleGroup = (data: any[]): any => {
 
   return transitions;
 };
+
+export const useZoomInEffect = (): [any, any,any] => {
+  const [p, set] = useSpring(() => ({
+    transform: "scale(1)"
+  }));
+
+  const setZom = () => {
+    set({
+      transform: "scale(1.3)"
+    });
+  };
+
+  const zoomBack = () => {
+    set({
+      transform: "scale(1)"
+    });
+  };
+
+  return [p, setZom, zoomBack];
+};
