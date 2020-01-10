@@ -153,7 +153,7 @@ function Sidebar() {
         </button>
       </div>
 
-      <Item onClick={() => handleOnClick("/")}>Home</Item>
+      <Item onClick={() => handleOnClick(Paths.home)}>Home</Item>
 
       <Item onClick={() => handleOnClick(Paths.transfer)}>Transfer Money</Item>
 

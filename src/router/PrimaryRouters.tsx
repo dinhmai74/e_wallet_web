@@ -63,11 +63,12 @@ const Paths = {
   trainSuccess: "/payment/train-ticket/success"
 };
 
-Object.keys(Paths).map(function(key, index) {
-  Paths[key] = process.env.PUBLIC_URL+Paths[key];
+// eslint-disable-next-line
+Object.keys(Paths).map((key, index) => {
+  Paths[key] = process.env.PUBLIC_URL + Paths[key];
 });
 
-export { Paths }
+export { Paths };
 
 export interface RouterModel {
   path: string;

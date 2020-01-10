@@ -6,6 +6,7 @@ import { useHistory } from "react-router";
 import { images } from "theme";
 import { IconMenu } from "theme/Icons";
 import { metrics } from "theme/metrics";
+import { Paths } from "router/PrimaryRouters";
 
 export const Header: React.FC = () => {
   const { toggleSidebar } = useSidebar();
@@ -19,7 +20,7 @@ export const Header: React.FC = () => {
         src={process.env.PUBLIC_URL + "/" + images.logo}
         className="img__logo"
         alt="logo"
-        onClick={() => history.push("/")}
+        onClick={() => history.push(Paths.home)}
       />
       <StyledIconMenu onClick={toggleSidebar} width={metrics.icon.md} />
     </div>
