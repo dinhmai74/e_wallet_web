@@ -4,9 +4,10 @@ import styled from "styled-components";
 
 interface Props {
   src?: string;
+  title?: string
 }
 export const PurchasedCard: React.FC<Props> = props => {
-  const { src } = props;
+  const { src, title } = props;
   return (
     <AppCard className="max-w-full flex flex-row px-8 py-8 cursor-pointer mb-10 ">
       <StyledImg
@@ -16,7 +17,7 @@ export const PurchasedCard: React.FC<Props> = props => {
       />
       <div className="flex flex-col justify-center item-center ml-4">
         <span className="text__h4 color__steel pb-4">
-          <b className="text__h2 ">Viettel - </b>
+          <b className="text__h2 ">{title} - </b>
           10,000d
         </span>
         <p className="text__b1 color__primary pb-4">24141634262</p>

@@ -7,18 +7,19 @@ import { images } from "theme/images";
 
 interface Props {
   urlImage?: string;
+  title?: string
 }
 
-export const SuccessScreen: React.FC<Props> = ({ urlImage }) => {
+export const SuccessScreen: React.FC<Props> = ({ urlImage, title }) => {
   return (
     <Screen className="flex flex-row">
       <div className="flex flex-col mt-40 mx-12 lg:mx-32 md:mx-24 flex-1">
         <p className="text__h2 color__steel mb-12 font-bold">
           Purchased cards:
         </p>
-        <PurchasedCard src={urlImage} />
-        <PurchasedCard src={urlImage} />
-        <PurchasedCard src={urlImage} />
+        <PurchasedCard src={urlImage} title={title} />
+        <PurchasedCard src={urlImage} title={title} />
+        <PurchasedCard src={urlImage} title={title} />
       </div>
 
       <div className="w-1/2 bg__bg-5 min-h-screen hidden md:inline-block pt-32 justify-center items-center">
